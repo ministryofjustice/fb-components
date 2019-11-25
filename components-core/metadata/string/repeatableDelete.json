@@ -1,0 +1,7 @@
+{
+  "_id": "repeatableDelete",
+  "_type": "string",
+  "description": "Default text to remove repeatable item",
+  "value": "Remove {control} {count}",
+  "value:cy": "Dileu {control} {count}"
+}

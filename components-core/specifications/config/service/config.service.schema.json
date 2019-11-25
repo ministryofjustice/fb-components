@@ -1,0 +1,112 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/config/service",
+  "title": "Form configuration",
+  "_name": "config.service",
+  "description": "Form configuration",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "const": "service"
+    },
+    "_type": {
+      "const": "config.service"
+    },
+    "name": {
+      "title": "Form name",
+      "type": "string",
+      "content": true
+    },
+    "phase": {
+      "title": "Form phase",
+      "type": "string",
+      "enum": [
+        "none",
+        "alpha",
+        "beta"
+      ],
+      "default": "alpha"
+    },
+    "phaseText": {
+      "title": "Form phase text",
+      "type": "string",
+      "content": true
+    },
+    "languageDefault": {
+      "title": "Default language",
+      "description": "Default language used for form (en)",
+      "type": "string",
+      "default": "en"
+    },
+    "languages": {
+      "title": "Languages",
+      "description": "Languages form is available in",
+      "type": "array"
+    },
+    "code": {
+      "title": "Form code",
+      "description": "Code used for form (eg. C100)",
+      "type": "string"
+    },
+    "pdfHeading": {
+      "title": "PDF heading",
+      "description": "Used as form’s heading when generating PDF output",
+      "type": "string"
+    },
+    "pdfSubHeading": {
+      "title": "PDF subheading",
+      "description": "Used as form’s subheading when generating PDF output",
+      "type": "string"
+    },
+    "emailInputNameUser": {
+      "title": "CC email address field",
+      "description": "Name of input used as email address to send user a copy of submission details",
+      "type": "string"
+    },
+    "attachUserSubmission": {
+      "title": "Attach confirmation of submission to user email",
+      "type": "boolean",
+      "default": false
+    },
+    "emailSubjectUser": {
+      "title": "CC email subject",
+      "type": "string"
+    },
+    "emailTemplateUser": {
+      "title": "CC email template",
+      "type": "string",
+      "multiline": true
+    },
+    "emailSubjectTeam": {
+      "title": "Form team email subject",
+      "type": "string"
+    },
+    "emailTemplateTeam": {
+      "title": "Form team email template",
+      "type": "string",
+      "multiline": true
+    },
+    "sessionDuration": {
+      "title": "Session duration",
+      "description": "How many minutes a user’s session should last",
+      "type": "number"
+    },
+    "dataRetentionDuration": {
+      "title": "User data retention duration",
+      "description": "How many days a user’s data should be kept for",
+      "type": "number"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/data"
+    }
+  ],
+  "category": [
+    "configuration"
+  ],
+  "required": [
+    "name",
+    "phase",
+    "phaseText"
+  ]
+}

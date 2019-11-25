@@ -1,0 +1,6 @@
+{
+  "_id": "definitionFieldId",
+  "_type": "definition.field",
+  "name": "field-component",
+  "label": "Field label"
+}

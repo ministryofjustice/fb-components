@@ -1,0 +1,7 @@
+{% extends "page.njk.html" %}
+
+{% block pageContentAction %}
+{% if page.nextpage %}
+{{ super() }}
+{% endif %}
+{% endblock %}

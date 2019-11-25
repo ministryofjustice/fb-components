@@ -1,0 +1,37 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/radios",
+  "_name": "radios",
+  "title": "Radios",
+  "description": "Let users select one option from a list",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "radios"
+    },
+    "items": {
+      "title": "Options",
+      "description": "Items that users can select",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/radio"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/fieldset"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/name"
+    }
+  ],
+  "transforms": {
+    "namespace": {
+      "propagation": "items[*].conditionalComponent"
+    }
+  },
+  "required": [
+    "name",
+    "items"
+  ]
+}

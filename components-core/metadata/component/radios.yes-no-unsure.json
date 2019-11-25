@@ -1,0 +1,21 @@
+{
+  "_id": "radios.yes-no-unsure",
+  "_type": "radios",
+  "items": [
+    {
+      "_id": "radios.yes-no-unsure--yes",
+      "_type": "radio",
+      "_isa": "radio.yes"
+    },
+    {
+      "_id": "radios.yes-no-unsure--no",
+      "_type": "radio",
+      "_isa": "radio.no"
+    },
+    {
+      "_id": "radios.yes-no-unsure--unsure",
+      "_type": "radio",
+      "_isa": "radio.unsure"
+    }
+  ]
+}

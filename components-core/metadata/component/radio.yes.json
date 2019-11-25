@@ -1,0 +1,6 @@
+{
+  "_id": "radio.yes",
+  "_type": "radio",
+  "label": "Yes",
+  "value": "yes"
+}

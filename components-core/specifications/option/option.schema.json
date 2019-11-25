@@ -1,0 +1,40 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/option",
+  "_name": "option",
+  "title": "Select option",
+  "description": "Component that provides a select option",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "option"
+    },
+    "text": {
+      "title": "Option text",
+      "description": "Text displayed to users for that option",
+      "type": "string",
+      "content": true
+    },
+    "textSummary": {
+      "title": "Option text (Summary version)",
+      "description": "Text displayed to users on the 'check your answers' page. Ideally a simplified version of the option text",
+      "type": "string",
+      "content": true
+    },
+    "value": {
+      "title": "Option value",
+      "description": "Value assigned when users select option",
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "required": [
+    "value"
+  ],
+  "category": [
+    "option"
+  ]
+}

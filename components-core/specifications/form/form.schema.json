@@ -1,0 +1,32 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/form",
+  "_name": "form",
+  "title": "Form",
+  "description": "Component for a form",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "form"
+    },
+    "action": {
+      "title": "Action",
+      "description": "URL to send form data to",
+      "type": "string"
+    },
+    "method": {
+      "title": "Method",
+      "description": "Method to use to send form data",
+      "type": "string",
+      "enum": [
+        "post",
+        "get"
+      ],
+      "default": "post"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/grouping"
+    }
+  ]
+}

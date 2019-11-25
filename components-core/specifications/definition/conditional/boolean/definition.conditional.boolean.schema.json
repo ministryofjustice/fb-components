@@ -1,0 +1,20 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/conditional/boolean",
+  "_name": "definition.conditional.boolean",
+  "title": "Boolean or condition",
+  "type": [
+    "boolean",
+    "object"
+  ],
+  "oneOf": [
+    {
+      "type": "boolean"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/condition"
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}

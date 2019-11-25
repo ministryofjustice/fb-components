@@ -1,0 +1,7 @@
+{
+  "_id": "conditionTextId",
+  "_type": "condition",
+  "identifier": "one",
+  "operator": "is",
+  "value": "One"
+}

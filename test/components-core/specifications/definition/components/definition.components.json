@@ -1,0 +1,10 @@
+{
+  "_id": "definitionComponentsId",
+  "_type": "definition.components",
+  "components": [
+    {
+      "_id": "definitionComponentId",
+      "_type": "definition.component"
+    }
+  ]
+}

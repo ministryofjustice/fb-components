@@ -1,0 +1,18 @@
+{
+  "_id": "groupId",
+  "_type": "group",
+  "components": [
+    {
+      "_id": "text--one",
+      "_type": "text",
+      "name": "text-one-component",
+      "label": "Text label"
+    },
+    {
+      "_id": "text--two",
+      "_type": "text",
+      "name": "text-two-component",
+      "label": "Text label"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_id": "pageSinglequestionId",
+  "_type": "page.singlequestion",
+  "url": "/page-url",
+  "components": [{
+    "_id": "textId",
+    "_type": "text",
+    "name": "text-component",
+    "label": "Text label"
+  }]
+}

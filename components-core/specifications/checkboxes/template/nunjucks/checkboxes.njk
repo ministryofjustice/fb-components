@@ -1,0 +1,19 @@
+{%- macro checkboxes(data) %}
+{% set params = setError(data) %}
+{% set params = setItemsLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{% set updatedItems = [] %}
+{% for item in params.items %}
+{% set conditionalHTML = '' %}
+{% if item.conditionalComponent %}
+{% set conditionalHTML %}
+{{- callBlock(item.conditionalComponent) -}}
+{% endset %}
+{% set conditional = {html: conditionalHTML} %}
+{% set item = setObject(item, {conditional: conditional}) %}
+{% endif %}
+{% set sink = updatedItems.push(item) %}
+{% endfor %}
+{% set params = setObject(params, {items: updatedItems}) %}
+{{ callMacro('govukCheckboxes', params) }}
+{% endmacro -%}

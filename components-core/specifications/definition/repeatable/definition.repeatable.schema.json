@@ -1,0 +1,72 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/repeatable",
+  "_name": "definition.repeatable",
+  "title": "Repeatable definition",
+  "type": "object",
+  "properties": {
+    "repeatable": {
+      "title": "Repeatable",
+      "description": "Whether the page or component lets users ‘add another’ answer",
+      "type": "boolean"
+    },
+    "repeatableMinimum": {
+      "title": "Minimum number of repeatable items",
+      "description": "For example, if users must give at least 3 answers, set this to 3 - the page will show 3 inputs when it loads",
+      "type": "number",
+      "minimum": 0,
+      "default": 1,
+      "category": [
+        "repeatable"
+      ]
+    },
+    "repeatableMaximum": {
+      "title": "Maximum number of repeatable items",
+      "description": "For example, if users can give up to 5 answers, set this to 5",
+      "type": "number",
+      "minimum": 0,
+      "category": [
+        "repeatable"
+      ]
+    },
+    "repeatableHeading": {
+      "title": "Repeatable section heading",
+      "description": "Heading for repeatable items - appears once before the components",
+      "type": "string",
+      "category": [
+        "repeatable"
+      ]
+    },
+    "repeatableLede": {
+      "title": "Repeatable section first paragraph",
+      "description": "Introductory paragraph - follows the heading",
+      "type": "string",
+      "category": [
+        "repeatable"
+      ]
+    },
+    "repeatableAdd": {
+      "title": "Text to add another answer",
+      "description": "Specify the link text for users to add another answer - defaults to ‘Add another’",
+      "type": "string",
+      "category": [
+        "repeatable"
+      ]
+    },
+    "repeatableDelete": {
+      "title": "Text to remove an answer",
+      "description": "Specify the link text for users to delete an answer - defaults to ‘Remove’",
+      "type": "string",
+      "category": [
+        "repeatable"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/namespace"
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}

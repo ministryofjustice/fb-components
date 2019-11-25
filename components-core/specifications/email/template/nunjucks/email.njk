@@ -1,0 +1,10 @@
+{%- macro email(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{% set params = setObjectProperty(params, 'type', 'email') %}
+{% set params = setObjectProperty(params, 'autocomplete', 'email') %}
+{% set attributes = setObjectProperty(params.attributes, 'spellcheck', 'false') %}
+{% set params = setObjectProperty(params, 'attributes', attributes) %}
+{{ callMacro('govukInput', params) }}
+{% endmacro -%}

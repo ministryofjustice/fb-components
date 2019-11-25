@@ -1,0 +1,6 @@
+{
+  "_id": "buttonPrimaryId",
+  "_type": "buttonPrimary",
+  "name": "button-primary-component",
+  "value": "Button value"
+}

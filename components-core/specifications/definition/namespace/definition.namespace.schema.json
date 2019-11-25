@@ -1,0 +1,28 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/namespace",
+  "_name": "definition.namespace",
+  "title": "Namespace definition",
+  "type": "object",
+  "properties": {
+    "namespace": {
+      "title": "Namespace",
+      "description": "Namespace under which to store user inputs - combines with input names of child components",
+      "type": "string",
+      "category": [
+        "userinput"
+      ]
+    },
+    "namespaceProtect": {
+      "title": "Namespace protection",
+      "description": "Whether to prevent the component’s namespace being overridden or appended",
+      "type": "boolean",
+      "default": false,
+      "category": [
+        "userinput"
+      ]
+    }
+  },
+  "category": [
+    "definition"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "_id": "configMetaId",
+  "_type": "config.meta",
+  "items": [
+    {
+      "_id": "linkId",
+      "_type": "link",
+      "text": "Link text",
+      "href": "Link href"
+    }
+  ]
+}

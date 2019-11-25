@@ -1,0 +1,35 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/radio",
+  "_name": "radio",
+  "idSeed": "value",
+  "title": "Radio option",
+  "description": "Component that provides a radio option",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "radio"
+    },
+    "hint": {
+      "title": "Hint text",
+      "description": "Text to help users understand an option - appears in grey under the label",
+      "type": "string",
+      "content": true
+    },
+    "conditionalComponent": {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/conditionalcomponent"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/option"
+    }
+  ],
+  "required": [
+    "label"
+  ],
+  "uiCategory": {
+    "main": [
+      "conditionalComponent"
+    ]
+  }
+}

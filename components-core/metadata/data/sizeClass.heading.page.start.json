@@ -1,0 +1,6 @@
+{
+  "_type": "classname",
+  "_id": "sizeClass.heading.page.start",
+  "desciption": "Default heading size class for start page",
+  "value": "govuk-heading-xl"
+}

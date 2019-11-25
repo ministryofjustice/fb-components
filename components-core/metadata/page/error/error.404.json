@@ -1,0 +1,6 @@
+{
+  "_id": "error.404",
+  "_type": "page.error",
+  "heading": "This page can’t be found",
+  "lede": "Please check you’ve entered the correct web address."
+}

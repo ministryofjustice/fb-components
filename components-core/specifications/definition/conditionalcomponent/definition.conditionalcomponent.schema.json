@@ -1,0 +1,12 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/conditionalcomponent",
+  "_name": "definition.conditionalcomponent",
+  "nestable": true,
+  "title": "Conditional component",
+  "description": "Component revealed when user chooses option",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ]
+}

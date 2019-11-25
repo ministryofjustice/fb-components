@@ -1,0 +1,7 @@
+{
+  "_id": "flash.file.removed",
+  "_type": "string",
+  "description": "Flash message displayed when file successfully removed",
+  "value": "Removed {filename}",
+  "value:cy": "Ffeil wedi'i dileu {filename}"
+}

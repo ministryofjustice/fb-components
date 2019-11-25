@@ -1,0 +1,6 @@
+{
+  "_type": "classname",
+  "_id": "sizeClass.label.single",
+  "desciption": "Default label size class when used on single question page",
+  "value": "govuk-label--xl"
+}

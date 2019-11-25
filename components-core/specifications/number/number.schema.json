@@ -1,0 +1,29 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/number",
+  "_name": "number",
+  "title": "Number",
+  "description": "Let users enter a number",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "number"
+    },
+    "name": {
+      "inputType": "number"
+    },
+    "widthClassInput": {
+      "default": "10"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/field"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/validations#/definitions/numberBundle"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/widthclass/input"
+    }
+  ]
+}

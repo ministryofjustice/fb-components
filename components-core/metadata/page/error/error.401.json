@@ -1,0 +1,6 @@
+{
+  "_id": "error.401",
+  "_type": "page.error",
+  "heading": "You must be authenticated to access this page",
+  "lede": ""
+}

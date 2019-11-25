@@ -1,0 +1,23 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/text",
+  "_name": "text",
+  "title": "Text",
+  "description": "Let users enter text that’s no longer than a single line",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "text"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/field"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/validations#/definitions/stringBundle"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/widthclass/input"
+    }
+  ]
+}

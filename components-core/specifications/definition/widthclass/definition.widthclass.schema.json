@@ -1,0 +1,34 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/widthclass",
+  "_name": "definition.widthclass",
+  "title": "Width class definition",
+  "properties": {
+    "widthClass": {
+      "title": "Width",
+      "description": "How wide the component should be visually",
+      "type": "string",
+      "enumMap": {
+        "one-quarter": "One quarter",
+        "one-third": "One third",
+        "one-half": "One half",
+        "two-thirds": "Two thirds",
+        "three-quarters": "Three quarters",
+        "full": "Full width"
+      },
+      "enum": [
+        "one-quarter",
+        "one-third",
+        "one-half",
+        "two-thirds",
+        "three-quarters",
+        "full"
+      ],
+      "category": [
+        "htmlattributes"
+      ]
+    }
+  },
+  "category": [
+    "definition"
+  ]
+}

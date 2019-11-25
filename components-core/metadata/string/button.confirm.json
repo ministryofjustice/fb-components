@@ -1,0 +1,7 @@
+{
+  "_id": "button.confirm",
+  "_type": "string",
+  "description": "Default confirm button text",
+  "value": "Confirm",
+  "value:cy": "Cadarnhau"
+}

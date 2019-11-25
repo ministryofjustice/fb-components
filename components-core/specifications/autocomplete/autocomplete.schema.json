@@ -1,0 +1,57 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/autocomplete",
+  "_name": "autocomplete",
+  "title": "Autocomplete",
+  "description": "Let users select one option from an auto-completing list",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/select"
+    }
+  ],
+  "properties": {
+    "_type": {
+      "const": "autocomplete"
+    },
+    "minLength": {
+      "title": "Minimum number of characters",
+      "description": "Minimum number of characters that should be entered before the autocomplete will attempt to suggest options. When the query length is under this, the aria status region will also provide helpful text to the user informing them they should type in more.",
+      "type": "number",
+      "default": 0
+    },
+    "autoselect": {
+      "title": "Auto select",
+      "description": "Set to true to highlight the first option when the user types in something and receives results. Pressing enter will select it.",
+      "type": "boolean",
+      "default": true
+    },
+    "confirmOnBlur": {
+      "title": "Confirm on blur",
+      "description": "The autocomplete will confirm the currently selected option when the user clicks outside of the component. Set to false to disable.",
+      "type": "boolean",
+      "default": true
+    },
+    "displayMenu": {
+      "title": "Display menu style",
+      "description": "Set this property to specify the way the menu should appear, whether inline or as an overlay",
+      "type": "string",
+      "enum": [
+        "inline",
+        "overlay"
+      ],
+      "default": "inline"
+    },
+    "showAllValues": {
+      "title": "Show all values",
+      "description": "If this is set to true, all values are shown when the user clicks the input. This is similar to a default dropdown, so the autocomplete is rendered with a dropdown arrow to convey this behaviour",
+      "type": "boolean",
+      "default": false
+    },
+    "showNoOptionsFound": {
+      "title": "Show no options found",
+      "description": "The autocomplete will display a ”No results found” template when there are no results. Set to false to disable",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

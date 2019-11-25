@@ -1,0 +1,7 @@
+{
+  "_id": "conditionNumberId",
+  "_type": "condition",
+  "identifier": "one",
+  "operator": "equals",
+  "value": 1
+}

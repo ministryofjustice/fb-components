@@ -1,0 +1,52 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/checkbox",
+  "_name": "checkbox",
+  "title": "Checkbox item",
+  "description": "Component that provides a checkbox item",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "checkbox"
+    },
+    "value": {
+      "default": "yes"
+    },
+    "label": {
+      "skipOptional": true
+    },
+    "hint": {
+      "title": "Hint text",
+      "description": "Text to help users understand an option - appears in grey under the label",
+      "type": "string",
+      "content": true
+    },
+    "conditionalComponent": {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/conditionalcomponent"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/namespace"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/option"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/name"
+    }
+  ],
+  "required": [
+    "name",
+    "label"
+  ],
+  "transforms": {
+    "namespace": {
+      "propagation": "conditionalComponent"
+    }
+  },
+  "uiCategory": {
+    "main": [
+      "conditionalComponent"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/string",
+  "title": "String definition",
+  "_name": "definition.string",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "title": "Data ID",
+      "type": "string"
+    },
+    "_type": {
+      "title": "Data type",
+      "type": "string"
+    },
+    "value": {
+      "title": "Value",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "description": "Explanation of the string’s purpose",
+      "type": "string"
+    }
+  },
+  "category": [
+    "string"
+  ],
+  "required": [
+    "value"
+  ]
+}

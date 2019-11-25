@@ -1,0 +1,18 @@
+{
+  "$id": "http://localhost:9876/baz/baz.schema.json",
+  "_name": "baz",
+  "title": "Baz",
+  "description": "Test baz schema",
+  "type": "object",
+  "properties": {
+    "baz": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "baz"
+  ],
+  "category": [
+    "baz-schema"
+  ]
+}

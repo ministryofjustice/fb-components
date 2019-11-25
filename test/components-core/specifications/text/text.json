@@ -1,0 +1,7 @@
+{
+  "_id": "textId",
+  "_type": "text",
+  "name": "text-component",
+  "label": "Text label",
+  "value": "Text value"
+}

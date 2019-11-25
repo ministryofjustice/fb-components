@@ -1,0 +1,6 @@
+{
+  "_id": "date.month.classes",
+  "_type": "string",
+  "description": "Date input month field class",
+  "value": "govuk-input--width-2"
+}

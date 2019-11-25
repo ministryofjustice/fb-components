@@ -1,0 +1,6 @@
+{
+  "_id": "error.type.number",
+  "_type": "string.error",
+  "description": "Input (number) is not a number",
+  "value": "Enter a number for {control}"
+}

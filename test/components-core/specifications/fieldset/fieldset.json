@@ -1,0 +1,13 @@
+{
+  "_id": "fieldsetId",
+  "_type": "fieldset",
+  "legend": "Fieldset legend",
+  "components": [
+    {
+      "_id": "textId",
+      "_type": "text",
+      "name": "text-component",
+      "label": "Text label"
+    }
+  ]
+}

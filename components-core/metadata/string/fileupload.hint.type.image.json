@@ -1,0 +1,6 @@
+{
+  "_id": "fileupload.hint.type.image",
+  "_type": "string",
+  "description": "Text explaining that users can upload images",
+  "value": "any image"
+}

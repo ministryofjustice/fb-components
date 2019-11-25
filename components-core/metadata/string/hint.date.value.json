@@ -1,0 +1,6 @@
+{
+  "_id": "hint.date.value",
+  "_type": "string",
+  "description": "Default date to show in hint text for date component",
+  "value": "12 11 2007"
+}

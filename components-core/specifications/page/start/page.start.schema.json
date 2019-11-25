@@ -1,0 +1,34 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/start",
+  "_name": "page.start",
+  "title": "Start page",
+  "description": "Let users start using a service",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.start"
+    },
+    "enableSteps": {
+      "const": true
+    },
+    "components": {
+      "accepts": [
+        "content"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
+    }
+  ],
+  "uiCategory": {
+    "main": [
+      "lede",
+      "body"
+    ]
+  },
+  "required": [
+    "steps"
+  ]
+}

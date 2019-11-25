@@ -1,0 +1,6 @@
+{
+  "_id": "formId",
+  "_type": "form",
+  "action": "/page-url",
+  "method": "post"
+}

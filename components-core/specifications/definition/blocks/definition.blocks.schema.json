@@ -1,0 +1,14 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/blocks",
+  "_name": "definition.blocks",
+  "title": "Blocks definition",
+  "properties": {
+    "blocks": {
+      "title": "Blocks",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/definition/block"
+      }
+    }
+  }
+}

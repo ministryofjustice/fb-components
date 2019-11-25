@@ -1,0 +1,4 @@
+{%- macro header(data) %}
+{% set data = setObject(data, {navigation: data.navigation.items}) %}
+{{ callMacro('govukHeader', data) }}
+{% endmacro -%}

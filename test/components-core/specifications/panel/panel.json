@@ -1,0 +1,6 @@
+{
+  "_id": "panelId",
+  "_type": "panel",
+  "titleHtml": "Panel title HTML",
+  "html": "Panel HTML"
+}

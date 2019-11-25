@@ -1,0 +1,7 @@
+{
+  "_id": "numberclearId",
+  "_type": "number",
+  "name": "number-component",
+  "label": "Number label",
+  "value": 1
+}

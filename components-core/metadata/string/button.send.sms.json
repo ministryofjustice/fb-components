@@ -1,0 +1,6 @@
+{
+  "_id": "button.send.sms",
+  "_type": "string",
+  "description": "Send SMS button",
+  "value": "Send text"
+}

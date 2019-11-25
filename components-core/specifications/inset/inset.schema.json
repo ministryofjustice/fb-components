@@ -1,0 +1,31 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/inset",
+  "_name": "inset",
+  "title": "Inset text",
+  "description": "Differentiate a block of text from the content that surrounds it",
+  "usage": "Use the inset text component to differentiate a block of text from the content that surrounds it",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "inset"
+    },
+    "html": {
+      "title": "Text",
+      "description": "Inset text content - use [markdown](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown) to format text or add hyperlinks",
+      "type": "string",
+      "content": true,
+      "multiline": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "required": [
+    "html"
+  ],
+  "category": [
+    "content"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "error.required",
+  "_type": "string.error",
+  "description": "Input is required",
+  "value": "Enter an answer for {control}",
+  "value:cy": "Rhowch ateb i {control}"
+}

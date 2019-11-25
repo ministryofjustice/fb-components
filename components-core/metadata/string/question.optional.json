@@ -1,0 +1,7 @@
+{
+  "_id": "question.optional",
+  "_type": "string",
+  "description": "String to append to question when it is optional",
+  "value": " (optional)",
+  "value:cy": " (dewisol)"
+}

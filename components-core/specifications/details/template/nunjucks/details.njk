@@ -1,0 +1,14 @@
+{%- macro details(data) %}
+{% set params = setObject(data, {
+  summaryHtml: data.summary
+}) %}
+{% if params.components %}
+{% set htmlComponents %}
+{{- callBlocks(params.components) -}}
+{% endset %}
+{% set params = setObject(params, {
+  html: htmlComponents
+}) %}
+{% endif %}
+{{ callMacro('govukDetails', params) }}
+{% endmacro -%}

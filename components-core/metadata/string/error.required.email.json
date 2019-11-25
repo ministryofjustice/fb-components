@@ -1,0 +1,6 @@
+{
+  "_id": "error.required.email",
+  "_type": "string.error",
+  "description": "Email is required",
+  "value": "Enter an email address for {control}"
+}

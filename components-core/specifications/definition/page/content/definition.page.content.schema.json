@@ -1,0 +1,23 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/page/content",
+  "_name": "definition.page.content",
+  "title": "Content page definition",
+  "properties": {
+    "components": {
+      "accepts": [
+        "content"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page"
+    }
+  ],
+  "required": [
+    "heading"
+  ],
+  "category": [
+    "contentPage"
+  ]
+}

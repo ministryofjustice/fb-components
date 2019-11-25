@@ -1,0 +1,6 @@
+{
+  "_id": "error.exclusiveMaximum",
+  "_type": "string.error",
+  "description": "Input (number) is too large (exclusive maximum)",
+  "value": "Your answer must be smaller than {maximum}"
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "tableId",
+  "_type": "table",
+  "caption": "Table caption",
+  "firstCellIsHeader": true,
+  "head": [
+    {
+      "_id": "headOneId",
+      "_type": "cell",
+      "html": "Head one HTML"
+    },
+    {
+      "_id": "headTwoId",
+      "_type": "cell",
+      "html": "Head two HTML"
+    }
+  ],
+  "rows": [
+    [
+      {
+        "_id": "cellOneId",
+        "_type": "cell",
+        "html": "Cell one HTML"
+      },
+      {
+        "_id": "cellTwoId",
+        "_type": "cell",
+        "html": "Cell two HTML"
+      }
+    ],
+    [
+      {
+        "_id": "cellThreeId",
+        "_type": "cell",
+        "html": "Cell three HTML"
+      },
+      {
+        "_id": "cellFourId",
+        "_type": "cell",
+        "html": "Cell four HTML"
+      }
+    ],
+    [
+      {
+        "_id": "cellFiveId",
+        "_type": "cell",
+        "html": "Cell five HTML"
+      },
+      {
+        "_id": "cellSixId",
+        "_type": "cell",
+        "html": "Cell six HTML"
+      }
+    ]
+  ]
+}

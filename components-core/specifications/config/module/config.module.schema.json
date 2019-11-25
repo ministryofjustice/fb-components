@@ -1,0 +1,40 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/config/module",
+  "_name": "config.module",
+  "title": "Module configuration",
+  "description": "Configuration details for a module",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "config.module"
+    },
+    "title": {
+      "title": "Module name",
+      "description": "Name of module",
+      "type": "string"
+    },
+    "module": {
+      "title": "Module ref",
+      "description": "Module reference",
+      "type": "string"
+    },
+    "enabled": {
+      "title": "Enabled",
+      "description": "Whether module is enabled",
+      "type": "string",
+      "enum": [
+        "on",
+        "off"
+      ],
+      "default": "off"
+    }
+  },
+  "required": [
+    "title",
+    "module",
+    "enabled"
+  ],
+  "category": [
+    "config"
+  ]
+}

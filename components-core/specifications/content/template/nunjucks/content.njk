@@ -1,0 +1,7 @@
+{%- macro content(data) %}
+<div class="govuk-prose-scope fb-content">
+<div data-block-id="{{ data._id }}" data-block-property="html">
+{{ data.html | safe }}
+</div>
+</div>
+{% endmacro -%}

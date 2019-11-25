@@ -1,0 +1,6 @@
+{
+  "_type": "classname",
+  "_id": "sizeClass.heading",
+  "desciption": "Default heading size class for pages",
+  "value": "govuk-heading-xl"
+}

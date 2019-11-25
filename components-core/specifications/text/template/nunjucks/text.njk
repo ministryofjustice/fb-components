@@ -1,0 +1,10 @@
+{%- macro text(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{% if params.spellcheck %}
+{% set attributes = setObjectProperty(params.attributes, 'spellcheck', params.spellcheck) %}
+{% set params = setObjectProperty(params, 'attributes', attributes) %}
+{% endif %}
+{{ callMacro('govukInput', params) }}
+{% endmacro -%}

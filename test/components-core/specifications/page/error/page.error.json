@@ -1,0 +1,7 @@
+{
+  "_id": "pageErrorId",
+  "_type": "page.error",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url"
+}

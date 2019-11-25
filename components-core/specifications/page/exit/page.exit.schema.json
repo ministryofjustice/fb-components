@@ -1,0 +1,28 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/exit",
+  "_name": "page.exit",
+  "title": "Exit page",
+  "description": "Display exit page to users when they cannot proceed",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.exit"
+    },
+    "isConfirmation": {
+      "title": "Is confirmation",
+      "description": "Display as confirmation page",
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/content"
+    }
+  ],
+  "uiCategory": {
+    "main": [
+      "lede",
+      "body"
+    ]
+  }
+}

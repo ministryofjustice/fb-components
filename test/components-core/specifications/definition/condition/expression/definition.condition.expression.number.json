@@ -1,0 +1,7 @@
+{
+  "_id": "definitionConditionExpressionId",
+  "_type": "condition",
+  "identifier": "Condition expression identiifier",
+  "operator": "equals",
+  "value": 1
+}

@@ -1,0 +1,6 @@
+{%- macro number(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setInputWidthClass(params, '10') %}
+{{ callMacro('govukInput', params) }}
+{% endmacro -%}

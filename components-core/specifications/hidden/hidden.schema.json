@@ -1,0 +1,26 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/hidden",
+  "_name": "hidden",
+  "title": "Hidden field",
+  "description": "Include a form value that is not displayed to users",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "hidden"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/name"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/namespace"
+    }
+  ],
+  "validation": {
+    "required": false
+  }
+}

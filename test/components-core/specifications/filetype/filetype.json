@@ -1,0 +1,7 @@
+{
+  "_type": "filetype",
+  "_id": "filetypeId",
+  "types": [
+    "MIME type"
+  ]
+}

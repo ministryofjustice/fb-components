@@ -1,0 +1,28 @@
+{
+  "_id": "conditionAllId",
+  "_type": "condition",
+  "all": [
+    {
+      "identifier": "one",
+      "operator": "is",
+      "value": "One"
+    },
+    {
+      "identifier": "two",
+      "operator": "equals",
+      "value": 2
+    },
+    {
+      "identifier": "three",
+      "operator": "is",
+      "value": "Three",
+      "negated": true
+    },
+    {
+      "identifier": "four",
+      "operator": "is",
+      "value": "Four",
+      "negated": false
+    }
+  ]
+}

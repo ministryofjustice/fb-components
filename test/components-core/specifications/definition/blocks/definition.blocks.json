@@ -1,0 +1,11 @@
+{
+  "_id": "definitionBlocksId",
+  "_type": "definition.blocks",
+  "blocks": [
+    {
+      "_id": "blockId",
+      "_type": "definition.block",
+      "show": true
+    }
+  ]
+}

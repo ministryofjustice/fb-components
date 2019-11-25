@@ -1,0 +1,18 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/name",
+  "_name": "definition.name",
+  "idSeed": "name",
+  "title": "Name definition",
+  "properties": {
+    "name": {
+      "title": "Input name",
+      "description": "Used by system to identify user's answer - also used as the component's HTML name property.",
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9-_]+$",
+      "processInput": true,
+      "category": [
+        "userinput"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "stringId",
+  "_type": "string",
+  "name": "string-component",
+  "value": "String value",
+  "multiline": true
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "conditionBooleanId",
+  "_type": "condition",
+  "identifier": "one",
+  "operator": "isTrue"
+}

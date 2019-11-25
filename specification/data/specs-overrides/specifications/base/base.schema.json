@@ -1,0 +1,13 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/base",
+  "_name": "base",
+  "title": "base",
+  "description": "base schema",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "type": "number",
+      "const": 1
+    }
+  }
+}

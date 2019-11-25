@@ -1,0 +1,8 @@
+{
+  "_type": "filetype",
+  "_id": "filetype.spreadsheet",
+  "types": [
+    "excel",
+    "csv"
+  ]
+}

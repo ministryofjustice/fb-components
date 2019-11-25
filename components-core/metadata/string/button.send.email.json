@@ -1,0 +1,6 @@
+{
+  "_id": "button.send.email",
+  "_type": "string",
+  "description": "Send email button",
+  "value": "Send email"
+}

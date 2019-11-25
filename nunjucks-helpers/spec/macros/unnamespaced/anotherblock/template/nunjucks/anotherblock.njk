@@ -1,0 +1,6 @@
+{% macro anotherblock(params) -%}
+<div class="govuk-form-group">
+{{ params.title }}
+{{ callBlock(params.block) }}
+</div>
+{%- endmacro %}

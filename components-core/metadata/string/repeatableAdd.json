@@ -1,0 +1,7 @@
+{
+  "_id": "repeatableAdd",
+  "_type": "string",
+  "description": "Default text to add repeatable item",
+  "value": "Add {control}",
+  "value:cy": "Ychwanegwch {control}"
+}

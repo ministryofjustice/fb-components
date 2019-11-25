@@ -1,0 +1,26 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/config/modules",
+  "_name": "config.modules",
+  "title": "Modules configuration",
+  "description": "Modules configuration details for a form",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "config.modules"
+    },
+    "modules": {
+      "title": "Modules",
+      "description": "List of modules to enable/disable",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/config/module"
+      }
+    }
+  },
+  "required": [
+    "modules"
+  ],
+  "category": [
+    "config"
+  ]
+}

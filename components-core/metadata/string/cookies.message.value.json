@@ -1,0 +1,7 @@
+{
+  "_id": "cookie.message.value",
+  "_type": "string",
+  "description": "Message displayed to user to notify them of the use of cookies",
+  "value": "We use cookies to make the site simpler. [Find out more about cookies]([% url:page.cookies %])",
+  "value:cy": "Rydym yn defnyddio cwcis i wneud y safle'n symlach. [Darganfyddwch fwy am cwcis]([% url:page.cookies %])"
+}

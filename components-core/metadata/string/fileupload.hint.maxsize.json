@@ -1,0 +1,7 @@
+{
+  "_id": "fileupload.hint.maxsize",
+  "_type": "string",
+  "description": "Text to inform user what the max size of files that can be uploaded is",
+  "value": "Maximum size: {maxsize, bytes}{maxsize, select, 1{} other{ per file}}",
+  "value:cy": "Uchafswm maint: {maxsize, bytes}{maxfiles, select, 1{} other{ y ffeil}}"
+}

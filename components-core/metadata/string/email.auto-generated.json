@@ -1,0 +1,7 @@
+
+{
+  "_id": "email.auto-generated",
+  "_type": "string.error",
+  "description": "Email boilerplate content re: being auto-generated",
+  "value": "\r\n\r\nThis message is automatically generated. Please do not reply to this email."
+}

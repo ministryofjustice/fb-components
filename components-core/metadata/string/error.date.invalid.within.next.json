@@ -1,0 +1,6 @@
+{
+  "_id": "error.date.invalid.within.next",
+  "_type": "string.error",
+  "description": "Input (date) should be within next",
+  "value": "Your answer for ‘{control}’ should be within the next {targetValue}"
+}

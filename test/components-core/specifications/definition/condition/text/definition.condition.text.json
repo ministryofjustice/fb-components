@@ -1,0 +1,7 @@
+{
+  "_id": "definitionConditionTextId",
+  "_type": "condition",
+  "identifier": "Condition text identifier",
+  "operator": "is",
+  "value": "Condition text value"
+}

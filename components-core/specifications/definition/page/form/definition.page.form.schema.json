@@ -1,0 +1,96 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/page/form",
+  "_name": "definition.page.form",
+  "title": "Form page definition",
+  "properties": {
+    "extraComponents": {
+      "title": "Additional components",
+      "description": "Components following continue button",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+      },
+      "accepts": [
+        "content"
+      ],
+      "category": [
+        "additional"
+      ]
+    },
+    "sectionHeading": {
+      "title": "Section heading",
+      "description": "Name of section",
+      "type": "string",
+      "content": true,
+      "category": [
+        "content"
+      ]
+    },
+    "sectionHeadingSummary": {
+      "title": "Section heading (Summary version)",
+      "description": "A condensed version of the section heading, for use on the 'check your answers' page",
+      "type": "string",
+      "content": true,
+      "category": [
+        "content"
+      ]
+    },
+    "headingSummary": {
+      "title": "Heading (Summary version)",
+      "description": "A condensed version of the page heading, for use on the 'check your answers' page",
+      "type": "string",
+      "content": true,
+      "category": [
+        "content"
+      ]
+    },
+    "stepsHeading": {
+      "title": "Steps heading",
+      "description": "Name of section to use on step pages (if any)",
+      "type": "string",
+      "category": [
+        "content"
+      ]
+    },
+    "steps": {
+      "title": "Steps",
+      "description": "The ‘child’ pages that follow from this ‘parent’ page",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "enableSteps": {
+      "title": "Enable steps",
+      "description": "Allow current page to have steps",
+      "type": "boolean"
+    },
+    "showSteps": {
+      "title": "Steps visibility",
+      "category": [
+        "logic"
+      ],
+      "description": "Whether to show or hide the page’s steps",
+      "oneOf": [
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/conditional/boolean"
+        }
+      ],
+      "default": true
+    },
+    "nextPage": {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/nextpage"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/repeatable"
+    }
+  ],
+  "category": [
+    "formPage"
+  ]
+}

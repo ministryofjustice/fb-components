@@ -1,0 +1,30 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/label",
+  "_name": "definition.label",
+  "title": "Label definition",
+  "type": "object",
+  "properties": {
+    "label": {
+      "title": "Label",
+      "description": "Question or instruction to user - appears above the component. If component is repeatable, the label appears next to the input, with the number added automatically (for example, child 1)",
+      "type": "string",
+      "content": true
+    },
+    "hint": {
+      "title": "Hint text",
+      "description": "Text to help users answer a question - appears in grey under the label (like this text)",
+      "type": "string",
+      "multiline": true,
+      "content": true
+    },
+    "labelSummary": {
+      "title": "Label (Summary version)",
+      "description": "The text used on the 'check your answers' page. Ideally a shorter version of the label text",
+      "type": "string",
+      "content": true
+    }
+  },
+  "category": [
+    "definition"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "fileupload.file.button.add",
+  "_type": "string",
+  "description": "Text displayed to allow user to add another uploaded file",
+  "value": "Add another file",
+  "value:cy": "Ychwanegu ffeil arall"
+}

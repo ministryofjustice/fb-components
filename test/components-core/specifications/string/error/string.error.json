@@ -1,0 +1,7 @@
+{
+  "_id": "stringErrorId",
+  "_type": "string.error",
+  "name": "string-error-component",
+  "value": "String error value",
+  "multiline": true
+}

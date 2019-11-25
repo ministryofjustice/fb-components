@@ -1,0 +1,23 @@
+{
+  "valid": [
+    {
+      "path": "/data/specs-a/specifications/definition/data/data/invalid/definition.data.invalid.double.error.json",
+      "schema": "definition.data",
+      "data": {
+        "_isa": "dataIsa"
+      },
+      "errors": [
+        {
+          "keyword": "required",
+          "dataPath": "",
+          "schemaPath": "#/required",
+          "params": {
+            "missingProperty": "_id"
+          },
+          "message": "should have required property '_id'"
+        }
+      ],
+      "expected": "valid"
+    }
+  ]
+}

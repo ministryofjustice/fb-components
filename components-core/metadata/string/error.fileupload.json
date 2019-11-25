@@ -1,0 +1,6 @@
+{
+  "_id": "error.fileupload",
+  "_type": "string.error",
+  "description": "File uploaded - generic error",
+  "value": "{filename} was not uploaded successfully"
+}

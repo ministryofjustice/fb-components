@@ -1,0 +1,4 @@
+{%- macro hidden(data) %}
+{% set params = setObjectProperty(data, 'type', 'hidden') %}
+{{ callMacro('govukInput', params) }}
+{% endmacro -%}

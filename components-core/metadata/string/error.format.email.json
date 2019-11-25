@@ -1,0 +1,7 @@
+{
+  "_id": "error.format.email",
+  "_type": "string.error",
+  "description": "Input (email) is not in correct format",
+  "value": "Enter an email address in the correct format, like name@example.com",
+  "value:cy": "Rhowch gyfeiriad e-bost yn y ffurf gywir, e.e. enw@enghraifft.com"
+}

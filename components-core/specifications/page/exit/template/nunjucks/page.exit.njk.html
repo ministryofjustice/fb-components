@@ -1,0 +1,7 @@
+{% set exitTemplate = 'page.njk.html' %}
+{% if page.isConfirmation %}
+{% set exitTemplate = 'page/confirmation/template/nunjucks/page.confirmation.njk.html' %}
+{% endif %}
+{% extends exitTemplate %}
+
+{% block pageContentAction %}{% endblock %}

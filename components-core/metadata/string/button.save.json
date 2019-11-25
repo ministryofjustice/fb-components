@@ -1,0 +1,7 @@
+{
+  "_id": "button.save",
+  "_type": "string",
+  "description": "Default save button text",
+  "value": "Save",
+  "value:cy": "Cadw"
+}

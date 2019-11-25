@@ -1,0 +1,33 @@
+    {
+      "invalid": [
+        {
+          "path": "/data/specs-a/specifications/definition/data/data/valid/definition.data.json",
+          "schema": "definition.data",
+          "data": {
+            "_id": "dataId",
+            "_type": "dataType"
+          },
+          "expected": "invalid",
+          "errors": [
+            {
+              "message": "should be invalid"
+            }
+          ]
+        },
+        {
+          "path": "/data/specs-a/specifications/definition/data/data/valid/definition.data.optional.json",
+          "schema": "definition.data",
+          "data": {
+            "_id": "dataId",
+            "_type": "dataType",
+            "_isa": "dataIsa"
+          },
+          "expected": "invalid",
+          "errors": [
+            {
+              "message": "should be invalid"
+            }
+          ]
+        }
+      ]
+    }

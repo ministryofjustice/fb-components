@@ -1,0 +1,7 @@
+{
+  "_id": "button.continue.reset",
+  "_type": "string",
+  "description": "Default form reset text",
+  "value": "Reset form",
+  "value:cy": "Ailosod ffurflen"
+}

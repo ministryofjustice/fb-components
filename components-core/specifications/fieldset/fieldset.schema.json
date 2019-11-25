@@ -1,0 +1,37 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/fieldset",
+  "_name": "fieldset",
+  "title": "Fieldset",
+  "description": "Group related form inputs",
+  "type": "object",
+  "category": [
+    "control",
+    "fieldset"
+  ],
+  "properties": {
+    "_type": {
+      "const": "fieldset"
+    },
+    "legend": {
+      "title": "Legend",
+      "description": "Text to use in fieldset legend",
+      "type": "string"
+    },
+    "hint": {
+      "title": "Hint",
+      "description": "Text to help users answer a question - appears in grey under the legend",
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/repeatable"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/grouping"
+    }
+  ],
+  "required": [
+    "legend"
+  ]
+}

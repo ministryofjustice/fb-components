@@ -1,0 +1,20 @@
+{
+  "_id": "configModulesId",
+  "_type": "config.modules",
+  "modules": [
+    {
+      "_id": "configModuleOnId",
+      "_type": "config.module",
+      "title": "Config module title",
+      "module": "Config module module",
+      "enabled": "on"
+    },
+    {
+      "_id": "configModuleOffId",
+      "_type": "config.module",
+      "title": "Config module title",
+      "module": "Config module module",
+      "enabled": "off"
+    }
+  ]
+}

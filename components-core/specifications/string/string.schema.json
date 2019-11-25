@@ -1,0 +1,23 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/string",
+  "_name": "string",
+  "idSeed": "_id",
+  "title": "String",
+  "description": "Content string",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "string"
+    },
+    "multiline": {
+      "title": "Multiline",
+      "description": "Whether the string can contain line breaks",
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/string"
+    }
+  ]
+}

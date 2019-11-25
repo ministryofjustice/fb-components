@@ -1,0 +1,5 @@
+{%- macro form(data) %}
+<form class="fb-form"{% if data.method %} method="{{ data.method }}"{% endif %}{% if data.action %} action="{{ data.action }}"{% endif %}>
+{{- callBlocks(data.components) -}}
+</form>
+{% endmacro -%}

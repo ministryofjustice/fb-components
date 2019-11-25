@@ -1,0 +1,75 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/control",
+  "_name": "definition.control",
+  "title": "Control definition",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/htmlattributes"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/namespace"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/validations#/definitions/requiredBundle"
+    }
+  ],
+  "properties": {
+    "redact": {
+      "title": "Redaction pattern",
+      "description": "Pattern specifying that user input should be redacted and how",
+      "type": "string",
+      "category": [
+        "userinput"
+      ]
+    },
+    "optionalText": {
+      "title": "Optional text",
+      "description": "Additional text to display if control is optional",
+      "type": "string",
+      "category": [
+        "content"
+      ],
+      "acceptsEmptyString": true,
+      "default": "(optional)"
+    },
+    "autocomplete": {
+      "title": "Autocomplete",
+      "description": "Instructions how to suggest (or not) values",
+      "type": "string",
+      "category": [
+        "userinput"
+      ]
+    },
+    "spellcheck": {
+      "title": "Spellcheck",
+      "description": "Whether the element may be checked for spelling errors",
+      "type": "string",
+      "enum": [
+        "true",
+        "false"
+      ],
+      "category": [
+        "userinput"
+      ]
+    },
+    "disabled": {
+      "title": "Disabled",
+      "description": "Whether the control should be disabled",
+      "oneOf": [
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/conditional/boolean"
+        }
+      ],
+      "default": false,
+      "category": [
+        "logic"
+      ]
+    }
+  },
+  "category": [
+    "control"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/nextpage",
+  "_name": "definition.nextpage",
+  "title": "Next page",
+  "description": "What page (or pages) to go to next, and under what conditions. Only use if what you’re trying to achieve is impossible or extremely difficult using page steps",
+  "oneOf": [
+    {
+      "type": "string"
+    },
+    {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "string"
+              },
+              "condition": {
+                "$ref": "http://gov.uk/schema/v1.0.0/definition/conditional/boolean"
+              }
+            },
+            "required": [
+              "page",
+              "condition"
+            ]
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "category": [
+    "logic",
+    "definition"
+  ]
+}

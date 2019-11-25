@@ -1,0 +1,72 @@
+{
+  "valid": [
+    {
+      "path": "/data/specs-a/specifications/definition/data/data/invalid/definition.data.invalid._id.json",
+      "schema": "definition.data",
+      "data": {
+        "_type": "dataType",
+        "_isa": "dataIsa"
+      },
+      "errors": [
+        {
+          "keyword": "required",
+          "dataPath": "",
+          "schemaPath": "#/required",
+          "params": {
+            "missingProperty": "_id"
+          },
+          "message": "should have required property '_id'"
+        }
+      ],
+      "expected": "valid"
+    },
+    {
+      "path": "/data/specs-a/specifications/definition/data/data/invalid/definition.data.invalid._type.json",
+      "schema": "definition.data",
+      "data": {
+        "_id": "dataId",
+        "_isa": "dataIsa"
+      },
+      "errors": [
+        {
+          "keyword": "required",
+          "dataPath": "",
+          "schemaPath": "#/required",
+          "params": {
+            "missingProperty": "_type"
+          },
+          "message": "should have required property '_type'"
+        }
+      ],
+      "expected": "valid"
+    },
+    {
+      "path": "/data/specs-a/specifications/definition/data/data/invalid/definition.data.invalid.double.error.json",
+      "schema": "definition.data",
+      "data": {
+        "_isa": "dataIsa"
+      },
+      "errors": [
+        {
+          "keyword": "required",
+          "dataPath": "",
+          "schemaPath": "#/required",
+          "params": {
+            "missingProperty": "_id"
+          },
+          "message": "should have required property '_id'"
+        },
+        {
+          "keyword": "required",
+          "dataPath": "",
+          "schemaPath": "#/required",
+          "params": {
+            "missingProperty": "_type"
+          },
+          "message": "should have required property '_type'"
+        }
+      ],
+      "expected": "valid"
+    }
+  ]
+}

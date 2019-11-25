@@ -1,0 +1,6 @@
+{
+  "_id": "textareaId",
+  "_type": "textarea",
+  "name": "textarea-component",
+  "label": "Textarea label"
+}

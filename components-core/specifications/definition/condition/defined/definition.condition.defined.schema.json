@@ -1,0 +1,25 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/condition/defined",
+  "_name": "definition.condition.defined",
+  "title": "Defined condition properties",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/base"
+    }
+  ],
+  "properties": {
+    "operator": {
+      "title": "Operator",
+      "type": "string",
+      "enum": [
+        "defined"
+      ]
+    }
+  },
+  "required": [
+    "operator"
+  ],
+  "category": [
+    "definition"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "checkboxId",
+  "_type": "checkbox",
+  "value": "yes",
+  "name": "checkbox-component",
+  "label": "Checkbox label"
+}

@@ -1,0 +1,86 @@
+{% extends "template.njk" %}
+
+{% block pageTitle %}{% if page.errorList %}Error: {% endif %}{% if page.heading %}{{ page.heading }}{% else %}{% if page.components[0].label.html %}{{ page.components[0].label.html }}{% else %}{{ page.components[0].legend.html }}{% endif %}{% endif %}{% if page._id != 'page.start' %} - {{ page.header.serviceName }}{% endif %} - GOV.UK{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/govuk-frontend-3.4.0.min.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="/assets/govuk-frontend-ie8-3.4.0.min.css">
+<![endif]-->
+{% block styles %}{% endblock %}
+{% endblock %}
+
+{% block header %}
+{% if environmentDisplay %}
+<style>
+.environment-display {
+  position: fixed;
+  background-color: #f47738;
+  color: #fff;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-family: nta,Arial,sans-serif;
+  text-transform: uppercase;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  margin-left: 30px;
+  margin-top: 0px;
+  height: 30px;
+  overflow: hidden;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+</style>
+<div class="environment-display">
+{{ environmentDisplay }}
+</div>
+{% endif %}
+  {% block govHeader %}
+    {% if page.header %}
+    {{ callBlock(page.header) }}
+    {% endif %}
+  {% endblock %}
+  {% block govPhase %}
+  {% if page.service.phase !== 'none' %}
+  <div class="govuk-width-container">
+  {{ callMacro('govukPhaseBanner', {
+    html: page.service.phaseText,
+    tag: {
+      html: page.service.phase
+    }
+    })
+  }}
+  </div>
+  {% endif %}
+  {% endblock %}
+{% endblock %}
+
+{% block main %}
+  <div class="govuk-width-container govuk-body-m">
+    {% block beforeContent %}{% endblock %}
+    <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+{% endblock %}
+
+
+{% block bodyEnd %}
+{% block tracking %}
+{% if not page.EDITMODE %}
+{% if GA_TRACKING_ID %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_TRACKING_ID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || []
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date())
+  gtag('config', '{{ GA_TRACKING_ID }}', { 'anonymize_ip': true });
+</script>
+{% endif %}
+{% endif %}
+{% endblock %}
+<script src="/assets/govuk-frontend-3.4.0.min.js"></script>
+<script>window.GOVUKFrontend.initAll()</script>
+{% block scripts %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,74 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/table",
+  "_name": "table",
+  "title": "Table",
+  "description": "Display information in rows and columns",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "table"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "captionClasses": {
+      "type": "string"
+    },
+    "firstCellIsHeader": {
+      "type": "boolean"
+    },
+    "head": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/cell"
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/cell"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/htmlattributes"
+    }
+  ],
+  "required": [
+    "rows"
+  ],
+  "definitions": {
+    "cell": {
+      "properties": {
+        "_type": {
+          "const": "cell"
+        },
+        "html": {
+          "type": "string",
+          "content": true
+        },
+        "format": {
+          "type": "string"
+        },
+        "colspan": {
+          "type": "number",
+          "minimum": 1
+        },
+        "rowspan": {
+          "type": "number",
+          "minimum": 1
+        }
+      }
+    }
+  },
+  "category": [
+    "content"
+  ]
+}

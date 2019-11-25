@@ -1,0 +1,30 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/checkboxes",
+  "_name": "checkboxes",
+  "title": "Checkboxes",
+  "description": "Let users select one or more options from a list",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "checkboxes"
+    },
+    "items": {
+      "title": "Options",
+      "description": "Items that users can select",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/checkbox"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/fieldset"
+    }
+  ],
+  "transforms": {
+    "namespace": {
+      "propagation": "items[?(@._type === 'checkbox')]"
+    }
+  }
+}

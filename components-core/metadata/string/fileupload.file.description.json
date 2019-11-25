@@ -1,0 +1,6 @@
+{
+  "_id": "fileupload.file.description",
+  "_type": "string",
+  "description": "Text displayed to describe uploaded file",
+  "value": "{filename} *({filetype}, {size})*"
+}

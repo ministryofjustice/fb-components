@@ -1,0 +1,9 @@
+{% macro fieldset(data) -%}
+{% set params = setError(data) %}
+{% set params = setItemsLabel(params) %}
+{% set paramsAttributes = {'data-block-id': params._id, 'data-block-property-instance': 'legend'} %}
+{% set params = setObject(params.fieldset, {attributes: paramsAttributes}) %}
+{% call callMacro('govukFieldset', params) -%}
+{{ callBlocks(data.components) }}
+{%- endcall %}
+{%- endmacro %}

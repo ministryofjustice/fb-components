@@ -1,0 +1,20 @@
+{
+  "_id": "autocompleteId",
+  "_type": "autocomplete",
+  "label": "Autocomplete label",
+  "name": "autocomplete-component",
+  "items": [
+    {
+      "_id": "autocomplete-component--one",
+      "_type": "option",
+      "value": "one",
+      "text": "One"
+    },
+    {
+      "_id": "autocomplete-component--two",
+      "_type": "option",
+      "value": "two",
+      "text": "Two"
+    }
+  ]
+}

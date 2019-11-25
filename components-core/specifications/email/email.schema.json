@@ -1,0 +1,32 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/email",
+  "_name": "email",
+  "title": "Email",
+  "description": "Let users enter an email address",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "email"
+    },
+    "autocomplete": {
+      "const": "email"
+    },
+    "spellcheck": {
+      "const": "false"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/field"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/validations#/definitions/stringBundle"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/widthclass/input"
+    }
+  ],
+  "validation": {
+    "format": "email"
+  }
+}

@@ -1,0 +1,19 @@
+{%- macro autocomplete(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setItemsLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{% set attributeProps = ['minLength', 'autoselect', 'confirmOnBlur', 'displayMenu', 'showAllValues', 'showNoOptionsFound'] %}
+{% if params.attributes %}
+{% set attributes = params.attributes %}
+{% else %}
+{% set attributes = {} %}
+{% endif %}
+{% for prop in attributeProps %}
+{% set attributes = setObjectProperty(attributes, 'data-autocomplete-' + prop, params[prop]) %}
+{% endfor %}
+{% set params = setObjectProperty(params, 'attributes', attributes) %}
+{# check for classes first #}
+{% set params = setObjectProperty(params, 'classes', 'fb-autocomplete') %}
+{{ callMacro('govukSelect', params) }}
+{% endmacro -%}

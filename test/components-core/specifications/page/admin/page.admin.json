@@ -1,0 +1,8 @@
+{
+  "_id": "pageAdminId",
+  "_type": "page.admin",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url",
+  "actionType": "save"
+}

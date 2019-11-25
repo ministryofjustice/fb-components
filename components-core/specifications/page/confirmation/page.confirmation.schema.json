@@ -1,0 +1,20 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/confirmation",
+  "_name": "page.confirmation",
+  "title": "Confirmation",
+  "description": "Let users know they’ve completed a transaction",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.confirmation"
+    },
+    "lede": {
+      "multiline": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/content"
+    }
+  ]
+}

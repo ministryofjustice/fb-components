@@ -1,0 +1,4 @@
+{%- macro buttonSecondary(data) %}
+{% set params = setObjectProperty(data, 'classes', 'govuk-button--secondary') %}
+{{ callMacro('govukButton', params) }}
+{% endmacro -%}

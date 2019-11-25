@@ -1,0 +1,6 @@
+{
+  "_id": "fileupload.file.type.application.msword",
+  "_type": "string",
+  "description": "Text explaining that file uploaded is msword",
+  "value": "word"
+}

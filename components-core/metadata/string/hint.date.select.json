@@ -1,0 +1,6 @@
+{
+  "_id": "hint.date.select",
+  "_type": "string",
+  "description": "Select date to show in hint text for date component",
+  "value": "{date, select, undefined{[% hint.date.value %]} other{{date}}}"
+}

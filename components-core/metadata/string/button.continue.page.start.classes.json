@@ -1,0 +1,6 @@
+{
+  "_id": "button.continue.page.start.classes",
+  "_type": "string",
+  "description": "Start button classes",
+  "value": "govuk-button--start"
+}

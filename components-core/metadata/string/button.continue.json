@@ -1,0 +1,7 @@
+{
+  "_id": "button.continue",
+  "_type": "string",
+  "description": "Default continue button text",
+  "value": "Continue",
+  "value:cy": "Parhau"
+}

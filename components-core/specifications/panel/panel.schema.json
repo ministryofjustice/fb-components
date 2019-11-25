@@ -1,0 +1,33 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/panel",
+  "_name": "panel",
+  "title": "Panel",
+  "description": "Display important information when a transaction has been completed",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "panel"
+    },
+    "titleHtml": {
+      "title": "Title",
+      "description": "Text to use as panel’s title",
+      "type": "string",
+      "content": true
+    },
+    "html": {
+      "title": "Content",
+      "description": "Text to use as panel’s content - use [markdown](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown) to format text or add hyperlinks",
+      "type": "string",
+      "content": true,
+      "multiline": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "category": [
+    "content"
+  ]
+}

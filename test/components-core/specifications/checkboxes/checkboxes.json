@@ -1,0 +1,21 @@
+{
+  "_id": "checkboxesId",
+  "_type": "checkboxes",
+  "legend": "Checkboxes legend",
+  "items": [
+    {
+      "_id": "checkboxes--one",
+      "_type": "checkbox",
+      "name": "checkbox-one",
+      "value": "yes",
+      "label": "Checkbox one"
+    },
+    {
+      "_id": "checkboxes--two",
+      "_type": "checkbox",
+      "name": "checkbox-two",
+      "value": "yes",
+      "label": "Checkbox two"
+    }
+  ]
+}

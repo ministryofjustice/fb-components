@@ -1,0 +1,7 @@
+{
+  "_id": "continue.page.summary",
+  "_type": "string",
+  "description": "Default text for summary page primary action",
+  "value": "Accept and send application",
+  "value:cy": "Derbyn ac anfon cais"
+}

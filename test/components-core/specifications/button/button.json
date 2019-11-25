@@ -1,0 +1,6 @@
+{
+  "_id": "buttonId",
+  "_type": "button",
+  "name": "button-component",
+  "value": "Button value"
+}

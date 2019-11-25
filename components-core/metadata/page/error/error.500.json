@@ -1,0 +1,6 @@
+{
+  "_id": "error.500",
+  "_type": "page.error",
+  "heading": "Sorry, we’re currently experiencing technical difficulties",
+  "lede": "Please try again later."
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "error.required.radios",
+  "_type": "string.error",
+  "description": "Input is required (radios)",
+  "value": "Choose one of the answers for {control}",
+  "value:cy": "Dewiswch un o'r atebion ar gyfer {control}"
+}

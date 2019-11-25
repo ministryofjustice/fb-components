@@ -1,0 +1,6 @@
+{
+  "_id": "error.fileupload.invalid.virus",
+  "_type": "string.error",
+  "description": "File uploaded contains virus",
+  "value": "{filename} was not uploaded successfully because it contains a virus"
+}

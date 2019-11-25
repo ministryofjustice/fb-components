@@ -1,0 +1,6 @@
+{
+  "_id": "conditionDefinedId",
+  "_type": "condition",
+  "identifier": "one",
+  "operator": "defined"
+}

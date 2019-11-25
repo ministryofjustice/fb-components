@@ -1,0 +1,7 @@
+{%- macro select(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setItemsLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{{ callMacro('govukSelect', params) }}
+{% endmacro -%}

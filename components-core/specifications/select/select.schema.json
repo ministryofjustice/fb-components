@@ -1,0 +1,17 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/select",
+  "_name": "select",
+  "title": "Select",
+  "description": "Let users select one option from a list (only use as a last resort, as some users find selects difficult to use)",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/select"
+    }
+  ],
+  "properties": {
+    "_type": {
+      "const": "select"
+    }
+  }
+}

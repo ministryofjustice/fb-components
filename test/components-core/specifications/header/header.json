@@ -1,0 +1,7 @@
+{
+  "_id": "headerId",
+  "_type": "header",
+  "homepageUrl": "/homepage-url",
+  "serviceName": "Service name",
+  "serviceUrl": "/service-url"
+}

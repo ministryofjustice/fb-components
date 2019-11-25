@@ -1,0 +1,18 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/filetype",
+  "_name": "filetype",
+  "title": "File Type",
+  "properties": {
+    "_type": {
+      "const": "filetype"
+    },
+    "types": {
+      "title": "MIME types",
+      "description": "MIME types for the file type",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

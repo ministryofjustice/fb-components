@@ -1,0 +1,39 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/details",
+  "_name": "details",
+  "title": "Hide/reveal",
+  "description": "Let users reveal more information only if they need it (it‘s also known as ‘Details’ in the Design System)",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "details"
+    },
+    "summary": {
+      "title": "Summary",
+      "description": "Text to use as the visible part of the component",
+      "type": "string",
+      "content": true
+    },
+    "html": {
+      "title": "Content",
+      "description": "Text to use as the hidden/revealed part of the component - use [markdown](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown) to format text or add hyperlinks",
+      "type": "string",
+      "content": true,
+      "multiline": true
+    },
+    "open": {
+      "title": "Open",
+      "description": "Whether the component’s content should be revealed when the page loads",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "category": [
+    "content"
+  ]
+}

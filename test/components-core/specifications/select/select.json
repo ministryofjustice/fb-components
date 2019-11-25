@@ -1,0 +1,20 @@
+{
+  "_id": "selectId",
+  "_type": "select",
+  "label": "Select label",
+  "name": "select-component",
+  "items": [
+    {
+      "_id": "select-component--one",
+      "_type": "option",
+      "value": "one",
+      "text": "One"
+    },
+    {
+      "_id": "select-component--two",
+      "_type": "option",
+      "value": "two",
+      "text": "Two"
+    }
+  ]
+}

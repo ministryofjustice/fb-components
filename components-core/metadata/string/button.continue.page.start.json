@@ -1,0 +1,7 @@
+{
+  "_id": "button.continue.page.start",
+  "_type": "string",
+  "description": "Continue button text for start page",
+  "value": "Start",
+  "value:cy": "Dechrau"
+}

@@ -1,0 +1,8 @@
+{
+  "_id": "config.header",
+  "_type": "header",
+  "description": "Base header for govuk template",
+  "homepageUrl": "[% service#homepageUrl %]",
+  "serviceName": "[% service#name %]",
+  "serviceUrl": "[% service#serviceUrl %]"
+}

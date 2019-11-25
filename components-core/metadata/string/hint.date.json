@@ -1,0 +1,7 @@
+{
+  "_id": "hint.date",
+  "_type": "string",
+  "description": "Default hint text for date",
+  "value": "For example, [% hint.date.select %]",
+  "value:cy": "Er enghraifft, [% hint.date.select %]"
+}

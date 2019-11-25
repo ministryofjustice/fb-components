@@ -1,0 +1,28 @@
+{
+  "base": {
+    "$id": "http://gov.uk/schema/v1.0.0/base",
+    "_name": "base",
+    "title": "base",
+    "description": "base schema",
+    "type": "object",
+    "properties": {
+      "_type": {
+        "type": "number",
+        "const": 1
+      }
+    }
+  },
+  "override": {
+    "$id": "http://gov.uk/schema/v1.0.0/override",
+    "_name": "override",
+    "title": "override",
+    "description": "override schema",
+    "type": "object",
+    "properties": {
+      "_type": {
+        "type": "string",
+        "const": "override"
+      }
+    }
+  }
+}

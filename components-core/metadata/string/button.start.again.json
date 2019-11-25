@@ -1,0 +1,6 @@
+{
+  "_id": "button.start.again",
+  "_type": "string",
+  "description": "Default start again after signing out button text",
+  "value": "Start again"
+}

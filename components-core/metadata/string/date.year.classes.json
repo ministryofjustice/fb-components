@@ -1,0 +1,6 @@
+{
+  "_id": "date.year.classes",
+  "_type": "string",
+  "description": "Date input year field class",
+  "value": "govuk-input--width-4"
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "dateId",
+  "_type": "date",
+  "legend": "Date legend",
+  "name": "date-component",
+  "dateType": "day-month-year"
+}

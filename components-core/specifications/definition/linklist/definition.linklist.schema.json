@@ -1,0 +1,30 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/linklist",
+  "_name": "definition.linklist",
+  "title": "Link list definition",
+  "type": "object",
+  "properties": {
+    "title": {
+      "title": "Title",
+      "description": "Title/heading to display",
+      "type": "string",
+      "content": true
+    },
+    "items": {
+      "title": "Items",
+      "description": "Items that make up list",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/link"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/block"
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "pageConfirmationId",
+  "_type": "page.confirmation",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url"
+}

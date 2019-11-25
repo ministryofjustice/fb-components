@@ -1,0 +1,46 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/link",
+  "_name": "link",
+  "title": "Link",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "link"
+    },
+    "text": {
+      "title": "Link text",
+      "description": "Link text to display",
+      "type": "string",
+      "content": true
+    },
+    "href": {
+      "title": "Link url",
+      "description": "Page Id or absolute url",
+      "type": "string",
+      "content": true,
+      "url": true
+    },
+    "active": {
+      "title": "Active",
+      "description": "Whether link is active",
+      "type": "boolean"
+    },
+    "attributes": {
+      "title": "Link attributes",
+      "description": "Attributes to pass to link",
+      "type": "object"
+    }
+  },
+  "required": [
+    "text",
+    "href"
+  ],
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/block"
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}

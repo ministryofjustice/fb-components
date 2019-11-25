@@ -1,0 +1,66 @@
+{
+  "definition.data": {
+    "$id": "http://gov.uk/schema/v1.0.0/definition/data",
+    "_name": "definition.data",
+    "title": "Data definition",
+    "properties": {
+      "_id": {
+        "title": "Data ID",
+        "type": "string"
+      },
+      "_type": {
+        "title": "Data type",
+        "type": "string"
+      },
+      "_isa": {
+        "title": "Based on",
+        "description": "Id of referenced data current data inherits property values from",
+        "type": "string",
+        "blockReference": true
+      }
+    },
+    "required": [
+      "_id",
+      "_type"
+    ],
+    "category": [
+      "definition"
+    ]
+  },
+  "dummy": {
+    "$id": "http://gov.uk/schema/v1.0.0/dummy",
+    "_name": "dummy",
+    "title": "Dummy",
+    "description": "Dummy schema",
+    "type": "object",
+    "properties": {
+      "_type": {
+        "const": "dummy",
+        "title": "Data type",
+        "type": "string"
+      },
+      "dummy": {
+        "type": "boolean"
+      },
+      "_id": {
+        "title": "Data ID",
+        "type": "string"
+      },
+      "_isa": {
+        "title": "Based on",
+        "description": "Id of referenced data current data inherits property values from",
+        "type": "string",
+        "blockReference": true
+      }
+    },
+    "required": [
+      "_id",
+      "_type",
+      "dummy"
+    ],
+    "category": [
+      "definition",
+      "dummy-schema"
+    ]
+  }
+}

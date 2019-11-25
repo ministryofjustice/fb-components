@@ -1,0 +1,13 @@
+{
+  "_id": "pageStartId",
+  "_type": "page.start",
+  "url": "/page-url",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "body": "Page body",
+  "steps": [
+    "page.question",
+    "page.check-answers",
+    "page.confirmation"
+  ]
+}

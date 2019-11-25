@@ -1,0 +1,7 @@
+{
+  "_id": "pageContentId",
+  "_type": "page.content",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url"
+}

@@ -1,0 +1,28 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/data",
+  "_name": "definition.data",
+  "title": "Data definition",
+  "properties": {
+    "_id": {
+      "title": "Data ID",
+      "type": "string"
+    },
+    "_type": {
+      "title": "Data type",
+      "type": "string"
+    },
+    "_isa": {
+      "title": "Based on",
+      "description": "Id of page/component to inherit property values from",
+      "type": "string",
+      "blockReference": true
+    }
+  },
+  "required": [
+    "_id",
+    "_type"
+  ],
+  "category": [
+    "definition"
+  ]
+}

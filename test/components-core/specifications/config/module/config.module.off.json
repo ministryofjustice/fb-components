@@ -1,0 +1,7 @@
+{
+  "_id": "configModuleId",
+  "_type": "config.module",
+  "title": "Config module title",
+  "module": "Config module module",
+  "enabled": "off"
+}

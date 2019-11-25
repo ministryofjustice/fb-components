@@ -1,0 +1,37 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/htmlattributes",
+  "_name": "definition.htmlattributes",
+  "title": "HTML attributes definition",
+  "description": "Additional HTML values to set on instances",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "HTML id",
+      "description": "Additional HTML id to apply to instance - only use as a last resort, to target a specific element on the page",
+      "type": "string",
+      "category": [
+        "htmlattributes"
+      ]
+    },
+    "classes": {
+      "title": "Classes",
+      "description": "Additional HTML classes to apply to instance - to add more than one, separate with a space",
+      "type": "string",
+      "content": true,
+      "category": [
+        "htmlattributes"
+      ]
+    },
+    "attributes": {
+      "title": "Attributes",
+      "description": "Additional HTML attributes to apply to instance - Enter the attributes as JSON",
+      "type": "object",
+      "category": [
+        "htmlattributes"
+      ]
+    }
+  },
+  "category": [
+    "definition"
+  ]
+}

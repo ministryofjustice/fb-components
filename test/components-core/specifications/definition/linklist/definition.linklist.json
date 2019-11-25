@@ -1,0 +1,11 @@
+{
+  "_id": "definitionLinklistId",
+  "_type": "definition.linklist",
+  "title": "Link list title",
+  "items": [{
+    "_id": "linkId",
+    "_type": "link",
+    "text": "Text",
+    "href": "Href"
+  }]
+}

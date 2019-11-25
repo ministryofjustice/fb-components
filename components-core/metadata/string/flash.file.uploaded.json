@@ -1,0 +1,7 @@
+{
+  "_id": "flash.file.uploaded",
+  "_type": "string",
+  "description": "Flash message displayed to when file successfully uploaded",
+  "value": "Document {filename} uploaded",
+  "value:cy": "Ffeil wedi'i llwytho i fyny {filename}"
+}

@@ -1,0 +1,48 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/widthclass/input",
+  "_name": "definition.widthclass.input",
+  "title": "Input width class definition",
+  "properties": {
+    "widthClassInput": {
+      "title": "Input width",
+      "description": "How wide the input should be visually",
+      "type": "string",
+      "enumMap": {
+        "2": "2 characters",
+        "3": "3 characters",
+        "4": "4 characters",
+        "5": "5 characters",
+        "10": "10 characters",
+        "20": "20 characters",
+        "30": "30 characters",
+        "one-quarter": "One quarter",
+        "one-third": "One third",
+        "one-half": "One half",
+        "two-thirds": "Two thirds",
+        "three-quarters": "Three quarters",
+        "full": "Full width"
+      },
+      "enum": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "10",
+        "20",
+        "30",
+        "one-quarter",
+        "one-third",
+        "one-half",
+        "two-thirds",
+        "three-quarters",
+        "full"
+      ],
+      "category": [
+        "htmlattributes"
+      ]
+    }
+  },
+  "category": [
+    "definition"
+  ]
+}

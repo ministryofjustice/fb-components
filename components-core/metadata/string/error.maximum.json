@@ -1,0 +1,6 @@
+{
+  "_id": "error.maximum",
+  "_type": "string.error",
+  "description": "Input (number) is too large",
+  "value": "Your answer for {control} must not be larger than {maximum}"
+}

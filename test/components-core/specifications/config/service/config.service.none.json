@@ -1,0 +1,12 @@
+{
+  "_id": "service",
+  "_type": "config.service",
+  "dataRetentionDuration": 28,
+  "homepageUrl": "http://www.gov.uk",
+  "name": "Config service name",
+  "phase": "none",
+  "phaseText": "Config service phase text",
+  "serviceEmailAddress": "form-builder@digital.justice.gov.uk",
+  "serviceUrl": "page.start",
+  "sessionDuration": 30
+}

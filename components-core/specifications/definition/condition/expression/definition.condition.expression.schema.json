@@ -1,0 +1,22 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/condition/expression",
+  "_name": "definition.condition.expression",
+  "title": "Single expression condition properties",
+  "oneOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/defined"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/text"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/number"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/boolean"
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}

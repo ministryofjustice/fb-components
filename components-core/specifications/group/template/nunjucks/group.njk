@@ -1,0 +1,32 @@
+{%- macro group(data) %}
+<div class="fb-group {{ data.classes }}">
+{% if not data.noHeading %}
+{% set dataBlockId = data._id %}
+{% set dataBlockHeading = 'heading' %}
+{% set dataBlockLede = 'lede' %}
+{% if not dataBlockId %}
+{% set dataBlockId = data._$repeatableId %}
+{% set dataBlockHeading = 'repeatableHeading' %}
+{% set dataBlockLede = 'repeatableLede' %}
+{% endif %}
+{% if data.heading %}
+<h2 class="govuk-heading-m" data-block-id="{{ dataBlockId }}" data-block-property="{{ dataBlockHeading }}">{{ data.heading | safe }}</h2>
+{% if data.lede %}
+<div class="govuk-prose-scope">
+<p data-block-id="{{ dataBlockId }}" data-block-property="{{ dataBlockLede }}">{{ data.lede | safe }}</p>
+</div>
+{% endif %}
+{% endif %}
+{% endif %}
+{{- callBlocks(data.components) -}}
+{% if data.add %}
+<p class="fb-group-add" data-block-id="{{ data._$repeatableId }}" data-block-property="repeatableAdd">{{ callMacro('govukButton', data.add) }}</p>
+{% endif %}
+{% if data.repeatableMaximum %}
+<div class="repeatableMinMax">
+<p class="fb-group-repeatableSetting fb-group-repeatableMinimum" data-block-id="{{ data._$repeatableId }}" data-block-property="repeatableMinimum">Minimum {{ data.repeatableMinimum }}</p>
+<p class="fb-group-repeatableSetting fb-group-repeatableMaximum" data-block-id="{{ data._$repeatableId }}" data-block-property="repeatableMaximum">Maximum {{ data.repeatableMaximum }}</p>
+</div>
+{% endif %}
+</div>
+{% endmacro -%}

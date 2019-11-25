@@ -1,0 +1,6 @@
+{
+  "extends": "@ministryofjustice/eslint-config-fb",
+  "env": {
+    "mocha": true
+  }
+}

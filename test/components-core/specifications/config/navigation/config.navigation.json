@@ -1,0 +1,47 @@
+{
+  "_id": "configNavigationId",
+  "_type": "config.navigation",
+  "navigation": [{
+    "_id": "configNavigationNavigationOneId",
+    "_type": "config.navigation.list",
+    "title": "Config navigation list title",
+    "columns": 2,
+    "items": [{
+      "_id": "linkOneId",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    },{
+      "_id": "linkTwoId",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    },{
+      "_id": "linkThreeId",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    }]
+  },{
+    "_id": "configNavigationNavigationTwoId",
+    "_type": "config.navigation.list",
+    "title": "Config navigation list title",
+    "columns": 2,
+    "items": [{
+      "_id": "linkFourId",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    },{
+      "_id": "linkFiveIdB",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    },{
+      "_id": "linkSixId",
+      "_type": "link",
+      "text": "Config navigation list item text",
+      "href": "Config navigation list item href"
+    }]
+  }]
+}

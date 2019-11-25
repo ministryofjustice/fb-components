@@ -1,0 +1,10 @@
+{
+  "_type": "filetype",
+  "_id": "filetype.text",
+  "types": [
+    "pdf",
+    "word",
+    "rtf",
+    "plaintext"
+  ]
+}

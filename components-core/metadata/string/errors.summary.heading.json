@@ -1,0 +1,7 @@
+{
+  "_id": "errors.summary.heading",
+  "_type": "string.error",
+  "description": "Errors summary heading",
+  "value": "There is a problem",
+  "value:cy": "Mae yna broblem"
+}

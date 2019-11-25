@@ -1,0 +1,6 @@
+{
+  "_id": "error.date.missing.day.month",
+  "_type": "string.error",
+  "description": "Day and month inputs (date) are missing",
+  "value": "{control} must include a day and month"
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "cookie.message",
+  "_type": "string",
+  "description": "Condition to determine whether to disply cookie message to user",
+  "value": "{req@newSession, select, other{[% cookie.message.value %]} undefined{}}"
+}

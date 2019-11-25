@@ -1,0 +1,69 @@
+{%- macro answers(data) %}
+
+<div data-block-id="{{ data._id }}">
+	{% macro answersMacro(block) %}
+	  {% if block.add %}
+	    <p class="fb-summary-repeatable-add"><button name="add" value="{{ block.add}}" type="submit" class="govuk-button fb-action-secondary fb-action--add">{{ block.repeatableAdd }}</button></p>
+	  {% endif %}
+
+	  {% if block.remove %}
+	    <p class="fb-summary-repeatable-delete"><button name="remove" value="{{ block.remove}}" type="submit" class="govuk-button fb-action-secondary fb-action--delete">{{ block.repeatableDelete }}</button></p>
+	  {% endif %}
+
+	  {% if block.heading %}
+	    {% set level = block.level %}
+	    {% set classSuffix = 'm' %}
+	    {% if level > 2 %}
+	      {% set classSuffix = 's' %}
+	    {% endif %}
+	    <h{{ level }} class="govuk-heading-{{ classSuffix }}{% if block.repeatable %} fb-repeatable-heading{% endif %}">
+	      {{ block.heading | safe }}
+	    </h{{ level }}>
+	  {% endif %}
+
+	  {% if block.answers %}
+	    {{ callMacro('govukSummaryList', {
+	      rows: block.answers
+	    }) }}
+	  {% endif %}
+	{% endmacro %}
+
+	{% for block in data.answers %}
+		{{ answersMacro(block) }}
+	{% endfor %}
+</div>
+
+<!--
+	As an answers component is only used once per page,
+	we are resorting to a hack to embed these styles here.
+	TODO: Use a proper build pipeline to build component styles
+-->
+
+<style>
+  form {
+    position: relative;
+  }
+  .fb-repeatable-heading {
+    margin-top: 0;
+  }
+  .fb-repeatable-heading + .app-check-your-answers {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 40.0625em) {
+    .fb-summary-repeatable-add {
+      margin-top: 30px;
+    }
+  }
+  p.fb-summary-repeatable-delete {
+    position: absolute;
+    right: 0;
+    margin-top: -0.25rem;
+  }
+  button.govuk-button.fb-action-secondary.fb-action--delete {
+    padding-right: 0;
+    text-decoration: underline;
+  }
+</style>
+
+{% endmacro -%}

@@ -1,0 +1,25 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/condition/base",
+  "_name": "definition.condition.base",
+  "title": "Base condition properties",
+  "properties": {
+    "identifier": {
+      "title": "Identifier",
+      "type": "string"
+    },
+    "identifierType": {
+      "title": "Identifier type",
+      "type": "string",
+      "enum": [
+        "input",
+        "feature"
+      ]
+    }
+  },
+  "required": [
+    "identifier"
+  ],
+  "category": [
+    "definition"
+  ]
+}

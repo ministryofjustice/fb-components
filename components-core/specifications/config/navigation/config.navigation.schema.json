@@ -1,0 +1,40 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/config/navigation",
+  "_name": "config.navigation",
+  "title": "Form navigation links",
+  "description": "List of navigation links to display in GOVUK footer",
+  "usage": "Use the config.navigation component to provide a navigational links in the footer",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "config.navigation"
+    },
+    "navigation": {
+      "type": "array",
+      "items": {
+        "$id": "http://gov.uk/schema/v1.0.0/config/navigation/list",
+        "allOf": [
+          {
+            "$ref": "http://gov.uk/schema/v1.0.0/definition/linklist"
+          }
+        ],
+        "properties": {
+          "_type": {
+            "const": "config.navigation.list"
+          },
+          "columns": {
+            "type": "number",
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          }
+        }
+      }
+    }
+  },
+  "category": [
+    "configuration"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/date",
+  "_name": "date",
+  "title": "Date",
+  "description": "Let users enter an exact date",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "date"
+    },
+    "name": {
+      "inputType": "date"
+    },
+    "hint": {
+      "default": "[% hint.date %]"
+    },
+    "dateType": {
+      "title": "Date type",
+      "description": "The format for entering dates",
+      "type": "string",
+      "enum": [
+        "day-month-year",
+        "month-year",
+        "day-month",
+        "year"
+      ],
+      "default": "day-month-year"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/fields"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/validations#/definitions/dateBundle"
+    }
+  ],
+  "composite": [
+    "day",
+    "month",
+    "year"
+  ],
+  "definitions": {
+    "dateTypeEnum": {
+      "day-month-year": "Day / Month / Year",
+      "month-year": "Month / Year",
+      "year": "Year",
+      "day-month": "Day / Month"
+    }
+  }
+}

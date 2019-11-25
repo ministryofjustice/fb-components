@@ -1,0 +1,20 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/form",
+  "_name": "page.form",
+  "title": "Multiple questions",
+  "description": "Ask users more than one question on a page",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.form"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
+    }
+  ],
+  "required": [
+    "heading"
+  ]
+}

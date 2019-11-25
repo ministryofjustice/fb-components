@@ -1,0 +1,31 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/singlequestion",
+  "_name": "page.singlequestion",
+  "title": "Single question",
+  "description": "Ask users one question (you can make the question repeatable, so users can add additional answers)",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.singlequestion"
+    },
+    "components": {
+      "maxItems": 1,
+      "accepts": [
+        "control"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
+    }
+  ],
+  "required": [
+    "components"
+  ],
+  "surplusProperties": [
+    "heading",
+    "lede",
+    "body"
+  ]
+}

@@ -1,0 +1,14 @@
+{% macro section(data) -%}
+<section class="govuk-prose-scope fb-section">
+{% if data.heading -%}
+<h2>{{ data.heading }}</h2>
+{%- endif %}
+{% if data.lede -%}
+<p class="fb-section--lede">{{ data.lede }}</p>
+{%- endif %}
+{% if data.content -%}
+<div class="fb-section--content">{{ data.content }}</div>
+{%- endif %}
+{{- callBlocks(data.components) -}}
+</section>
+{%- endmacro %}

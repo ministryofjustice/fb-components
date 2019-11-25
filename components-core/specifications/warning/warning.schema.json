@@ -1,0 +1,36 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/warning",
+  "_name": "warning",
+  "title": "Warning text",
+  "description": "Warn users about something important",
+  "usage": "Use when there are consequences - for example, a fine or prison sentence",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "warning"
+    },
+    "iconFallbackText": {
+      "title": "Fallback text for the icon",
+      "description": "Alternative text for the icon - for example ‘warning’",
+      "type": "string"
+    },
+    "html": {
+      "title": "Content",
+      "description": "Warning text content - use [markdown](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown) to format text or add hyperlinks",
+      "type": "string",
+      "content": true,
+      "multiline": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "required": [
+    "html"
+  ],
+  "category": [
+    "content"
+  ]
+}

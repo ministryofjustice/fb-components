@@ -1,0 +1,27 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/group",
+  "_name": "group",
+  "title": "Group",
+  "description": "Group unrelated components",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "group"
+    },
+    "heading": {
+      "type": "string",
+      "title": "Heading",
+      "content": true
+    },
+    "lede": {
+      "type": "string",
+      "title": "First paragraph",
+      "content": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/grouping"
+    }
+  ]
+}

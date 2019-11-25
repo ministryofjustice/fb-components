@@ -1,0 +1,6 @@
+{
+  "_type": "classname",
+  "_id": "sizeClass.label.multiple",
+  "desciption": "Default label size class when used on multiple question page",
+  "value": "govuk-label--m"
+}

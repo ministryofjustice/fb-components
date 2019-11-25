@@ -1,0 +1,84 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/header",
+  "_name": "header",
+  "title": "Header",
+  "description": "Component that outputs header",
+  "usage": "Use the header component to provide a GOV.UK style header",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "header"
+    },
+    "homepageUrl": {
+      "title": "Homepage URL",
+      "description": "The url of the homepage. Defaults to /",
+      "type": "string",
+      "content": true,
+      "url": true
+    },
+    "serviceName": {
+      "title": "Service name",
+      "description": "Header title that is placed next to GOV.UK. Used for product names (i.e. Pay, Verify)",
+      "type": "string",
+      "content": true
+    },
+    "serviceUrl": {
+      "title": "Service URL",
+      "description": "Url for the service name anchor",
+      "type": "string",
+      "content": true,
+      "url": true
+    },
+    "productName": {
+      "title": "Product name",
+      "description": "Header title that is placed next to GOV.UK. Used for product names (i.e. Pay, Verify) - IS THIS NOT DUPLICATING serviceName???",
+      "type": "string",
+      "content": true
+    },
+    "assetsPath": {
+      "title": "Assets path",
+      "description": "The public path for the assets folder. If not provided it defaults to /assets/images",
+      "type": "string",
+      "default": "/assets/images"
+    },
+    "navigation": {
+      "$id": "http://gov.uk/schema/v1.0.0/header/navigation",
+      "allOf": [
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/linklist"
+        }
+      ],
+      "properties": {
+        "_type": {
+          "const": "header.navigation"
+        },
+        "title": {
+          "type": "null"
+        }
+      }
+    },
+    "navigationClasses": {
+      "title": "Navigation classes",
+      "description": "Optional classes that can be added to the navigation section of the header",
+      "type": "string"
+    },
+    "containerClasses": {
+      "title": "Container classes",
+      "description": "Optional classes that can be added to the container, useful if you want to make the header fixed width",
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/component"
+    }
+  ],
+  "required": [
+    "homepageUrl",
+    "serviceName",
+    "serviceUrl"
+  ],
+  "category": [
+    "content"
+  ]
+}

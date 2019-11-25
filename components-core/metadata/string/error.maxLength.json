@@ -1,0 +1,6 @@
+{
+  "_id": "error.maxLength",
+  "_type": "string.error",
+  "description": "Input (string) is too long",
+  "value": "Your answer for {control} is too long ({maxLength} characters at most)"
+}

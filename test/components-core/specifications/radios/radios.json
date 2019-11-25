@@ -1,0 +1,20 @@
+{
+  "_id": "radiosId",
+  "_type": "radios",
+  "legend": "Radios legend",
+  "name": "radios-component",
+  "items": [
+    {
+      "_id": "radio--one",
+      "_type": "radio",
+      "value": "one",
+      "label": "One"
+    },
+    {
+      "_id": "radios--two",
+      "_type": "radio",
+      "value": "two",
+      "label": "Two"
+    }
+  ]
+}

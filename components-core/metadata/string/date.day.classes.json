@@ -1,0 +1,6 @@
+{
+  "_id": "date.day.classes",
+  "_type": "string",
+  "description": "Date input day field class",
+  "value": "govuk-input--width-2"
+}

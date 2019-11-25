@@ -1,0 +1,21 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/error/bar",
+  "_name": "error.bar",
+  "title": "Bar",
+  "description": "Test bar schema",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "bar"
+    },
+    "bar": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "bar"
+  ],
+  "category": [
+    "bar-schema"
+  ]
+}

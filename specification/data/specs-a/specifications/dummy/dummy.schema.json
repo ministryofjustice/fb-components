@@ -1,0 +1,26 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/dummy",
+  "_name": "dummy",
+  "title": "Dummy",
+  "description": "Dummy schema",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "dummy"
+    },
+    "dummy": {
+      "type": "boolean"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/data"
+    }
+  ],
+  "required": [
+    "dummy"
+  ],
+  "category": [
+    "dummy-schema"
+  ]
+}

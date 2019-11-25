@@ -1,0 +1,29 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/definition/select",
+  "_name": "definition.select",
+  "title": "Select component definition",
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/field"
+    },
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/widthclass/input"
+    }
+  ],
+  "properties": {
+    "items": {
+      "title": "Options",
+      "description": "Items that users can select",
+      "type": "array",
+      "items": {
+        "$ref": "http://gov.uk/schema/v1.0.0/option"
+      }
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "category": [
+    "select"
+  ]
+}

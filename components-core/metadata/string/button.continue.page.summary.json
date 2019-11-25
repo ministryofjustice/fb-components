@@ -1,0 +1,6 @@
+{
+  "_id": "button.continue.page.summary",
+  "_type": "string",
+  "description": "Continue button text for summary page",
+  "value": "{page@summaryOf, select, undefined{[% continue.page.summary %]} other{}}"
+}

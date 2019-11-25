@@ -1,0 +1,7 @@
+{
+  "_id": "definitionStringId",
+  "_type": "definition.string",
+  "label": "Definition string label",
+  "name": "definition-string-component",
+  "value": "Definition string value"
+}

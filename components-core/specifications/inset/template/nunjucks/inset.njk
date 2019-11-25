@@ -1,0 +1,4 @@
+{%- macro inset(data) %}
+{% set data = setMainEditableInstanceProperty(data, 'html') %}
+{{ callMacro('govukInsetText', data) }}
+{% endmacro -%}

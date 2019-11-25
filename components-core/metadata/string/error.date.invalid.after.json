@@ -1,0 +1,6 @@
+{
+  "_id": "error.date.invalid.after",
+  "_type": "string.error",
+  "description": "Input (date) should be after",
+  "value": "Enter a date for {control} that is after {targetValue}"
+}

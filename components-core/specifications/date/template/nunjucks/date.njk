@@ -1,0 +1,7 @@
+{%- macro date(data) %}
+{% set params = setError(data) %}
+{% set params = setLabel(params) %}
+{% set params = setItemsLabel(params) %}
+{% set params = setInputWidthClass(params) %}
+{{ callMacro('govukDateInput', params) }}
+{% endmacro -%}

@@ -1,0 +1,7 @@
+{
+  "_id": "emailId",
+  "_type": "email",
+  "name": "email-component",
+  "label": "Email label",
+  "value": "email@email.com"
+}

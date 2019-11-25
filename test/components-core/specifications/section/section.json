@@ -1,0 +1,19 @@
+{
+  "_id": "sectionId",
+  "_type": "section",
+  "heading": "Section heading",
+  "components": [
+    {
+      "_id": "text--one",
+      "_type": "text",
+      "name": "text-one-component",
+      "label": "Text one"
+    },
+    {
+      "_id": "text--two",
+      "_type": "text",
+      "name": "text-two-component",
+      "label": "Text two"
+    }
+  ]
+}

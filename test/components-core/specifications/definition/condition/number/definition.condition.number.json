@@ -1,0 +1,7 @@
+{
+  "_id": "definitionConditionNumberId",
+  "_type": "condition",
+  "identifier": "Condition number identifier",
+  "operator": "equals",
+  "value": 1
+}

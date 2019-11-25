@@ -1,0 +1,48 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/condition",
+  "_name": "condition",
+  "title": "Condition",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "_id": {
+          "title": "Condition ID",
+          "type": "string"
+        },
+        "_type": {
+          "title": "Type",
+          "type": "string",
+          "const": "condition"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "negated": {
+          "title": "Negated",
+          "type": "boolean"
+        }
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/condition/expression"
+        },
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/conditions/all"
+        },
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/conditions/any"
+        },
+        {
+          "$ref": "http://gov.uk/schema/v1.0.0/definition/conditions/exactly"
+        }
+      ]
+    }
+  ],
+  "category": [
+    "definition"
+  ]
+}
