@@ -29,8 +29,6 @@ const initEnv = (fn) => {
       const namespace = viewPath.namespace
       const path = viewPath.path || viewPath
 
-      console.log(path)
-
       // const macrosPathRegex = new RegExp(`.*${viewPath}/`)
       const macroPaths = glob.sync(`${path}/**/*.njk`)
       // .map(path => path.replace(macrosPathRegex, ''))

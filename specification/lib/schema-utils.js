@@ -113,8 +113,6 @@ const schemaUtils = (specs = [{}]) => {
   }
 
   const _load = (schemas, specsPath) => {
-    console.log(specsPath)
-
     const specSchemas = `${specsPath}/specifications/**/*.schema.json`
     const schemaPaths = glob.sync(specSchemas)
 
