@@ -13,7 +13,7 @@ const {
   setWidthClass,
   setInputWidthClass,
   setMainEditableInstanceProperty
-} = require('~/nunjucks-helpers/fb-nunjucks-data-helpers')
+} = require('~/templates/nunjucks/helpers/nunjucks-data-helpers')
 
 const {
   expect
@@ -21,7 +21,7 @@ const {
 
 chai.use(sinonChai)
 
-describe('~/nunjucks-helpers/fb-nunjucks-data-helpers', () => {
+describe('~/templates/nunjucks/helpers/nunjucks-data-helpers', () => {
   describe('Always', () => {
     it('exports `init`', () => expect(init).to.be.a('function'))
 

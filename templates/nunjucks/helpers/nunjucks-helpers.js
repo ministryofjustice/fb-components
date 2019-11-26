@@ -1,5 +1,5 @@
 const nunjucksMacroHelpers = require('./nunjucks-macro-helpers')
-const nunjucksDataHelpers = require('./fb-nunjucks-data-helpers')
+const nunjucksDataHelpers = require('./nunjucks-data-helpers')
 
 const init = (env, options) => {
   let nunjucksEnv = nunjucksMacroHelpers.init(env)

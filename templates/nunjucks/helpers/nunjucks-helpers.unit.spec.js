@@ -1,11 +1,11 @@
 const {
   test
 } = require('tap')
-const nunjucksHelpers = require('./fb-nunjucks-helpers')
+const nunjucksHelpers = require('./nunjucks-helpers')
 const {initEnv, defaultViewPaths} = require('./spec/load-nunjucks')
 const getEnv = initEnv(nunjucksHelpers)
 
-test('When fb-nunjucks-data-helpers is loaded', t => {
+test('When nunjucks-data-helpers is loaded', t => {
   t.ok(nunjucksHelpers.init, 'it should export the init method')
   t.ok(nunjucksHelpers.setObject, 'it should export the setObject method')
   t.ok(nunjucksHelpers.setObjectProperty, 'it should export the setObjectProperty method')

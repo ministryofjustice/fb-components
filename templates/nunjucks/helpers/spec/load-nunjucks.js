@@ -2,7 +2,7 @@ const path = require('path')
 const glob = require('glob-promise')
 const nunjucks = require('nunjucks')
 
-const macrosPath = path.resolve('./nunjucks-helpers/spec/macros')
+const macrosPath = path.resolve('./templates/nunjucks/helpers/spec/macros')
 const unnamespacedPath = path.join(macrosPath, 'unnamespaced')
 const namespacedPath = path.join(macrosPath, 'namespaced')
 
@@ -28,6 +28,9 @@ const initEnv = (fn) => {
     viewPaths.forEach(viewPath => {
       const namespace = viewPath.namespace
       const path = viewPath.path || viewPath
+
+      console.log(path)
+
       // const macrosPathRegex = new RegExp(`.*${viewPath}/`)
       const macroPaths = glob.sync(`${path}/**/*.njk`)
       // .map(path => path.replace(macrosPathRegex, ''))

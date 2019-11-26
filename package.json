@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
-    "test": "mocha test --recursive && tap nunjucks-helpers --reporter spec",
-    "lint": "eslint . --ext .json && eslint nunjucks-helpers specification test",
+    "test": "mocha test --recursive && tap templates/nunjucks/helpers --reporter spec",
+    "lint": "eslint . --ext .json && eslint templates/nunjucks/helpers specification test",
     "lint:fix": "eslint . --ext .json --fix && eslint test --fix"
   },
   "bin": {
@@ -64,7 +64,7 @@
     "~/test": "./test",
     "~/specifications": "./specifications",
     "~/metadata": "./metadata",
-    "~/nunjucks-helpers": "./nunjucks-helpers"
+    "~/templates": "./templates"
   },
   "specifications": {
     "$idRoot": "http://gov.uk/schema/v1.0.0",

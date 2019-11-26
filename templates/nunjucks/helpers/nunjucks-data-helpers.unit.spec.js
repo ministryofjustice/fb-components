@@ -9,9 +9,9 @@ const {
   setContent,
   setWidthClass,
   setInputWidthClass
-} = require('./fb-nunjucks-data-helpers')
+} = require('./nunjucks-data-helpers')
 
-test('When fb-nunjucks-data-helpers is required', t => {
+test('When nunjucks-data-helpers is required', t => {
   t.ok(setError, 'it should export the setError method')
   t.ok(setLabel, 'it should export the setLabel method')
   t.ok(setItemsLabel, 'it should export the setItemsLabel method')

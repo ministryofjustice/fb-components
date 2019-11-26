@@ -20,13 +20,13 @@ const {
   setMainEditableInstanceProperty,
   setObject,
   setObjectProperty
-} = proxyquire('~/nunjucks-helpers/fb-nunjucks-helpers', {
+} = proxyquire('~/templates/nunjucks/helpers/nunjucks-helpers', {
   './nunjucks-macro-helpers': {
     init: nunjucksMacroHelpersInitStub,
     setObject: sinon.stub(),
     setObjectProperty: sinon.stub()
   },
-  './fb-nunjucks-data-helpers': {
+  './nunjucks-data-helpers': {
     init: nunjucksDataHelpersInitStub,
     setError: sinon.stub(),
     setLabel: sinon.stub(),
@@ -44,7 +44,7 @@ const {
 
 chai.use(sinonChai)
 
-describe('~/nunjucks-helpers/fb-nunjucks-helpers', () => {
+describe('~/templates/nunjucks/helpers/nunjucks-helpers', () => {
   describe('Always', () => {
     it('exports `init`', () => expect(init).to.be.a('function'))
 

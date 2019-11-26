@@ -8,7 +8,7 @@ const {
   init,
   setObject,
   setObjectProperty
-} = require('~/nunjucks-helpers/nunjucks-macro-helpers')
+} = require('~/templates/nunjucks/helpers/nunjucks-macro-helpers')
 
 const {
   expect
@@ -16,7 +16,7 @@ const {
 
 chai.use(sinonChai)
 
-describe('~/nunjucks-helpers/nunjucks-macro-helpers', () => {
+describe('~/templates/nunjucks/helpers/nunjucks-macro-helpers', () => {
   describe('Always', () => {
     it('exports `init`', () => expect(init).to.be.a('function'))
 
