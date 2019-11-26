@@ -26,21 +26,22 @@ const schemaUtils = (specs = [{}]) => {
   const mapIdToIdRoot = (schemaUrl) => {
     for (let index = 0; index < specsPathMatchOrder.length; index++) {
       const idRoot = specsPathMatchOrder[index]
-      if (schemaUrl.startsWith(`${idRoot}`)) {
+
+      if (schemaUrl.startsWith(idRoot)) {
         return idRoot
       }
     }
+
     throw new FBSchemaError('Schema URL cannot be resolved', {data: {schemaUrl}})
   }
 
   const mapIdToDir = (schemaUrl) => {
     const idRoot = mapIdToIdRoot(schemaUrl)
+
     return specsPathMap[idRoot]
   }
 
-  const mapIdRootToNamePrefix = (idRoot) => {
-    return specsIdRootToNameMap[idRoot]
-  }
+  const mapIdRootToNamePrefix = (idRoot) => specsIdRootToNameMap[idRoot]
 
   const specsNamePrefixMatchOrder = Object.keys(specsNamePrefix)
     .sort().reverse()
@@ -60,12 +61,13 @@ const schemaUtils = (specs = [{}]) => {
   const mapIdToName = (id) => {
     const idRoot = mapIdToIdRoot(id)
     const namePrefix = mapIdRootToNamePrefix(idRoot)
+
     let name = id.replace(`${idRoot}/`, '')
     if (namePrefix) {
       name = `${namePrefix}.${name}`
     }
-    name = name.replace(/\//g, '.')
-    return name
+
+    return name.replace(/\//g, '.')
   }
 
   const mapNameToPath = (name) => {
@@ -73,8 +75,11 @@ const schemaUtils = (specs = [{}]) => {
     const namePrefix = mapIdRootToNamePrefix(idRoot)
     const idRootPath = mapIdToDir(idRoot)
     const namePrefixRegex = new RegExp(`^${namePrefix}\\.`)
-    let namePath = name.replace(namePrefixRegex, '')
-    namePath = namePath.replace(/\./g, '/')
+
+    let namePath = name
+      .replace(namePrefixRegex, '')
+      .replace(/\./g, '/')
+
     if (namePath) {
       namePath += '/'
     }
@@ -84,11 +89,13 @@ const schemaUtils = (specs = [{}]) => {
 
   const mapIdToPath = (id) => {
     const name = mapIdToName(id)
+
     return mapNameToPath(name)
   }
 
   const specsMatchStr = `^(${specs.map(spec => spec.$idRoot).sort().reverse().join('|')}).+`
     .replace(/\//g, '\\/')
+
   const specsMatch = new RegExp(specsMatchStr)
 
   let protectedRefs = []
@@ -129,27 +136,27 @@ const schemaUtils = (specs = [{}]) => {
 
   const getSchemaName = (schema) => schema._name
 
-  const getSchemaDir = (name) => {
-    return getSchemaPath(name).replace(/\/[^/]+$/, '')
-  }
+  const getSchemaDir = (name) => getSchemaPath(name).replace(/\/[^/]+$/, '')
 
   const getSchemaPath = (name) => {
-    if (name.endsWith('.schema.json')) {
-      return name
-    }
-    return mapNameToPath(name)
+    return name.endsWith('.schema.json')
+      ? name
+      : mapNameToPath(name)
   }
 
   const rawSchemas = {}
+
   const getRawSchema = (name) => {
     if (!name.endsWith('.json')) {
       name = name.replace(/\//g, '.')
     }
+
     if (!rawSchemas[name]) {
       const schemaPath = getSchemaPath(name)
       const loaded = require(path.resolve(schemaPath))
       rawSchemas[name] = loaded
     }
+
     return rawSchemas[name]
   }
 
@@ -162,6 +169,7 @@ const schemaUtils = (specs = [{}]) => {
     refSchema = JSON.parse(refSchema)
     return refSchema
   }
+
   const expandedSchemas = {}
 
   const recurseResolver = (id) => {
@@ -173,6 +181,7 @@ const schemaUtils = (specs = [{}]) => {
     const refSchema = doLoad(schemaPath)
     return dereference(refSchema)
   }
+
   const matchedResolver = {
     order: 1,
     canRead: specsMatch,

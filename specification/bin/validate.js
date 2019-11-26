@@ -1,13 +1,25 @@
 #!/usr/bin/env node
-const glob = require('glob-promise')
-const validateSchema = require('../lib/validate-schema')
 
-// let {schemas: specs} = require('../index')
+const glob = require('glob-promise')
+const getComponentsPath = require('./get-components-path')
+const getSchemaObjs = require('./getSchemaObjs')
+
+const validateSchema = require('@ministryofjustice/fb-components/specification/lib/validate-schema')
 
 const {FBError, FBLogger} = require('@ministryofjustice/fb-utils-node')
+
+const componentsPath = getComponentsPath()
+
 class FBValidateError extends FBError { }
 
 FBLogger.verbose(true)
+
+/**
+ * Required:
+ *   --path     Absolute path to all of the schemas
+ *   --schema   Absolute path to one schema
+ *   --id-root  e.g. "http://gov.uk/v1.0.0/schema"
+ */
 
 const argv = require('yargs')
   .version(false)
@@ -59,19 +71,29 @@ const argv = require('yargs')
     return true
   }).argv
 
-const {schema, invalid, directory, quiet, allErrors, debug} = argv
-const {path: schemaPaths, idRoot: idRoots} = argv
+const {
+  schema,
+  invalid,
+  directory,
+  quiet,
+  allErrors,
+  debug,
+  path: schemaPaths,
+  idRoot: idRoots
+} = argv
+
 let specs = []
 try {
   if (schemaPaths && !idRoots) {
     throw new FBValidateError('No value passed for --idRoot when --path passed')
   }
+
   if (!schemaPaths && idRoots) {
     throw new FBValidateError('No value passed for --path when --idRoot passed')
   }
 
   if (!schemaPaths && !idRoots) {
-    const schemaObjs = require('./getSchemaObjs')()
+    const schemaObjs = getSchemaObjs(componentsPath)
     if (schemaObjs.length) {
       specs = schemaObjs
     }
@@ -94,12 +116,14 @@ try {
   process.exit(1)
 }
 
-const dataPaths = {
+const options = {
   specs,
   allErrors,
   debug
 }
+
 let files
+
 if (argv._.length) {
   const firstArg = argv._[0]
   if (firstArg.includes('*')) {
@@ -115,15 +139,16 @@ if (argv._.length) {
     }
   }
 }
+
 if (files) {
   if (invalid) {
-    dataPaths.invalid = files
+    options.invalid = files
   } else {
-    dataPaths.valid = files
+    options.valid = files
   }
 }
 
-validateSchema(schema, dataPaths)
+validateSchema(schema, options)
   .then(results => {
     if (!results) {
       FBLogger('OK')

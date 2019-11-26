@@ -1,21 +1,28 @@
 #!/usr/bin/env node
 
 /* eslint-disable no-console */
-const {schemaUtils} = require('../index')
 
-const schemaObjs = require('./getSchemaObjs')()
-
-const {expandSchema, getSchemaName, getSchemaDir, getRawSchema} = schemaUtils(schemaObjs)
 const glob = require('glob-promise')
 const fs = require('fs')
 const path = require('path')
 const shell = require('shelljs')
-shell.config.silent = true
 const mkdirp = require('mkdirp')
 
-const localDocPath = process.argv[2] || path.resolve('../../fb-documentation')
+const getComponentsPath = require('./get-components-path')
+const getSchemaObjs = require('./getSchemaObjs')
 
-const njks = glob.sync('specifications/**/*/*.njk')
+const {schemaUtils} = require('../index')
+
+shell.config.silent = true
+
+const componentsPath = getComponentsPath()
+const schemaObjs = getSchemaObjs(componentsPath)
+
+const {expandSchema, getSchemaName, getSchemaDir, getRawSchema} = schemaUtils(schemaObjs)
+
+const localDocPath = process.argv[2] || path.resolve('../fb-documentation')
+
+const njks = glob.sync(`${componentsPath}/specifications/**/*/*.njk`)
 
 let njkSource = ''
 const njkBlocks = []
@@ -54,21 +61,17 @@ ${njkBlocks.join(',\n')}
 {% endfor %}
 {% endmacro %}
 `
-// console.log({njkSource})
 
-glob('specifications/**/*/*.schema.json')
-  .then(schemaList => {
-    return Promise.all(schemaList.map(expandSchema))
-  })
+glob(`${componentsPath}/specifications/**/*/*.schema.json`)
+  .then(schemaList => Promise.all(schemaList.map(expandSchema)))
   .then(schemas => {
-    return schemas
-  })
-  .then(schemas => {
+
     const partition = (array, isValid) => {
       return array.reduce(([pass, fail], elem) => {
         return isValid(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]]
       }, [[], []])
     }
+
     const getByCategory = (schemas, category) => {
       return partition(schemas, schema => {
         if (schema._name && schema._name.startsWith('definition.')) {
@@ -77,6 +80,7 @@ glob('specifications/**/*/*.schema.json')
         return schema.category && schema.category.includes(category)
       })
     }
+
     const splitByCategory = (schemas, categories) => {
       let split = {}
       if (categories[0]) {
@@ -94,6 +98,7 @@ glob('specifications/**/*/*.schema.json')
       component: 'Components',
       definition: 'Definitions'
     }
+
     const categoryOrder = [
       'configuration',
       'page',
@@ -101,9 +106,12 @@ glob('specifications/**/*/*.schema.json')
       'pattern',
       'definition'
     ]
+
     const docPath = path.join(localDocPath, 'src')
-    const specDocPath = path.resolve('documentation')
     const getStartedDocPath = path.join(docPath, 'get-started')
+
+    const specDocPath = path.join(componentsPath, 'specification/documentation')
+
     shell.cp(`${specDocPath}/get-started.md`, `${getStartedDocPath}/index.md.njk`)
 
     const copyCategory = (category, sections) => {
@@ -278,9 +286,11 @@ ${njkSource}
             theme = 'control'
           }
         }
+
         if (category === 'definition') {
           theme = ''
         }
+
         const originalSchema = getRawSchema(schemaName)
         const categoryList = (schema.category || []).filter(cat => category === 'definition' ? true : cat !== 'definition')
         const schemaCategories = categoryList.join(', ')
@@ -304,17 +314,24 @@ ${njkSource}
           .map($id => {
             const url = $id.replace(/.*\/v\d+\.\d+\.\d+\//, '').replace(/#.*/, '') // TODO: subsume into schemaUtils
             const name = url.replace(/\//g, '.') // TODO: subsume into schemaUtils
-            const {title, _name} = getRawSchema(name)
+            const {
+              title,
+              _name
+            } = getRawSchema(name)
+
             return getDocsUrl(url, title, _name)
           })
         const schemaUses = allOf.join('\n')
-        const usedBy = shell.grep('-l', `"${schema.$id}"`, 'specifications/**/*.schema.json').stdout
+        const usedBy = shell.grep('-l', `"${schema.$id}"`, `${componentsPath}/specifications/**/*.schema.json`).stdout
           .replace(/\n$/, '')
           .split('\n')
           .filter(src => getRawSchema(src)._name !== schema._name)
           .map(src => {
-            const url = src.replace('specifications/', '').replace(/\/[^/]+\.json$/, '')
-            const {title, _name} = getRawSchema(src)
+            const url = src.replace(`${componentsPath}/specifications/`, '').replace(/\/[^/]+\.json$/, '')
+            const {
+              title,
+              _name
+            } = getRawSchema(src)
             return getDocsUrl(url, title, _name)
           })
 

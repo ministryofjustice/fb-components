@@ -1,11 +1,16 @@
 #!/usr/bin/env node
+
+const getComponentsPath = require('./get-components-path')
+const getSchemaObjs = require('./getSchemaObjs')
 const {schemaUtils} = require('../index')
 
-const schemaObjs = require('./getSchemaObjs')()
+const componentsPath = getComponentsPath()
+const schemaObjs = getSchemaObjs(componentsPath)
 
 const {expandSchema} = schemaUtils(schemaObjs)
 
 const {FBLogger} = require('@ministryofjustice/fb-utils-node')
+
 FBLogger.verbose(true)
 
 const schemaName = process.argv[2]

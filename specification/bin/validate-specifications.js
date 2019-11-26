@@ -3,14 +3,21 @@
 const {
   test
 } = require('tap')
+
 const glob = require('glob-promise')
 const path = require('path')
+
+const getComponentsPath = require('./get-components-path')
+const getSchemaObjs = require('./getSchemaObjs')
+
 const validateSchema = require('../lib/validate-schema')
 
-const schemas = glob.sync('specifications/**/*.schema.json')
+const componentsPath = getComponentsPath()
+
+const schemas = glob.sync(`${componentsPath}/specifications/**/*.schema.json`)
   .map(schema => path.resolve(schema))
 
-const schemaObjs = require('./getSchemaObjs')()
+const schemaObjs = getSchemaObjs(componentsPath)
 
 schemas.forEach(schema => {
   const schemaName = schema.replace(/.*\//, '').replace(/\.schema\.json/, '')

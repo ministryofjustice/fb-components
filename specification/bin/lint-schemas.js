@@ -6,9 +6,12 @@ const fs = require('fs')
 const jsonlint = require('jsonlint')
 
 const {FBLogger} = require('@ministryofjustice/fb-utils-node')
+
+const getComponentsPath = require('./get-components-path')
+
 FBLogger.verbose(true)
 
-const appDir = process.cwd()
+const componentsPath = getComponentsPath()
 
 const errors = []
 const reportError = (msg) => {
@@ -46,10 +49,10 @@ const testJSON = (file, options = {}) => {
 
 const testJSONFiles = (files, options) => Promise.all(files.map(file => testJSON(file, options)))
 // , {_id: true}
-glob(`${appDir}/specifications/**/*/*.schema.json`)
+glob(`${componentsPath}/specifications/**/*/*.schema.json`)
   .then(files => testJSONFiles(files, {_name: true}))
   .then(() => {
-    return glob(`${appDir}/specifications/**/data/**/*/*.json`)
+    return glob(`${componentsPath}/specifications/**/data/**/*/*.json`)
       .then(testJSONFiles)
   })
   .then(() => {
