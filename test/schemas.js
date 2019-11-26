@@ -1,4 +1,4 @@
-require('module-alias/register')
+require('@ministryofjustice/module-alias/register')
 
 const path = require('path')
 const glob = require('glob-all')

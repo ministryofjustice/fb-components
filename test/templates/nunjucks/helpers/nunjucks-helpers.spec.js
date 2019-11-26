@@ -1,4 +1,4 @@
-require('module-alias/register')
+require('@ministryofjustice/module-alias/register')
 
 const proxyquire = require('proxyquire')
 
