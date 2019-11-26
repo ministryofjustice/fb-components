@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "test": "mocha test --recursive && tap templates/nunjucks/helpers --reporter spec",
