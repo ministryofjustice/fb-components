@@ -79,7 +79,7 @@ const schemaUtils = (specs = [{}]) => {
       namePath += '/'
     }
 
-    return `${idRootPath}/components-core/specifications/${namePath}${name}.schema.json`
+    return `${idRootPath}/specifications/${namePath}${name}.schema.json`
   }
 
   const mapIdToPath = (id) => {
@@ -115,7 +115,7 @@ const schemaUtils = (specs = [{}]) => {
   const _load = (schemas, specsPath) => {
     console.log(specsPath)
 
-    const specSchemas = `${specsPath}/components-core/specifications/**/*.schema.json`
+    const specSchemas = `${specsPath}/specifications/**/*.schema.json`
     const schemaPaths = glob.sync(specSchemas)
 
     const loadSchema = schemaPath => {

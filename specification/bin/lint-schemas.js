@@ -46,10 +46,10 @@ const testJSON = (file, options = {}) => {
 
 const testJSONFiles = (files, options) => Promise.all(files.map(file => testJSON(file, options)))
 // , {_id: true}
-glob(`${appDir}/components-core/specifications/**/*/*.schema.json`)
+glob(`${appDir}/specifications/**/*/*.schema.json`)
   .then(files => testJSONFiles(files, {_name: true}))
   .then(() => {
-    return glob(`${appDir}/components-core/specifications/**/data/**/*/*.json`)
+    return glob(`${appDir}/specifications/**/data/**/*/*.json`)
       .then(testJSONFiles)
   })
   .then(() => {

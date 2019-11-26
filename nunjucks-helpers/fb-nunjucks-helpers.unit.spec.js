@@ -1,20 +1,20 @@
 const {
   test
 } = require('tap')
-const fbNunjucksHelpers = require('./fb-nunjucks-helpers')
+const nunjucksHelpers = require('./fb-nunjucks-helpers')
 const {initEnv, defaultViewPaths} = require('./spec/load-nunjucks')
-const getEnv = initEnv(fbNunjucksHelpers)
+const getEnv = initEnv(nunjucksHelpers)
 
 test('When fb-nunjucks-data-helpers is loaded', t => {
-  t.ok(fbNunjucksHelpers.init, 'it should export the init method')
-  t.ok(fbNunjucksHelpers.setObject, 'it should export the setObject method')
-  t.ok(fbNunjucksHelpers.setObjectProperty, 'it should export the setObjectProperty method')
-  t.ok(fbNunjucksHelpers.setError, 'it should export the setError method')
-  t.ok(fbNunjucksHelpers.setLabel, 'it should export the setLabel method')
-  t.ok(fbNunjucksHelpers.setItemsLabel, 'it should export the setItemsLabel method')
-  t.ok(fbNunjucksHelpers.setContent, 'it should export the setContent method')
-  t.ok(fbNunjucksHelpers.setWidthClass, 'it should export the setWidthClass method')
-  t.ok(fbNunjucksHelpers.setInputWidthClass, 'it should export the setInputWidthClass method')
+  t.ok(nunjucksHelpers.init, 'it should export the init method')
+  t.ok(nunjucksHelpers.setObject, 'it should export the setObject method')
+  t.ok(nunjucksHelpers.setObjectProperty, 'it should export the setObjectProperty method')
+  t.ok(nunjucksHelpers.setError, 'it should export the setError method')
+  t.ok(nunjucksHelpers.setLabel, 'it should export the setLabel method')
+  t.ok(nunjucksHelpers.setItemsLabel, 'it should export the setItemsLabel method')
+  t.ok(nunjucksHelpers.setContent, 'it should export the setContent method')
+  t.ok(nunjucksHelpers.setWidthClass, 'it should export the setWidthClass method')
+  t.ok(nunjucksHelpers.setInputWidthClass, 'it should export the setInputWidthClass method')
 
   t.end()
 })

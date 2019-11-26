@@ -1,5 +1,5 @@
 const nunjucksMacroHelpers = require('./nunjucks-macro-helpers')
-const fbNunjucksDataHelpers = require('./fb-nunjucks-data-helpers')
+const nunjucksDataHelpers = require('./fb-nunjucks-data-helpers')
 
 const init = (env, options) => {
   let nunjucksEnv = nunjucksMacroHelpers.init(env)
@@ -39,11 +39,11 @@ const init = (env, options) => {
 {{ addGlobal('callComponents', callComponents) }}
   `)
 
-  nunjucksEnv = fbNunjucksDataHelpers.init(nunjucksEnv, options)
+  nunjucksEnv = nunjucksDataHelpers.init(nunjucksEnv, options)
 
   return nunjucksEnv
 }
 
-module.exports = Object.assign({}, nunjucksMacroHelpers, fbNunjucksDataHelpers, {
+module.exports = Object.assign({}, nunjucksMacroHelpers, nunjucksDataHelpers, {
   init
 })

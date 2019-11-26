@@ -15,7 +15,7 @@ const mkdirp = require('mkdirp')
 
 const localDocPath = process.argv[2] || path.resolve('../../fb-documentation')
 
-const njks = glob.sync('components-core/specifications/**/*/*.njk')
+const njks = glob.sync('specifications/**/*/*.njk')
 
 let njkSource = ''
 const njkBlocks = []
@@ -56,7 +56,7 @@ ${njkBlocks.join(',\n')}
 `
 // console.log({njkSource})
 
-glob('components-core/specifications/**/*/*.schema.json')
+glob('specifications/**/*/*.schema.json')
   .then(schemaList => {
     return Promise.all(schemaList.map(expandSchema))
   })
@@ -308,12 +308,12 @@ ${njkSource}
             return getDocsUrl(url, title, _name)
           })
         const schemaUses = allOf.join('\n')
-        const usedBy = shell.grep('-l', `"${schema.$id}"`, 'components-core/specifications/**/*.schema.json').stdout
+        const usedBy = shell.grep('-l', `"${schema.$id}"`, 'specifications/**/*.schema.json').stdout
           .replace(/\n$/, '')
           .split('\n')
           .filter(src => getRawSchema(src)._name !== schema._name)
           .map(src => {
-            const url = src.replace('components-core/specifications/', '').replace(/\/[^/]+\.json$/, '')
+            const url = src.replace('specifications/', '').replace(/\/[^/]+\.json$/, '')
             const {title, _name} = getRawSchema(src)
             return getDocsUrl(url, title, _name)
           })

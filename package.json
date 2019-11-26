@@ -4,7 +4,7 @@
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "test": "mocha test --recursive && tap nunjucks-helpers --reporter spec",
-    "lint": "eslint components-core --ext .json && eslint nunjucks-helpers specification test",
+    "lint": "eslint . --ext .json && eslint nunjucks-helpers specification test",
     "lint:fix": "eslint . --ext .json --fix && eslint test --fix"
   },
   "bin": {
@@ -62,7 +62,8 @@
   },
   "_moduleAliases": {
     "~/test": "./test",
-    "~/components-core": "./components-core",
+    "~/specifications": "./specifications",
+    "~/metadata": "./metadata",
     "~/nunjucks-helpers": "./nunjucks-helpers"
   },
   "specifications": {
