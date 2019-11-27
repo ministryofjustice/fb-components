@@ -123,6 +123,6 @@ describe('~/templates/nunjucks/helpers/nunjucks-macro-helpers', () => {
   })
 
   describe('`setObjectProperty()`', () => {
-    describe('An object and a key and value are passed', () => it('returns an object', () => expect(setObjectProperty({x: 1}, 'foo', 'bar')).to.eql({x: 1, foo: 'bar'})))
+    describe('An object and a key and a value are passed', () => it('returns an object', () => expect(setObjectProperty({x: 1}, 'foo', 'bar')).to.eql({x: 1, foo: 'bar'})))
   })
 })
