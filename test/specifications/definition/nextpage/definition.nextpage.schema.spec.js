@@ -8,8 +8,8 @@ const {
 
 const schemas = require('~/test/schemas')
 
-const dataObject = require('~/test/specifications/definition/nextpage/definition.nextpage.json')
 const jsonSchema = require('~/specifications/definition/nextpage/definition.nextpage.schema.json')
+const dataObject = require('~/test/specifications/definition/nextpage/definition.nextpage.json')
 
 const ajv = new Ajv({schemas})
 

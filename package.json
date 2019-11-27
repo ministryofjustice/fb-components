@@ -3,9 +3,9 @@
   "version": "0.0.6",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
-    "test": "mocha test --recursive && tap templates/nunjucks/helpers --reporter spec",
-    "lint": "eslint . --ext .json && eslint templates/nunjucks/helpers specification test",
-    "lint:fix": "eslint . --ext .json --fix && eslint templates/nunjucks/helpers specification --fix"
+    "test": "mocha test --recursive",
+    "lint": "eslint . --ext .json && eslint templates specification test",
+    "lint:fix": "eslint . --ext .json --fix && eslint templates specification test --fix"
   },
   "bin": {
     "expand-all": "specification/bin/expand-all.js",
@@ -55,10 +55,7 @@
     "mocha": "^6.2.2",
     "proxyquire": "^2.1.3",
     "sinon": "^7.5.0",
-    "sinon-chai": "^3.3.0",
-    "tap": "^14.10.1",
-    "tape": "^4.11.0",
-    "test-console": "^1.1.0"
+    "sinon-chai": "^3.3.0"
   },
   "_moduleAliases": {
     "~/test": "./test",

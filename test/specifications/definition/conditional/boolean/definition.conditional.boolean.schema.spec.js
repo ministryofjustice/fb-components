@@ -8,8 +8,8 @@ const {
 
 const schemas = require('~/test/schemas')
 
-const dataObject = require('~/test/specifications/definition/conditional/boolean/definition.conditional.boolean.json')
 const jsonSchema = require('~/specifications/definition/conditional/boolean/definition.conditional.boolean.schema.json')
+const dataObject = require('~/test/specifications/definition/conditional/boolean/definition.conditional.boolean.json')
 
 const ajv = new Ajv({schemas})
 

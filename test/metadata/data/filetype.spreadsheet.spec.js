@@ -8,15 +8,11 @@ const {
 
 const schemas = require('~/test/schemas')
 
-const dataObject = require('~/metadata/data/filetype.spreadsheet.json')
 const jsonSchema = require('~/specifications/filetype/filetype.schema.json')
+const dataObject = require('~/metadata/data/filetype.spreadsheet.json')
 
 const ajv = new Ajv({schemas})
 
 const validator = ajv.compile(jsonSchema)
 
-describe('~/metadata/data/filetype.spreadsheet.json', () => {
-  it('has properties', () => expect(dataObject).not.to.be.empty)
-
-  it('validates the data object', () => expect(validator(dataObject)).to.be.true)
-})
+describe('~/metadata/data/filetype.spreadsheet.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))

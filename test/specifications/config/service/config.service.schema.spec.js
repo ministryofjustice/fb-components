@@ -19,19 +19,9 @@ const ajv = new Ajv({schemas})
 const validator = ajv.compile(jsonSchema)
 
 describe('~/specifications/config/service/config.service.schema.json', () => {
-  describe('The data object', () => {
-    it('has properties for `alpha`', () => expect(dataObjectForAlpha).not.to.be.empty)
+  it('validates for `alpha`', () => expect(validator(dataObjectForAlpha)).to.be.true)
 
-    it('has properties for `beta`', () => expect(dataObjectForBeta).not.to.be.empty)
+  it('validates for `beta`', () => expect(validator(dataObjectForBeta)).to.be.true)
 
-    it('has properties for `none`', () => expect(dataObjectForNone).not.to.be.empty)
-  })
-
-  describe('The json schema', () => {
-    it('validates the data object for `alpha`', () => expect(validator(dataObjectForAlpha)).to.be.true)
-
-    it('validates the data object for `beta`', () => expect(validator(dataObjectForBeta)).to.be.true)
-
-    it('validates the data object for `none`', () => expect(validator(dataObjectForNone)).to.be.true)
-  })
+  it('validates for `none`', () => expect(validator(dataObjectForNone)).to.be.true)
 })
