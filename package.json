@@ -5,7 +5,7 @@
   "scripts": {
     "test": "mocha test --recursive && tap templates/nunjucks/helpers --reporter spec",
     "lint": "eslint . --ext .json && eslint templates/nunjucks/helpers specification test",
-    "lint:fix": "eslint . --ext .json --fix && eslint test --fix"
+    "lint:fix": "eslint . --ext .json --fix && eslint templates/nunjucks/helpers specification --fix"
   },
   "bin": {
     "expand-all": "specification/bin/expand-all.js",

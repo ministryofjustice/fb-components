@@ -65,7 +65,6 @@ ${njkBlocks.join(',\n')}
 glob(`${componentsPath}/specifications/**/*/*.schema.json`)
   .then(schemaList => Promise.all(schemaList.map(expandSchema)))
   .then(schemas => {
-
     const partition = (array, isValid) => {
       return array.reduce(([pass, fail], elem) => {
         return isValid(elem) ? [[...pass, elem], fail] : [pass, [...fail, elem]]
