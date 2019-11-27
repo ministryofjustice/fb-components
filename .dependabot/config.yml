@@ -7,3 +7,5 @@ update_configs:
     default_reviewers:
     - asmega
     - sequencemedialimited
+    - mattempty
+    - form-builder-developers
