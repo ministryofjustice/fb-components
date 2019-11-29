@@ -1,0 +1,7 @@
+{
+  "_id": "mojFileupload.file.button.remove",
+  "_type": "string",
+  "description": "Text displayed to allow user to remove an uploaded file",
+  "value": "Remove",
+  "value:cy": "Dileu"
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "mojFileupload.file.type.application.vnd.ms-powerpoint",
+  "_type": "string",
+  "description": "Text explaining that file uploaded is vnd.ms-powerpoint",
+  "value": "powerpoint"
+}

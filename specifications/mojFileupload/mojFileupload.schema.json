@@ -1,12 +1,12 @@
 {
-  "$id": "http://gov.uk/schema/v1.0.0/fileupload",
-  "_name": "fileupload",
-  "title": "File Upload",
+  "$id": "http://gov.uk/schema/v1.0.0/mojFileupload",
+  "_name": "mojFileupload",
+  "title": "MOJ File Upload",
   "description": "Let users select and upload one or more files",
   "type": "object",
   "properties": {
     "_type": {
-      "const": "fileupload"
+      "const": "mojFileupload"
     },
     "maxFiles": {
       "title": "Maximum number of files",

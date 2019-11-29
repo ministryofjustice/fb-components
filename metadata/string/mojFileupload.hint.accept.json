@@ -1,0 +1,7 @@
+{
+  "_id": "mojFileupload.hint.accept",
+  "_type": "string",
+  "description": "Text to inform user what type of files can be uploaded",
+  "value": "Types allowed: {types, or}",
+  "value:cy": "Mathau a ganiateir: {types, or}"
+}

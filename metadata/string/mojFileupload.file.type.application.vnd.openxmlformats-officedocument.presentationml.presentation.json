@@ -1,0 +1,6 @@
+{
+  "_id": "mojFileupload.file.type.application.vnd.openxmlformats-officedocument.presentationml.presentation",
+  "_type": "string",
+  "description": "Text explaining that file uploaded is vnd.openxmlformats-officedocument.presentationml.presentation",
+  "value": "powerpoint"
+}
