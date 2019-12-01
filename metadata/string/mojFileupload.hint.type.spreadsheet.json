@@ -1,6 +1,0 @@
-{
-  "_id": "mojFileupload.hint.type.spreadsheet",
-  "_type": "string",
-  "description": "Text explaining that users can upload spreadsheet documents",
-  "value": "spreadsheet (.xls or .csv)"
-}

@@ -1,6 +1,0 @@
-{
-  "_id": "mojFileupload.file.type.application.msword",
-  "_type": "string",
-  "description": "Text explaining that file uploaded is msword",
-  "value": "word"
-}

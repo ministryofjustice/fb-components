@@ -1,0 +1,6 @@
+{
+  "_id": "mojUpload.hint.accept.select",
+  "_type": "string",
+  "description": "Text to inform user what type of files can be uploaded",
+  "value": "{types, select, undefined{} other{[% mojUpload.hint.accept %]}}"
+}

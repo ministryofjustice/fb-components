@@ -1,0 +1,9 @@
+{
+  "_id": "pageMOJUploadSummaryId",
+  "_type": "page.mojUploadSummary",
+  "url": "/page-url",
+  "heading": "Page heading",
+  "summaryOf": "page.question",
+  "sendHeading": "Page send heading",
+  "sendBody": "Page send body"
+}

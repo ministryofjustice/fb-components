@@ -1,7 +1,0 @@
-{
-  "_id": "mojFileupload.hint.maxfiles",
-  "_type": "string",
-  "description": "Text to inform user the maximum number of files that can be uploaded",
-  "value": "You can upload up to {maxfiles} documents",
-  "value:cy": "Gallwch chi lanlwytho hyd at {maxfiles} dogfen"
-}

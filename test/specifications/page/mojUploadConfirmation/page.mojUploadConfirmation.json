@@ -1,0 +1,7 @@
+{
+  "_id": "pageMOJUploadConfirmationId",
+  "_type": "page.mojUploadConfirmation",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url"
+}

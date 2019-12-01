@@ -2,7 +2,7 @@
   "$id": "http://gov.uk/schema/v1.0.0/page/singlequestion",
   "_name": "page.singlequestion",
   "title": "Single question",
-  "description": "Ask users one question (you can make the question repeatable, so users can add additional answers)",
+  "description": "Ask users one question on a page (you can make the question repeatable for additional answers)",
   "type": "object",
   "properties": {
     "_type": {

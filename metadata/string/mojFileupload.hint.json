@@ -1,6 +1,0 @@
-{
-  "_id": "mojFileupload.hint",
-  "_type": "string",
-  "description": "Hint text displayed for a file upload",
-  "value": "[% mojFileupload.hint.maxfiles.select %]\n\n[% mojFileupload.hint.accept.select %]\n\n[% mojFileupload.hint.maxsize.select %]"
-}

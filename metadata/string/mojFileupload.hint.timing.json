@@ -1,7 +1,0 @@
-{
-  "_id": "mojFileupload.hint.timing",
-  "_type": "string",
-  "description": "Information about when files will be uploaded",
-  "value": "Your {count, select, 1{document} other{documents}} will upload when you click ‘Continue’.",
-  "value:cy": "{count, select, 1{Bydd eich dogfen yn llwytho pan fyddwch yn clicio ‘Parhau’.} other{Bydd eich dogfennau'n llwytho pan fyddwch chi'n clicio ‘Parhau’.}}"
-}

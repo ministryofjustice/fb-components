@@ -2,7 +2,7 @@
   "$id": "http://gov.uk/schema/v1.0.0/page/confirmation",
   "_name": "page.confirmation",
   "title": "Confirmation",
-  "description": "Let users know they’ve completed a transaction",
+  "description": "Confirm to users that they’ve completed their answers",
   "type": "object",
   "properties": {
     "_type": {

@@ -1,0 +1,135 @@
+{%- macro mojUpload(data) %}
+  {% set params = setError(data) %}
+  {% set params = setLabel(params) %}
+  {% if params.maxFiles > 1 %}
+    {% set params = setItemsLabel(params) %}
+  {% endif %}
+  {% set params = setInputWidthClass(params) %}
+
+  {% set attributes = params.attributes %}
+
+  {% if params.maxFiles > 1 or not params.slots %}
+    {#- If an id 'prefix' is not passed, fall back to using the name attribute
+   instead. We need this for error messages and hints as well -#}
+    {% set idPrefix = params.idPrefix if params.idPrefix else
+      params.name %}
+
+    {#- a record of other elements that we need to associate with the input using
+   aria-describedby – for example hints or error messages -#}
+    {% set describedBy = "" %}
+
+    {#- Capture the HTML so we can optionally nest it in a fieldset -#}
+    {% set innerHtml %}
+    {% if params.hint %}
+      {% set hintId = idPrefix + '-hint' %}
+      {% set describedBy = describedBy + ' ' + hintId if describedBy else
+        hintId %}
+      {{ govukHint({
+        id: hintId,
+        classes: params.hint.classes,
+        attributes: params.hint.attributes,
+        html: params.hint.html,
+        text: params.hint.text
+      }) | indent(2) | trim }}
+    {% endif %}
+    {% if params.errorMessage %}
+      {% set errorId = idPrefix + '-error' %}
+      {% set describedBy = describedBy + ' ' + errorId if describedBy else
+        errorId %}
+      {{ govukErrorMessage({
+        id: errorId,
+        classes: params.errorMessage.classes,
+        attributes: params.errorMessage.attributes,
+        html: params.errorMessage.html,
+        text: params.errorMessage.text,
+        visuallyHiddenText: params.errorMessage.visuallyHiddenText
+      }) | indent(2) | trim }}
+    {% endif %}
+
+    {% if params.slots %}
+      <input type="hidden" name="{{params.name + '_slots'}}" value="{{params.slots}}">
+    {% endif %}
+    {% set uploadSlots %}
+    {% for upload in params.fileUploads %}
+      {% set upload = setLabel(upload) %}
+      {% if not upload.errorMessage %}
+        {% set upload = setObjectProperty(upload, 'errorMessage', params.errorMessage) %}
+      {% endif %}
+      {% if not upload.describedBy %}
+        {% set upload = setObjectProperty(upload, 'describedBy', describedBy) %}
+      {% endif %}
+      {% if not upload.id %}
+        {% set upload = setObjectProperty(upload, 'id', upload.name) %}
+      {% endif %}
+      {% if params.fileUploads.length === 1 %}
+        {% set label = setObjectProperty(upload.label, 'classes', 'govuk-visually-hidden') %}
+        {% set upload = setObjectProperty(upload, 'label', label) %}
+      {% endif %}
+      {% if attributes %}
+        {% set upload = setObject(upload, {attributes: attributes}) %}
+      {% endif %}
+      {{ callMacro('govukFileUpload', upload) }}
+      {% if upload.removeSlot %}
+        <p class="fb-control--moj-fileupload--remove">
+          <button class="govuk-button govuk-button--secondary fb-action--remove" name="removeSlot" value="{{ upload.name }}">{{ upload.removeSlot | safe }}</button>
+        </p>
+      {% endif %}
+    {% endfor %}
+    {% endset %}
+    {{ uploadSlots | safe }}
+    {% endset -%}
+  {% endif %}
+
+  {% if params.maxFiles > 1 and params.slots > 1 %}
+    <div class="fb-form-group--moj-fileupload-multiple govuk-form-group {%- if params.errorMessage %} govuk-form-group--error{% endif %} {%- if params.formGroup.classes %} {{ params.formGroup.classes }}{% endif %}">
+      {% call govukFieldset({classes: params.fieldset.classes, attributes: params.fieldset.attributes, legend: params.fieldset.legend}) %}
+      {{ innerHtml | trim | safe }}
+      {% endcall %}
+    </div>
+    {{ mojUploadAdditionalParts(params) }}
+  {% else %}
+    {% if params.slots %}
+      {% set uploadParams = setObject(params.fileUploads[0], {
+          label: params.label,
+          hint: params.hint,
+          id: params.fileUploads[0].name,
+          errorMessage: params.errorMessage,
+          attributes: attributes
+        })
+      %}
+      <div class="fb-form--moj-fileupload-single">
+      {{ govukFileUpload(uploadParams) }}
+      </div>
+
+    {% else %}
+      <div class="govuk-form-group {%- if params.errorMessage %} govuk-form-group--error{% endif %} {%- if params.formGroup.classes %} {{ params.formGroup.classes }}{% endif %}">
+        {{ govukLabel(params.label) }}
+        {{ innerHtml | trim | safe }}
+      </div>
+    {% endif %}
+    {{ mojUploadAdditionalParts(params) }}
+  {% endif %}
+
+{% endmacro -%}
+
+{% macro groupWrapper(params) %}
+  <div class="govuk-form-group {%- if params.errorMessage %} govuk-form-group--error{% endif %} {%- if params.formGroup.classes %} {{ params.formGroup.classes }}{% endif %}">
+    {{ caller() }}
+  </div>
+{% endmacro %}
+
+{% macro mojUploadAdditionalParts(params) %}
+  {% if params.addFile %}
+    <p class="fb-control--moj-fileupload--add">
+      <button class="govuk-button govuk-button--secondary fb-action--add" name="addFile" value="{{ params.name }}">{{ params.addFile | safe }}</button>
+    </p>
+  {% endif %}
+  {% if params.summaryList.length %}
+    {{
+      callMacro('summaryListExtended', {
+          heading: params.summaryListHeading,
+          rows: params.summaryList
+        })
+    }}
+  {% endif %}
+{% endmacro %}

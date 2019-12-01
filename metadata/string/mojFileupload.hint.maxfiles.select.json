@@ -1,6 +1,0 @@
-{
-  "_id": "mojFileupload.hint.maxfiles.select",
-  "_type": "string",
-  "description": "Text to inform user the maximum number of files that can be uploaded",
-  "value": "{maxfiles, plural, 1{} other{[% mojFileupload.hint.maxfiles %]}}"
-}
