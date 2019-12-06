@@ -1,7 +1,0 @@
-{
-  "_id": "mojUpload.slot.label",
-  "_type": "string",
-  "description": "Text displayed to label file upload slot",
-  "value": "File {count}",
-  "value:cy": "Ffeil {count}"
-}

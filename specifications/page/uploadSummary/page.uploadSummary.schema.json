@@ -1,0 +1,39 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/uploadSummary",
+  "_name": "page.uploadSummary",
+  "title": "Upload summary",
+  "description": "Let users check and change their uploads before submitting",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.uploadSummary"
+    },
+    "heading": {
+      "default": "Check your uploads"
+    },
+    "summaryOf": {
+      "title": "Summary of",
+      "description": "Page/section that summary summarises"
+    },
+    "sendHeading": {
+      "title": "Send heading",
+      "description": "Heading to display before accept and send button",
+      "type": "string",
+      "content": true,
+      "default": "Now send your application"
+    },
+    "sendBody": {
+      "title": "Send content",
+      "description": "Content to display before accept and send button - use [markdown](https://www.gov.uk/guidance/how-to-publish-on-gov-uk/markdown) to format text or add hyperlinks",
+      "type": "string",
+      "content": true,
+      "multiline": true,
+      "default": "By submitting this application you confirm that, to the best of your knowledge, the details you are providing are correct."
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "pageUploadCheckId",
+  "_type": "page.uploadCheck",
+  "heading": "Page heading",
+  "lede": "Page lede",
+  "url": "/page-url"
+}

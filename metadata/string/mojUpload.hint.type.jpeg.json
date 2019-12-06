@@ -1,6 +1,0 @@
-{
-  "_id": "mojUpload.hint.type.jpeg",
-  "_type": "string",
-  "description": "Text explaining that users can upload JPEG images",
-  "value": "JPEG (.jpg or .jpeg)"
-}

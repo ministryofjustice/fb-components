@@ -1,0 +1,6 @@
+{
+  "_id": "upload.file.type.application.octet-stream",
+  "_type": "string",
+  "description": "Text explaining that file uploaded is a binary file",
+  "value": "binary file"
+}
