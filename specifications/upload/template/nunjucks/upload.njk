@@ -4,26 +4,9 @@
   {% set params = setInputWidthClass(params) %}
   {% set attributes = params.attributes %}
 
-  {% if params.errorMessage %}
-    {% set errorId = idPrefix + '-error' %}
-    {% set describedBy = describedBy + ' ' + errorId if describedBy else errorId %}
-
-    {{ govukErrorMessage({
-      id: errorId,
-      classes: params.errorMessage.classes,
-      attributes: params.errorMessage.attributes,
-      html: params.errorMessage.html,
-      text: params.errorMessage.text,
-      visuallyHiddenText: params.errorMessage.visuallyHiddenText
-    }) | indent(2) | trim }}
-  {% endif %}
-
-  {% if params.slots %}
-    <input type="hidden" name="{{params.name + '_slots'}}" value="{{ params.slots }}">
-  {% endif %}
-
   <div class="fb-form--upload-single">
     <input type="hidden" name="uploadPage" value="{{ params.uploadPage }}">
+    <input type="hidden" name="fileName" value="{{ params.fileName }}">
 
     {% set uploadParams = setObject(params.fileUpload, {
         label: params.label,
