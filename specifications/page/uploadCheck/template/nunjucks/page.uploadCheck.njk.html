@@ -1,20 +1,3 @@
 {% extends "page.njk.html" %}
 
-{% block beforeContent %}{% endblock %}
-
-{% block prePageContentHeading %}
-{{ callMacro('govukPanel', {
-  headingLevel: 1,
-  titleHtml: page.heading,
-  html: page.lede,
-  attributes: {
-    'data-block-id': page._id,
-    'data-block-property': 'heading',
-    'data-block-property-class': 'govuk-panel__body:lede'
-  }
-}) }}
-{% endblock %}
-
-{% block pageContentHeading %}{% endblock %}
-
-{% block pageContentAction %}{% endblock %}
+Page upload check

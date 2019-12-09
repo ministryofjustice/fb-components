@@ -1,0 +1,6 @@
+{%- macro uploadCheck(data) %}
+  {% if data.upload %}
+     <input type="hidden" name="uploadPage" value="{{ data.uploadPage }}">
+     <input type="hidden" name="upload" value="{{ data.upload.uuid }}">
+  {% endif %}
+{% endmacro -%}

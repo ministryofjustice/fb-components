@@ -1,0 +1,7 @@
+{
+  "_id": "uploadSummary.summaryList.button.delete",
+  "_type": "string",
+  "description": "Text for button to enable removal of an upload",
+  "value": "Delete",
+  "value:cy": "Dileu"
+}

@@ -2,11 +2,14 @@
   "$id": "http://gov.uk/schema/v1.0.0/page/uploadCheck",
   "_name": "page.uploadCheck",
   "title": "Upload check",
-  "description": "Let users check that they have uploaded a file",
+  "description": "Let the user check and change their uploads",
   "type": "object",
   "properties": {
     "_type": {
       "const": "page.uploadCheck"
+    },
+    "heading": {
+      "default": "Check your uploads"
     },
     "lede": {
       "multiline": true
@@ -14,7 +17,7 @@
   },
   "allOf": [
     {
-      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/content"
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
     }
   ]
 }

@@ -2,5 +2,5 @@
   "_id": "error.pattern",
   "_type": "string.error",
   "description": "Input (string) does not match pattern",
-  "value": "Your answer for {control} does not match the pattern ({pattern})"
+  "value": "Your answer for ‘{control}’ does not match the pattern ({pattern})"
 }

@@ -1,0 +1,6 @@
+{
+  "_id": "uploadSummary.summaryList.button.visuallyHidden",
+  "_type": "string",
+  "description": "Visually hidden text for button to enable removal of an upload",
+  "value": "upload {count}"
+}

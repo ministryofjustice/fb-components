@@ -1,15 +1,1 @@
 {% extends "page.njk.html" %}
-
-{% block pageContentComponents %}
-  {{super()}}
-
-  {% if not page.summaryOf and not page.isPdf %}
-    <h2 class="fb-send-heading govuk-heading-m" data-block-id="{{ page._id }}" data-block-property="sendHeading">
-      {{ page.sendHeading | safe }}
-    </h2>
-
-    <div class="fb-send-body" data-block-id="{{ page._id }}" data-block-property="sendBody">
-      {{ page.sendBody | safe }}
-    </div>
-  {% endif %}
-{% endblock %}
