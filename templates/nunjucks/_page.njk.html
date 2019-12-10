@@ -76,11 +76,17 @@
 <form method="post"{% if page.action %} action="{{ page.action }}"{% endif %}{% if page.encType %} enctype="multipart/form-data"{% endif %}{% if page.autocomplete %} autocomplete="{{ page.autocomplete }}"{% endif %} novalidate>
 {# default submit control - ie. triggered if user hits return in a text input #}
 <input type="submit" style="display: none" aria-hidden="true">
+
 {% if _csrf %}
 <input type="hidden" name="_csrf" value="{{ _csrf }}">
 {% endif %}
+
 {% if page.changePage %}
 <input type="hidden" name="changePage" value="{{ page.changePage }}">
+{% endif %}
+
+{% if page.uploadPage %}
+<input type="hidden" name="uploadPage" value="{{ page.uploadPage }}">
 {% endif %}
 {% endif %}
 

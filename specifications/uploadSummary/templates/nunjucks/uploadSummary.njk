@@ -7,9 +7,9 @@
         {{ data.summaryListHeading }}
       </h2>
 
-    {{ govukSummaryList({
-      rows: data.uploadList
-    }) | indent(2) | trim }}
-  </div>
+      {{ govukSummaryList({
+        rows: data.uploadList
+      }) | indent(2) | trim }}
+    </div>
   {% endif %}
 {% endmacro -%}

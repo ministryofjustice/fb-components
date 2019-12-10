@@ -3,5 +3,5 @@
   "_type": "string",
   "title": "Accept the upload",
   "description": "Accept the upload",
-  "value": "Yes, add this file"
+  "value": "Yes, add {count, select, 1{this upload} other{these uploads}}"
 }
