@@ -4,20 +4,17 @@
   {% set params = setInputWidthClass(params) %}
   {% set attributes = params.attributes %}
 
-  <div class="fb-form--upload-single">
-    <input type="hidden" name="uploadPage" value="{{ params.uploadPage }}">
-    <input type="hidden" name="fileName" value="{{ params.fileName }}">
+  <input type="hidden" name="uploadPage" value="{{ params.uploadPage }}">
+  <input type="hidden" name="fileName" value="{{ params.fileName }}">
 
-    {% set uploadParams = setObject(params.fileUpload, {
-        label: params.label,
-        hint: params.hint,
-        id: params.fileUpload.name,
-        errorMessage: params.errorMessage,
-        attributes: attributes
-      })
-    %}
+  {% set uploadParams = setObject(params.fileUpload, {
+      label: params.label,
+      hint: params.hint,
+      id: params.fileUpload.name,
+      errorMessage: params.errorMessage,
+      attributes: attributes
+    })
+  %}
 
-    {{ govukFileUpload(uploadParams) | indent(2) | trim }}
-  </div>
-
+  {{ govukFileUpload(uploadParams) | indent(2) | trim }}
 {% endmacro -%}

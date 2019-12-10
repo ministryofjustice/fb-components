@@ -1,0 +1,6 @@
+{
+  "_id": "uploadSummary.summaryList.row.indicia",
+  "_type": "string",
+  "description": "Upload indicia/number in the summary list",
+  "value": "Upload {count}"
+}
