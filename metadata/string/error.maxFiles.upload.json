@@ -1,0 +1,6 @@
+{
+  "_id": "error.maxFiles.upload",
+  "_type": "string.error",
+  "description": "Number of uploads is more than one",
+  "value": "[% error.upload.invalid.too-many %]"
+}
