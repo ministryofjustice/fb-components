@@ -1,0 +1,7 @@
+{
+  "_id": "upload.files.heading",
+  "_type": "string",
+  "description": "Heading displayed for previously uploaded files",
+  "value": "Previously uploaded {count, select, 1{document} other{documents}}",
+  "value:cy": "{count, select, 1{Dogfen a lwythwyd yn flaenorol} other{Dogfennau a lwythwyd i fyny o'r blaen}}"
+}

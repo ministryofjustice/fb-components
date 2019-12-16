@@ -2,7 +2,7 @@
   "$id": "http://gov.uk/schema/v1.0.0/page/exit",
   "_name": "page.exit",
   "title": "Exit page",
-  "description": "Display exit page to users when they cannot proceed",
+  "description": "Display an exit page to users when they cannot proceed",
   "type": "object",
   "properties": {
     "_type": {

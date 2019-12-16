@@ -1,0 +1,19 @@
+{%- macro upload(data) %}
+  {% set params = setError(data) %}
+  {% set params = setLabel(params) %}
+  {% set params = setInputWidthClass(params) %}
+  {% set attributes = params.attributes %}
+
+  <input type="hidden" name="fieldName" value="{{ params.fieldName }}">
+
+  {% set uploadParams = setObject(params.fileUpload, {
+      label: params.label,
+      hint: params.hint,
+      id: params.fileUpload.name,
+      errorMessage: params.errorMessage,
+      attributes: attributes
+    })
+  %}
+
+  {{ govukFileUpload(uploadParams) | indent(2) | trim }}
+{% endmacro -%}

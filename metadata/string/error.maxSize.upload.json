@@ -1,0 +1,6 @@
+{
+  "_id": "error.maxSize.upload",
+  "_type": "string.error",
+  "description": "Uploaded file is too large",
+  "value": "[% error.upload.invalid.too-large %]"
+}

@@ -1,0 +1,6 @@
+{
+  "_id": "uploadId",
+  "_type": "upload",
+  "name": "upload-component",
+  "label": "Upload label"
+}

@@ -76,11 +76,17 @@
 <form method="post"{% if page.action %} action="{{ page.action }}"{% endif %}{% if page.encType %} enctype="multipart/form-data"{% endif %}{% if page.autocomplete %} autocomplete="{{ page.autocomplete }}"{% endif %} novalidate>
 {# default submit control - ie. triggered if user hits return in a text input #}
 <input type="submit" style="display: none" aria-hidden="true">
+
 {% if _csrf %}
 <input type="hidden" name="_csrf" value="{{ _csrf }}">
 {% endif %}
-{% if page.changepage %}
-<input type="hidden" name="changepage" value="{{ page.changepage }}">
+
+{% if page.changePage %}
+<input type="hidden" name="changePage" value="{{ page.changePage }}">
+{% endif %}
+
+{% if page.uploadPage %}
+<input type="hidden" name="uploadPage" value="{{ page.uploadPage }}">
 {% endif %}
 {% endif %}
 
@@ -231,6 +237,7 @@ input[type=file].govuk-file-upload::-webkit-file-upload-button {
 .fb-form-group--fileupload-multiple {
   position: relative;
 }
+
 .fb-form-group--fileupload-multiple fieldset .govuk-form-group {
   border-top: solid 1px #bfc1c3;
   padding: 10px 0;
@@ -245,7 +252,6 @@ input[type=file].govuk-file-upload::-webkit-file-upload-button {
 .fb-form--fileupload-single .govuk-form-group {
   margin-bottom: 10px;
 }
-
 
 {# @media (min-width: 40.0625em) { #}
 .fb-form--fileupload-single .govuk-hint {
@@ -267,7 +273,6 @@ input[type=file].govuk-file-upload::-webkit-file-upload-button {
   margin-bottom: 30px;
 }
 
-
 .fb-form-group--fileupload-multiple fieldset .govuk-form-group + .govuk-form-group,
 .fb-form-group--fileupload-multiple fieldset .fb-control--fileupload--remove + .govuk-form-group {
   border-top: none;
@@ -280,6 +285,7 @@ input[type=file].govuk-file-upload::-webkit-file-upload-button {
 .govuk-summary-list__actions .govuk-button {
   margin-bottom: 0;
 }
+
 .govuk-summary-list__actions a.govuk-button {
   padding: 0;
 }

@@ -1,7 +1,7 @@
 {
   "$id": "http://gov.uk/schema/v1.0.0/fileupload",
   "_name": "fileupload",
-  "title": "File upload",
+  "title": "File Upload",
   "description": "Let users select and upload one or more files",
   "type": "object",
   "properties": {

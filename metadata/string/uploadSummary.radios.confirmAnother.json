@@ -1,0 +1,7 @@
+{
+  "_id": "uploadSummary.radios.confirmAnother",
+  "_type": "string",
+  "title": "Confirm another upload",
+  "description": "Confirm another upload",
+  "value": "Yes"
+}

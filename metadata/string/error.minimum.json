@@ -2,5 +2,5 @@
   "_id": "error.minimum",
   "_type": "string.error",
   "description": "Input (number) is too small",
-  "value": "Your answer for {control} must be not be smaller than {minimum}"
+  "value": "Your answer for ‘{control}’ must be not be smaller than {minimum}"
 }

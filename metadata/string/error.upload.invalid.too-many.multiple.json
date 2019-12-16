@@ -1,0 +1,6 @@
+{
+  "_id": "error.upload.invalid.too-many.multiple",
+  "_type": "string.error",
+  "description": "Number of uploads is more than maximum",
+  "value": "You can only upload {maxFiles, number} files"
+}

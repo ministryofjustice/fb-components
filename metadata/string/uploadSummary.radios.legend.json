@@ -1,0 +1,6 @@
+{
+  "_id": "uploadSummary.radios.legend",
+  "_type": "string",
+  "description": "Legend for the radios to confirm or decline another an upload",
+  "value": "Do you want to upload {count, select, 1{another} other{more}}?"
+}

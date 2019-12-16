@@ -1,0 +1,6 @@
+{
+  "_id": "uploadSummary.summaryList.heading",
+  "_type": "string",
+  "description": "Heading for the summary list of uploads",
+  "value": "Uploads"
+}

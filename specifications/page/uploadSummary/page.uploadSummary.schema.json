@@ -1,0 +1,23 @@
+{
+  "$id": "http://gov.uk/schema/v1.0.0/page/uploadSummary",
+  "_name": "page.uploadSummary",
+  "title": "Upload summary",
+  "description": "A summary list of the user’s uploads",
+  "type": "object",
+  "properties": {
+    "_type": {
+      "const": "page.uploadSummary"
+    },
+    "heading": {
+      "default": "Summary of your uploads"
+    },
+    "lede": {
+      "multiline": true
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "http://gov.uk/schema/v1.0.0/definition/page/form"
+    }
+  ]
+}

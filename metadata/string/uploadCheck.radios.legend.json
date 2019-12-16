@@ -1,0 +1,6 @@
+{
+  "_id": "uploadCheck.radios.legend",
+  "_type": "string",
+  "description": "Legend for the radios to accept or reject an upload",
+  "value": "{count, select, 1{Is this upload} other {Are these uploads}} correct?"
+}

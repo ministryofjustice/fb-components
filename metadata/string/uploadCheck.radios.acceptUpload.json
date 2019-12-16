@@ -1,0 +1,7 @@
+{
+  "_id": "uploadCheck.radios.acceptUpload",
+  "_type": "string",
+  "title": "Accept the upload",
+  "description": "Accept the upload",
+  "value": "Yes, add {count, select, 1{this upload} other{these uploads}}"
+}

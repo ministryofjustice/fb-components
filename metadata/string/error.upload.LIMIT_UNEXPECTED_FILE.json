@@ -1,0 +1,6 @@
+{
+  "_id": "error.upload.LIMIT_UNEXPECTED_FILE",
+  "_type": "string.error",
+  "description": "File uploaded - maximum number of uploads exceded",
+  "value": "The maxmimum number of uploads has been exceded"
+}

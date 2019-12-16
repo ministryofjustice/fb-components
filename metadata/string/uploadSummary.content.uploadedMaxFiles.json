@@ -1,0 +1,6 @@
+{
+  "_id": "uploadSummary.content.uploadedMaxFiles",
+  "_type": "string",
+  "description": "Content to tell the user they cannot upload more",
+  "value": "You have completed the maxmimum number of uploads"
+}

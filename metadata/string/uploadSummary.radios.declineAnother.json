@@ -1,0 +1,7 @@
+{
+  "_id": "uploadSummary.radios.declineAnother",
+  "_type": "string",
+  "title": "Decline another upload",
+  "description": "Decline another upload",
+  "value": "No"
+}

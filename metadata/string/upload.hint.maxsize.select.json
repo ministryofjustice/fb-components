@@ -1,0 +1,6 @@
+{
+  "_id": "upload.hint.maxsize.select",
+  "_type": "string",
+  "description": "Text to inform user what the max size of files that can be uploaded is",
+  "value": "[% upload.hint.maxsize %]"
+}
