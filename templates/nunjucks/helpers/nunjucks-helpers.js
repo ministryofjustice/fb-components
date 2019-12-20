@@ -1,5 +1,9 @@
+require('@ministryofjustice/module-alias/register-module')(module)
+
 const nunjucksMacroHelpers = require('./nunjucks-macro-helpers')
 const nunjucksDataHelpers = require('./nunjucks-data-helpers')
+
+const {version} = require('~/fb-components/package')
 
 const init = (env, options) => {
   let nunjucksEnv = nunjucksMacroHelpers.init(env)
@@ -15,6 +19,7 @@ const init = (env, options) => {
   })
 
   nunjucksEnv.renderString(`
+{{ addGlobal('version', '${version}') }}
 {% macro callBlock(data) -%}
 {% set blockOutput %}{{ callMacro(data._type, data) }}{% endset %}
 {{- blockOutput | addBlockInfo(data) | safe -}}

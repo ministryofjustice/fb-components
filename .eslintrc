@@ -1,3 +1,6 @@
 {
-  "extends": "plugin:json/recommended"
+  "env": {
+    "node": true
+  },
+  "extends": ["@ministryofjustice/eslint-config-fb", "plugin:json/recommended"]
 }

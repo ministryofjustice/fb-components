@@ -6,18 +6,18 @@ const {
   expect
 } = require('chai')
 
-const schemas = require('~/test/schemas')
+const schemas = require('~/fb-components/test/schemas')
 
-const dataObjectForEnumValue = require('~/test/specifications/definition/condition/valuetype/definition.condition.valuetype.value.json')
-const dataObjectForEnumInput = require('~/test/specifications/definition/condition/valuetype/definition.condition.valuetype.input.json')
-const dataObjectForEnumFeature = require('~/test/specifications/definition/condition/valuetype/definition.condition.valuetype.feature.json')
-const jsonSchema = require('~/specifications/definition/condition/valuetype/definition.condition.valuetype.schema.json')
+const dataObjectForEnumValue = require('~/fb-components/test/specifications/definition/condition/valuetype/definition.condition.valuetype.value.json')
+const dataObjectForEnumInput = require('~/fb-components/test/specifications/definition/condition/valuetype/definition.condition.valuetype.input.json')
+const dataObjectForEnumFeature = require('~/fb-components/test/specifications/definition/condition/valuetype/definition.condition.valuetype.feature.json')
+const jsonSchema = require('~/fb-components/specifications/definition/condition/valuetype/definition.condition.valuetype.schema.json')
 
 const ajv = new Ajv({schemas})
 
 const validator = ajv.compile(jsonSchema)
 
-describe('~/specifications/definition/condition/valuetype/definition.condition.valuetype.schema.json', () => {
+describe('~/fb-components/specifications/definition/condition/valuetype/definition.condition.valuetype.schema.json', () => {
   it('validates for `value`', () => expect(validator(dataObjectForEnumValue)).to.be.true)
 
   it('validates for `input`', () => expect(validator(dataObjectForEnumInput)).to.be.true)

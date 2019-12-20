@@ -4,6 +4,6 @@ const {
   expect
 } = require('chai')
 
-const dataObject = require('~/metadata/data/fileupload.maxsize.json')
+const dataObject = require('~/fb-components/metadata/data/fileupload.maxsize.json')
 
-describe('~/metadata/data/fileupload.maxsize.json', () => it('exists', () => expect(dataObject).to.exist))
+describe('~/fb-components/metadata/data/fileupload.maxsize.json', () => it('exists', () => expect(dataObject).to.exist))
