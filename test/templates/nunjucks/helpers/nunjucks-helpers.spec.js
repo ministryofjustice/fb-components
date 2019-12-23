@@ -85,6 +85,10 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-helpers', () => {
         renderString: renderStringStub
       }
 
+      addFilterStub.returns(mockNunjucksEnvironment)
+      addGlobalStub.returns(mockNunjucksEnvironment)
+      renderStringStub.returns(mockNunjucksEnvironment)
+
       mockOptions = {}
 
       nunjucksMacroHelpersInitStub.returns(mockNunjucksEnvironment)
