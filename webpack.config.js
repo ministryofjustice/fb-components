@@ -14,7 +14,7 @@ const {
   targetPath
 } = require('./build/paths')
 
-const buildSourcePath = path.join(sourcePath, 'js/app.js')
+const buildSourcePath = path.join(sourcePath, 'js')
 const buildTargetPath = path.join(targetPath, 'javascripts')
 
 const {version} = require('./package')
@@ -22,7 +22,8 @@ const {version} = require('./package')
 module.exports = () => ({
   mode: 'production',
   entry: {
-    app: buildSourcePath
+    app: path.join(buildSourcePath, 'app.js'),
+    'component/autocomplete': path.join(buildSourcePath, 'component/autocomplete.js')
   },
   output: {
     path: buildTargetPath,
@@ -36,7 +37,7 @@ module.exports = () => ({
       {
         test: /\.js?$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules(!\/accessible-autocomplete)/
       }
     ]
   },

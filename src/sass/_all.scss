@@ -1,0 +1,219 @@
+a:link {
+  color: #005ea5;
+}
+
+a:visited {
+  color: #4c2c92;
+}
+
+a:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #fd0;
+  -webkit-box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  text-decoration: none;
+}
+
+table th,
+table td {
+  vertical-align: top;
+}
+
+#global-cookie-message {
+  background-color: #d5e8f3;
+  padding: 10px 0;
+}
+
+.fb-sectionHeading {
+  margin-top: 0;
+}
+
+.govuk-button p {
+  display: inline-block;
+  margin: 0;
+}
+
+.govuk-button.fb-action-secondary {
+  text-align: left;
+  text-decoration: underline;
+  background: transparent;
+  border-bottom-color: transparent;
+  color:  #005ea5;
+  box-shadow: none;
+  padding-left: 0;
+  border-left: none;
+  margin-bottom: 0;
+}
+
+.fb-action-secondary:hover {
+  background: transparent;
+  color:  #2b8cc4;
+}
+
+.fb-group-blocks {
+  position: relative;
+}
+
+.fb-repeatable-item--block {
+  position: relative;
+}
+
+.fb-repeatable-item > .govuk-fieldset > legend.govuk-fieldset__legend {
+  font-weight: bold;
+}
+
+.fb-repeatable-item .fb-action--delete {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+  font-size: 75%;
+  width: auto;
+}
+
+.fb-info-summary {
+  border-color: #005ea5;
+}
+
+.fb-flash-summary {
+  border-color: #006435;
+}
+
+.fb-info-summary .govuk-list li:last-child,
+.fb-flash-summary .govuk-list li:last-child {
+  margin-bottom: 0;
+}
+
+.fb-summary-list--file-key {
+  font-weight: normal;
+}
+
+.govuk-hint p {
+  margin: 0 0 5px;
+}
+
+.fb-block-fileupload fieldset .govuk-form-group .govuk-error-message {
+  display: none;
+}
+
+input[type=file].govuk-file-upload::-webkit-file-upload-button {
+  font-size: 1.25rem !important;
+}
+
+.fb-form-group--fileupload-multiple {
+  position: relative;
+}
+
+.fb-form-group--fileupload-multiple fieldset .govuk-form-group {
+  border-top: solid 1px #bfc1c3;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .fb-form-group--fileupload-multiple fieldset .govuk-form-group {
+    border-bottom: solid 1px #bfc1c3;
+  }
+}
+
+.fb-form--fileupload-single .govuk-form-group {
+  margin-bottom: 10px;
+}
+
+.fb-form--fileupload-single .govuk-form-group--error  .govuk-hint {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fb-form--fileupload-single  .govuk-error-message {
+  border-bottom: solid 1px #bfc1c3;
+  padding-bottom: 10px;
+}
+
+.fb-form--fileupload-single {
+  border-bottom: solid 1px #bfc1c3;
+  margin-bottom: 30px;
+}
+
+.fb-form-group--fileupload-multiple fieldset .govuk-form-group + .govuk-form-group,
+.fb-form-group--fileupload-multiple fieldset .fb-control--fileupload--remove + .govuk-form-group {
+  border-top: none;
+}
+
+.fb-block-fileupload .govuk-summary-list {
+  border-top: solid 1px #bfc1c3;
+}
+
+.govuk-summary-list__actions .govuk-button {
+  margin-bottom: 0;
+}
+
+.govuk-summary-list__actions a.govuk-button {
+  padding: 0;
+}
+
+fieldset .govuk-summary-list {
+  margin-bottom: 0;
+}
+
+.fb-block-fileupload .fb-summary-list-extended--heading {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-file-upload {
+    width: 65%;
+  }
+}
+
+@media (min-width: 55em) {
+  .govuk-file-upload {
+    width: auto;
+  }
+}
+
+.fb-control--fileupload--remove {
+  border-bottom: solid 1px #bfc1c3;
+  margin: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .fb-control--fileupload--remove {
+    position: absolute;
+    right: 0;
+    margin: -3rem 0 0;
+    border-bottom: none;
+  }
+}
+
+.fb-control--fileupload--remove em {
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  margin: 0!important;
+  overflow: hidden!important;
+  clip: rect(0 0 0 0)!important;
+  -webkit-clip-path: inset(50%)!important;
+  clip-path: inset(50%)!important;
+  white-space: nowrap!important;
+}
+
+.fb-summary-list--file-key {
+  padding-top: 5px;
+}
+
+.fb-summary-list--file-key em {
+  font-style: normal;
+  display: block;
+  white-space: nowrap;
+}
+
+@media (min-width:40.0625em) {
+  .fb-summary-list--file-key {
+    padding-top: 0;
+  }
+  .fb-summary-list--file-key em {
+    display: inline-block;
+  }
+}

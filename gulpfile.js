@@ -12,7 +12,7 @@ const {
   cssClean: buildCssClean,
   css: buildCss,
   cssWatch: buildCssWatch
-} = require('./build/gulp/tasks')
+} = require('./build/gulp/build')
 
 gulp
   .task('build:fonts:clean', buildFontsClean)
