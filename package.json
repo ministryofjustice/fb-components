@@ -4,20 +4,8 @@
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "test": "mocha test --recursive",
-    "lint": "eslint . --ext .json && eslint templates specification test",
-    "lint:fix": "eslint . --ext .json --fix && eslint templates specification test --fix"
-  },
-  "bin": {
-    "expand-all": "specification/bin/expand-all.js",
-    "expand-schema": "specification/bin/expand-schema.js",
-    "format-data": "specification/bin/format-data.js",
-    "format-schemas": "specification/bin/format-schemas.js",
-    "lint-all": "specification/bin/lint-all.js",
-    "lint-data": "specification/bin/lint-data.js",
-    "lint-schemas": "specification/bin/lint-schemas.js",
-    "test-specifications": "specification/bin/test-specifications.js",
-    "validate": "specification/bin/validate.js",
-    "validate-specifications": "specification/bin/validate-specifications.js"
+    "lint": "eslint . --ext .json && eslint templates test",
+    "lint:fix": "eslint . --ext .json --fix && eslint templates test --fix"
   },
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "repository": {
