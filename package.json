@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
@@ -60,7 +60,7 @@
     "mkdirp": "^0.5.1",
     "nunjucks": "^3.2.0",
     "shelljs": "^0.8.3",
-    "yargs": "^15.0.2"
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
@@ -86,7 +86,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^3.1.0",
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.0",
     "postcss-normalize": "^8.0.1",
     "postcss-scss": "^2.0.0",
     "proxyquire": "^2.1.3",
