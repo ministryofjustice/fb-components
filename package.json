@@ -27,32 +27,32 @@
   "license": "MIT",
   "dependencies": {
     "@ministryofjustice/fb-utils-node": "^0.1.8",
-    "@ministryofjustice/module-alias": "^1.0.5",
+    "@ministryofjustice/module-alias": "^1.0.8",
     "ajv": "^6.10.2",
     "glob": "^7.1.6",
     "glob-all": "^3.1.0",
     "glob-promise": "^3.4.0",
-    "govuk-frontend": "^3.3.0",
+    "govuk-frontend": "^3.4.0",
     "json-schema-merge-allof": "^0.7.0",
-    "json-schema-ref-parser": "^7.1.2",
+    "json-schema-ref-parser": "^7.1.3",
     "jsonlint": "^1.6.3",
     "jsonpath": "^1.0.2",
     "markdown-it": "^10.0.0",
     "mkdirp": "^0.5.1",
     "nunjucks": "^3.2.0",
     "shelljs": "^0.8.3",
-    "yargs": "^15.0.2"
+    "yargs": "^15.1.0"
   },
   "devDependencies": {
-    "@ministryofjustice/eslint-config-fb": "^1.1.5",
+    "@ministryofjustice/eslint-config-fb": "^1.1.6",
     "ajv-cli": "^3.0.0",
     "chai": "^4.2.0",
-    "eslint": "^6.7.0",
+    "eslint": "^6.8.0",
     "eslint-plugin-json": "^2.0.1",
     "mocha": "^7.0.0",
     "proxyquire": "^2.1.3",
-    "sinon": "^7.5.0",
-    "sinon-chai": "^3.3.0"
+    "sinon": "^8.0.2",
+    "sinon-chai": "^3.4.0"
   },
   "_moduleAliases": {
     "~/test": "./test",
