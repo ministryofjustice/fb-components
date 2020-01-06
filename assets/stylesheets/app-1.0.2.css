@@ -6239,11 +6239,6 @@ table th {
   margin-bottom: 0
 }
 
-.fb-summary-list--file-key {
-  font-weight: 400;
-  padding-top: 5px
-}
-
 .govuk-hint p {
   margin: 0 0 5px
 }
@@ -6355,6 +6350,11 @@ fieldset .govuk-summary-list {
   white-space: nowrap!important
 }
 
+.fb-summary-list--file-key {
+  font-weight: 400;
+  padding-top: 5px
+}
+
 .fb-summary-list--file-key em {
   font-style: normal;
   display: block;
@@ -6391,4 +6391,4 @@ fieldset .govuk-summary-list {
   font-size: 16px;
   box-sizing: border-box
 }
-/*# sourceMappingURL=app-1.0.1.css.map */
+/*# sourceMappingURL=app-1.0.2.css.map */
