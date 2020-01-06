@@ -4,6 +4,6 @@ const {
   expect
 } = require('chai')
 
-const dataObject = require('~/metadata/component/actions.json')
+const dataObject = require('~/fb-components/metadata/component/actions.json')
 
-describe('~/metadata/component/actions.json', () => it('exists', () => expect(dataObject).to.exist))
+describe('~/fb-components/metadata/component/actions.json', () => it('exists', () => expect(dataObject).to.exist))

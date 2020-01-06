@@ -1,5 +1,10 @@
 {% extends "page.njk.html" %}
 
+{% block styles %}
+  {{super()}}
+  <link rel="stylesheet" href="/assets/stylesheets/page/summary-{{version}}.css" />
+{% endblock %}
+
 {% block pageContentComponents %}
   {{super()}}
 

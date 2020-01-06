@@ -6,13 +6,13 @@ const {
   expect
 } = require('chai')
 
-const schemas = require('~/test/schemas')
+const schemas = require('~/fb-components/test/schemas')
 
-const jsonSchema = require('~/specifications/config/modules/config.modules.schema.json')
-const dataObject = require('~/test/specifications/config/modules/config.modules.json')
+const jsonSchema = require('~/fb-components/specifications/config/modules/config.modules.schema.json')
+const dataObject = require('~/fb-components/test/specifications/config/modules/config.modules.json')
 
 const ajv = new Ajv({schemas})
 
 const validator = ajv.compile(jsonSchema)
 
-describe('~/specifications/config/modules/config.modules.schema.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))
+describe('~/fb-components/specifications/config/modules/config.modules.schema.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))

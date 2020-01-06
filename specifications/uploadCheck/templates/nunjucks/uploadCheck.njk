@@ -1,21 +1,5 @@
 {%- macro uploadCheck(data) %}
   {% if data.uploadDescriptions.length %}
-    <style>
-      .fb-upload-descriptions {
-        background-color: #1d70b8;
-        margin: 50px auto;
-      }
-      .fb-upload-descriptions ul {
-        list-style-type: none;
-        padding: 1rem;
-      }
-      .fb-upload-descriptions ul li {
-        margin-bottom: unset;
-        padding: 1rem;
-      }
-      .fb-upload-descriptions .govuk-body-l { color: white; }
-    </style>
-
     <div class="fb-upload-descriptions">
       <ul>
       {% for uploadDescription in data.uploadDescriptions %}

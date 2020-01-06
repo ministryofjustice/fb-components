@@ -4,6 +4,6 @@ const {
   expect
 } = require('chai')
 
-const dataObject = require('~/metadata/page/error/error.401.json')
+const dataObject = require('~/fb-components/metadata/page/error/error.401.json')
 
-describe('~/metadata/page/error/error.401.json', () => it('exists', () => expect(dataObject).to.exist))
+describe('~/fb-components/metadata/page/error/error.401.json', () => it('exists', () => expect(dataObject).to.exist))
