@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
@@ -21,7 +21,8 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "test": "mocha test --recursive",
     "gulp": "gulp --color",
-    "pre-commit": "npm run build && git add assets"
+    "pre-commit": "npm run build && git add assets",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "expand-all": "specification/bin/expand-all.js",
