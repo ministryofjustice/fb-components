@@ -20,7 +20,7 @@ const {
   setMainEditableInstanceProperty,
   setObject,
   setObjectProperty
-} = proxyquire('~/templates/nunjucks/helpers/nunjucks-helpers', {
+} = proxyquire('~/fb-components/templates/nunjucks/helpers/nunjucks-helpers', {
   './nunjucks-macro-helpers': {
     init: nunjucksMacroHelpersInitStub,
     setObject: sinon.stub(),
@@ -44,7 +44,7 @@ const {
 
 chai.use(sinonChai)
 
-describe('~/templates/nunjucks/helpers/nunjucks-helpers', () => {
+describe('~/fb-components/templates/nunjucks/helpers/nunjucks-helpers', () => {
   describe('Always', () => {
     it('exports `init`', () => expect(init).to.be.a('function'))
 
@@ -84,6 +84,10 @@ describe('~/templates/nunjucks/helpers/nunjucks-helpers', () => {
         addGlobal: addGlobalStub,
         renderString: renderStringStub
       }
+
+      addFilterStub.returns(mockNunjucksEnvironment)
+      addGlobalStub.returns(mockNunjucksEnvironment)
+      renderStringStub.returns(mockNunjucksEnvironment)
 
       mockOptions = {}
 

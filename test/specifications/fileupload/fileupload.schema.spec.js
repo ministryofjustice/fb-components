@@ -6,13 +6,13 @@ const {
   expect
 } = require('chai')
 
-const schemas = require('~/test/schemas')
+const schemas = require('~/fb-components/test/schemas')
 
-const jsonSchema = require('~/specifications/fileupload/fileupload.schema.json')
-const dataObject = require('~/test/specifications/fileupload/fileupload.json')
+const jsonSchema = require('~/fb-components/specifications/fileupload/fileupload.schema.json')
+const dataObject = require('~/fb-components/test/specifications/fileupload/fileupload.json')
 
 const ajv = new Ajv({schemas})
 
 const validator = ajv.compile(jsonSchema)
 
-describe('~/specifications/fileupload/fileupload.schema.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))
+describe('~/fb-components/specifications/fileupload/fileupload.schema.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))

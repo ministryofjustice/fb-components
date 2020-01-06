@@ -1,20 +1,21 @@
+require('@ministryofjustice/module-alias/register-module')(module)
+
 const nunjucksMacroHelpers = require('./nunjucks-macro-helpers')
 const nunjucksDataHelpers = require('./nunjucks-data-helpers')
 
-const init = (env, options) => {
-  let nunjucksEnv = nunjucksMacroHelpers.init(env)
+const {version} = require('~/fb-components/package')
 
-  nunjucksEnv.addFilter('addBlockInfo', (str, params) => {
-    const output = str.replace(/\s*(<\w+[^>]+)/, (m, m1) => {
-      if (!params._id) {
-        return m
-      }
-      return `${m1} data-block-id="${params._id}" data-block-type="${params._type}"`
-    }).replace(/(class=")/, `$1fb-block fb-block-${params._type} `)
-    return output
-  })
+function addBlockInfoFilter (block, {_id, _type}) {
+  return block
+    .replace(/\s*(<\w+[^>]+)/, (match, value) => _id ? `${value} data-block-id="${_id}" data-block-type="${_type}"` : match)
+    .replace(/(class=")/, `$1fb-block fb-block-${_type} `)
+}
 
-  nunjucksEnv.renderString(`
+function initialiseMacroHelpers (env) {
+  nunjucksMacroHelpers.init(env)
+    .addFilter('addBlockInfo', addBlockInfoFilter)
+    .renderString(`
+{{ addGlobal('version', '${version}') }}
 {% macro callBlock(data) -%}
 {% set blockOutput %}{{ callMacro(data._type, data) }}{% endset %}
 {{- blockOutput | addBlockInfo(data) | safe -}}
@@ -38,12 +39,13 @@ const init = (env, options) => {
 {%- endmacro %}
 {{ addGlobal('callComponents', callComponents) }}
   `)
-
-  nunjucksEnv = nunjucksDataHelpers.init(nunjucksEnv, options)
-
-  return nunjucksEnv
+  return env
 }
 
-module.exports = Object.assign({}, nunjucksMacroHelpers, nunjucksDataHelpers, {
-  init
-})
+function initialiseDataHelpers (env, options) {
+  return nunjucksDataHelpers.init(env, options)
+}
+
+const init = (env, options) => initialiseDataHelpers(initialiseMacroHelpers(env), options)
+
+module.exports = Object.assign({}, nunjucksMacroHelpers, nunjucksDataHelpers, {init})

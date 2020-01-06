@@ -4,6 +4,6 @@ const {
   expect
 } = require('chai')
 
-const dataObject = require('~/metadata/component/radio.yes.json')
+const dataObject = require('~/fb-components/metadata/component/radio.yes.json')
 
-describe('~/metadata/component/radio.yes.json', () => it('exists', () => expect(dataObject).to.exist))
+describe('~/fb-components/metadata/component/radio.yes.json', () => it('exists', () => expect(dataObject).to.exist))
