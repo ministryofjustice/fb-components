@@ -21,7 +21,8 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "test": "mocha test --recursive",
     "gulp": "gulp --color",
-    "pre-commit": "npm run build && git add assets"
+    "pre-commit": "npm run build && git add assets",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "expand-all": "specification/bin/expand-all.js",
