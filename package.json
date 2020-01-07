@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
@@ -15,7 +15,7 @@
     "build:css:watch": "npm run gulp -- build:css:watch",
     "lint": "eslint . --ext .json && npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
-    "lint:js": "eslint *.js build templates specification src test",
+    "lint:js": "eslint *.js build templates src test",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:css": "stylelint src/sass",
     "lint:css:fix": "npm run lint:css -- --fix",
@@ -23,18 +23,6 @@
     "gulp": "gulp --color",
     "pre-commit": "npm run build && git add assets",
     "prepublishOnly": "npm run build"
-  },
-  "bin": {
-    "expand-all": "specification/bin/expand-all.js",
-    "expand-schema": "specification/bin/expand-schema.js",
-    "format-data": "specification/bin/format-data.js",
-    "format-schemas": "specification/bin/format-schemas.js",
-    "lint-all": "specification/bin/lint-all.js",
-    "lint-data": "specification/bin/lint-data.js",
-    "lint-schemas": "specification/bin/lint-schemas.js",
-    "test-specifications": "specification/bin/test-specifications.js",
-    "validate": "specification/bin/validate.js",
-    "validate-specifications": "specification/bin/validate-specifications.js"
   },
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "repository": {
@@ -64,6 +52,7 @@
     "yargs": "^15.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.7",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-transform-react-jsx": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
@@ -86,12 +75,12 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "husky": "^3.1.0",
+    "husky": "^4.0.0",
     "mocha": "^7.0.0",
     "postcss-normalize": "^8.0.1",
     "postcss-scss": "^2.0.0",
     "proxyquire": "^2.1.3",
-    "sinon": "^8.0.2",
+    "sinon": "^8.0.4",
     "sinon-chai": "^3.4.0",
     "stylelint": "^12.0.1",
     "stylelint-config-recommended-scss": "^4.1.0",
