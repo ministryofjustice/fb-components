@@ -615,7 +615,8 @@ template {
 .govuk-width-container {
   max-width: 960px;
   width: 960px;
-  margin: 0 auto
+  margin-right: auto;
+  margin-left: auto
 }
 
 @supports (margin:max(calc(0px))) {
@@ -1140,7 +1141,6 @@ template {
   margin-left: 10px;
   vertical-align: middle;
   flex-shrink: 0;
-  -webkit-align-self: center;
   align-self: center
 }
 
@@ -3597,4 +3597,4 @@ only screen and (min-resolution:192dpi) {
   width: 100%!important;
   width: 25%!important
 }
-/*# sourceMappingURL=app-ie8-1.0.6.css.map */
+/*# sourceMappingURL=app-ie8-1.0.7.css.map */

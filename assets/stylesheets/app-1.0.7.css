@@ -1117,7 +1117,8 @@ template {
 
 .govuk-width-container {
   max-width: 960px;
-  margin: 0 15px
+  margin-right: 15px;
+  margin-left: 15px
 }
 
 @supports (margin:max(calc(0px))) {
@@ -1129,7 +1130,8 @@ template {
 
 @media (min-width:40.0625em) {
   .govuk-width-container {
-    margin: 0 30px
+    margin-right: 30px;
+    margin-left: 30px
   }
 
 @supports (margin:max(calc(0px))) {
@@ -1142,12 +1144,14 @@ template {
 
 @media (min-width:1020px) {
   .govuk-width-container {
-    margin: 0 auto
+    margin-right: auto;
+    margin-left: auto
   }
 
 @supports (margin:max(calc(0px))) {
     .govuk-width-container {
-      margin: 0 auto
+      margin-right: auto;
+      margin-left: auto
     }
 }
 }
@@ -1813,7 +1817,6 @@ template {
   margin-left: 5px;
   vertical-align: middle;
   flex-shrink: 0;
-  -webkit-align-self: center;
   align-self: center
 }
 
@@ -3129,18 +3132,6 @@ template {
   background-color: #fd0;
   box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
   text-decoration: none
-}
-
-.govuk-footer__inline-list .govuk-footer__link,
-.govuk-footer__list .govuk-footer__link {
-  text-decoration: none
-}
-
-.govuk-footer__inline-list .govuk-footer__link:active:not(:focus),
-.govuk-footer__inline-list .govuk-footer__link:hover:not(:focus),
-.govuk-footer__list .govuk-footer__link:active:not(:focus),
-.govuk-footer__list .govuk-footer__link:hover:not(:focus) {
-  text-decoration: underline
 }
 
 .govuk-footer__section-break {
@@ -6391,4 +6382,4 @@ fieldset .govuk-summary-list {
   font-size: 16px;
   box-sizing: border-box
 }
-/*# sourceMappingURL=app-1.0.6.css.map */
+/*# sourceMappingURL=app-1.0.7.css.map */
