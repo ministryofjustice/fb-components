@@ -46,7 +46,7 @@
     "jsonlint": "^1.6.3",
     "jsonpath": "^1.0.2",
     "markdown-it": "^10.0.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.2",
     "nunjucks": "^3.2.0",
     "shelljs": "^0.8.3",
     "yargs": "^15.1.0"
