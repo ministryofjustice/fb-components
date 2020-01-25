@@ -36,7 +36,7 @@
     "accessible-autocomplete": "^2.0.1",
     "ajv": "^6.11.0",
     "concurrently": "^5.0.2",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.0",
     "glob": "^7.1.6",
     "glob-all": "^3.1.0",
     "glob-promise": "^3.4.0",
