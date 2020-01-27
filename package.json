@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
@@ -31,8 +31,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ministryofjustice/fb-utils-node": "^0.1.8",
-    "@ministryofjustice/module-alias": "^1.0.9",
+    "@ministryofjustice/module-alias": "^1.0.11",
     "accessible-autocomplete": "^2.0.1",
     "ajv": "^6.11.0",
     "concurrently": "^5.1.0",
