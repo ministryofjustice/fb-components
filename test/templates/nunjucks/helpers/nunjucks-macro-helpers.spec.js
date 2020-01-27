@@ -115,14 +115,14 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-macro-helpers', ()
   })
 
   describe('`setObject()`', () => {
-    describe('One object is passed', () => it('returns an object', () => expect(setObject({x: 1})).to.eql({x: 1})))
+    describe('One object is passed', () => it('returns an object', () => expect(setObject({ x: 1 })).to.eql({ x: 1 })))
 
-    describe('Two or more objects are passed', () => it('merges the objects', () => expect(setObject({foo: 'bar'}, {bar: 'foo'}, {x: 1})).to.eql({foo: 'bar', bar: 'foo', x: 1})))
+    describe('Two or more objects are passed', () => it('merges the objects', () => expect(setObject({ foo: 'bar' }, { bar: 'foo' }, { x: 1 })).to.eql({ foo: 'bar', bar: 'foo', x: 1 })))
 
     describe('No objects are passed', () => it('returns an object', () => expect(setObject()).to.eql({})))
   })
 
   describe('`setObjectProperty()`', () => {
-    describe('An object and a key and a value are passed', () => it('returns an object', () => expect(setObjectProperty({x: 1}, 'foo', 'bar')).to.eql({x: 1, foo: 'bar'})))
+    describe('An object and a key and a value are passed', () => it('returns an object', () => expect(setObjectProperty({ x: 1 }, 'foo', 'bar')).to.eql({ x: 1, foo: 'bar' })))
   })
 })

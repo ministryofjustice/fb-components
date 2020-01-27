@@ -7,7 +7,7 @@ const setObject = (...args) => {
 
 // Allow object properties to be updated individually
 const setObjectProperty = (obj, prop, val) => {
-  return Object.assign({}, obj, {[prop]: val})
+  return Object.assign({}, obj, { [prop]: val })
 }
 
 const init = (env) => {
@@ -66,7 +66,7 @@ const init = (env) => {
   const macros = {}
 
   const addMacro = (key, val) => {
-    addMacros({[key]: val})
+    addMacros({ [key]: val })
   }
 
   const addMacros = (obj, namespace) => {

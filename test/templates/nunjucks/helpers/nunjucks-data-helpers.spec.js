@@ -48,7 +48,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
       beforeEach(() => {
         forEachStub = sinon.stub()
 
-        entriesStub = sinon.stub(global.Object, 'entries').returns({forEach: forEachStub})
+        entriesStub = sinon.stub(global.Object, 'entries').returns({ forEach: forEachStub })
 
         init()
       })
@@ -94,7 +94,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
   describe('`setError()`', () => {
     describe('An error is passed as an argument', () => {
       it('returns an object with the error message assigned to the field `errorMessage`', () => {
-        const returnValue = setError({error: 'error string'})
+        const returnValue = setError({ error: 'error string' })
 
         expect(returnValue).to.eql({
           error: 'error string',
@@ -185,7 +185,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('`mappings` are defined', () => {
       beforeEach(() => {
-        const mockNunjucksEnvironment = {addGlobal: sinon.stub()}
+        const mockNunjucksEnvironment = { addGlobal: sinon.stub() }
 
         init(mockNunjucksEnvironment, {
           mappings: {
@@ -236,7 +236,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
       describe('A label does not have a `classes` field', () => {
         it('returns an object with default classes assigned to the field `label.classes`', () => {
-          const returnValue = setLabel({label: 'mock label value'})
+          const returnValue = setLabel({ label: 'mock label value' })
 
           return expect(returnValue.label.classes).to.equal('multiple-size-class')
         })
@@ -247,9 +247,9 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
       let returnValue
 
       beforeEach(() => {
-        const mockNunjucksEnvironment = {addGlobal: sinon.stub()}
+        const mockNunjucksEnvironment = { addGlobal: sinon.stub() }
 
-        init(mockNunjucksEnvironment, {mappings: {}})
+        init(mockNunjucksEnvironment, { mappings: {} })
 
         returnValue = setLabel({
           label: 'mock label value',
@@ -537,7 +537,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
   describe('`setContent()`', () => {
     describe('The content contains markdown', () => {
       it('transforms the content to HTML', () => {
-        const returnValue = setContent({heading: '# Hello world\n\nGoodbye\n\n- One\n- Two\n- Three'}, 'heading')
+        const returnValue = setContent({ heading: '# Hello world\n\nGoodbye\n\n- One\n- Two\n- Three' }, 'heading')
 
         return expect(returnValue.heading).to.equal('<h1>Hello world</h1>\n<p>Goodbye</p>\n<ul>\n<li>One</li>\n<li>Two</li>\n<li>Three</li>\n</ul>')
       })
@@ -545,7 +545,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('The content does not contain markdown', () => {
       it('transforms the content to HTML', () => {
-        const returnValue = setContent({heading: 'Hello world\n\nGoodbye\n\n- One\n- Two\n- Three'}, 'heading')
+        const returnValue = setContent({ heading: 'Hello world\n\nGoodbye\n\n- One\n- Two\n- Three' }, 'heading')
 
         return expect(returnValue.heading).to.equal('<p>Hello world</p>\n<p>Goodbye</p>\n<ul>\n<li>One</li>\n<li>Two</li>\n<li>Three</li>\n</ul>')
       })
@@ -553,7 +553,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('The content is text on the `html` field', () => {
       it('transforms the content to HTML', () => {
-        const returnValue = setContent({html: 'mock text content'})
+        const returnValue = setContent({ html: 'mock text content' })
 
         return expect(returnValue.html).to.equal('<p>mock text content</p>')
       })
@@ -566,7 +566,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
   describe('`setWidthClass()`', () => {
     describe('A character-based value is provided', () => {
       it('returns an object with the character-based value on the `classes` field', () => {
-        const returnValue = setWidthClass({widthClass: '20'})
+        const returnValue = setWidthClass({ widthClass: '20' })
 
         return expect(returnValue.classes).to.equal('govuk-input--width-20')
       })
@@ -574,7 +574,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value is provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setWidthClass({widthClass: 'one-third'})
+        const returnValue = setWidthClass({ widthClass: 'one-third' })
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -582,7 +582,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value and a default value are provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setWidthClass({widthClass: 'one-third'}, 10)
+        const returnValue = setWidthClass({ widthClass: 'one-third' }, 10)
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -590,7 +590,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value and a default value are provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setWidthClass({widthClass: 'one-third'}, 10)
+        const returnValue = setWidthClass({ widthClass: 'one-third' }, 10)
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -603,7 +603,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
       describe('And a character-based value is provided', () => {
         it('returns an object with the character-based value appended to the `classes` field', () => {
-          const returnValue = setWidthClass({classes: 'mock-classes', widthClass: '20'})
+          const returnValue = setWidthClass({ classes: 'mock-classes', widthClass: '20' })
 
           return expect(returnValue.classes).to.equal('mock-classes govuk-input--width-20')
         })
@@ -611,7 +611,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
       describe('And a proportion-based value is provided', () => {
         it('returns an object with the proportion-based value appended to the `classes` field', () => {
-          const returnValue = setWidthClass({classes: 'mock-classes', widthClass: 'one-third'})
+          const returnValue = setWidthClass({ classes: 'mock-classes', widthClass: 'one-third' })
 
           return expect(returnValue.classes).to.equal('mock-classes govuk-!-width-one-third')
         })
@@ -643,7 +643,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
   describe('`setInputWidthClass()`', () => {
     describe('A character-based value is provided', () => {
       it('returns an object with the character-based value on the `classes` field', () => {
-        const returnValue = setInputWidthClass({widthClassInput: '20'})
+        const returnValue = setInputWidthClass({ widthClassInput: '20' })
 
         return expect(returnValue.classes).to.equal('govuk-input--width-20')
       })
@@ -651,7 +651,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value is provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setInputWidthClass({widthClassInput: 'one-third'})
+        const returnValue = setInputWidthClass({ widthClassInput: 'one-third' })
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -659,7 +659,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value and a default value are provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setInputWidthClass({widthClassInput: 'one-third'}, 10)
+        const returnValue = setInputWidthClass({ widthClassInput: 'one-third' }, 10)
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -667,7 +667,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
     describe('A proportion-based value and a default value are provided', () => {
       it('returns an object with the proportion-based value on the `classes` field', () => {
-        const returnValue = setInputWidthClass({widthClassInput: 'one-third'}, 10)
+        const returnValue = setInputWidthClass({ widthClassInput: 'one-third' }, 10)
 
         return expect(returnValue.classes).to.equal('govuk-!-width-one-third')
       })
@@ -680,7 +680,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
       describe('And a character-based value is provided', () => {
         it('returns an object with the character-based value appended to the `classes` field', () => {
-          const returnValue = setInputWidthClass({classes: 'mock-classes', widthClassInput: '20'})
+          const returnValue = setInputWidthClass({ classes: 'mock-classes', widthClassInput: '20' })
 
           return expect(returnValue.classes).to.equal('mock-classes govuk-input--width-20')
         })
@@ -688,7 +688,7 @@ describe('~/fb-components/templates/nunjucks/helpers/nunjucks-data-helpers', () 
 
       describe('And a proportion-based value is provided', () => {
         it('returns an object with the proportion-based value appended to the `classes` field', () => {
-          const returnValue = setInputWidthClass({classes: 'mock-classes', widthClassInput: 'one-third'})
+          const returnValue = setInputWidthClass({ classes: 'mock-classes', widthClassInput: 'one-third' })
 
           return expect(returnValue.classes).to.equal('mock-classes govuk-!-width-one-third')
         })

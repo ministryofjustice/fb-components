@@ -14,7 +14,7 @@ const dataObjectForNone = require('~/fb-components/test/specifications/config/se
 
 const jsonSchema = require('~/fb-components/specifications/config/service/config.service.schema.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 

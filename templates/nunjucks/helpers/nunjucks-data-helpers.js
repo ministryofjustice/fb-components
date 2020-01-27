@@ -85,7 +85,7 @@ const setItemsLabel = data => {
       // console.log('updating items', item)
       let hint = item.hint
       if (hint && !hint.html) {
-        hint = {html: hint}
+        hint = { html: hint }
       }
       let itemId = item.id || item.name
       if (!itemId && data.name) {
