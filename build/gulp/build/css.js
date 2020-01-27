@@ -19,8 +19,8 @@ const buildTargetPath = path.relative(currentDir, targetPath)
 const buildAssetsPath = path.relative(currentDir, assetsPath)
 
 const cssClean = () =>
-  gulp.src(`${buildTargetPath}/stylesheets/*`, {read: false})
-    .pipe(vinylPaths((paths) => del(paths, {force: true})))
+  gulp.src(`${buildTargetPath}/stylesheets/*`, { read: false })
+    .pipe(vinylPaths((paths) => del(paths, { force: true })))
 
 const css = gulp.series(cssFromSass)
 

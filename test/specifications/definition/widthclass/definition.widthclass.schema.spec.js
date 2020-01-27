@@ -11,7 +11,7 @@ const schemas = require('~/fb-components/test/schemas')
 const jsonSchema = require('~/fb-components/specifications/definition/widthclass/definition.widthclass.schema.json')
 const dataObject = require('~/fb-components/test/specifications/definition/widthclass/definition.widthclass.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 

@@ -17,7 +17,7 @@ const {
 const buildSourcePath = path.join(sourcePath, 'js')
 const buildTargetPath = path.join(targetPath, 'javascripts')
 
-const {version} = require('./package')
+const { version } = require('./package')
 
 module.exports = () => ({
   mode: 'production',
@@ -54,6 +54,6 @@ module.exports = () => ({
         buildTargetPath.concat('/*.js.map')
       ]
     }),
-    new EnvironmentPlugin({NODE_ENV: 'production'})
+    new EnvironmentPlugin({ NODE_ENV: 'production' })
   ]
 })

@@ -14,7 +14,7 @@ const dataObjectForNumber = require('~/fb-components/test/specifications/definit
 const dataObjectForBoolean = require('~/fb-components/test/specifications/definition/condition/expression/definition.condition.expression.boolean.json')
 const jsonSchema = require('~/fb-components/specifications/definition/condition/expression/definition.condition.expression.schema.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 

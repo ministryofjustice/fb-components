@@ -3,9 +3,9 @@ require('@ministryofjustice/module-alias/register-module')(module)
 const nunjucksMacroHelpers = require('./nunjucks-macro-helpers')
 const nunjucksDataHelpers = require('./nunjucks-data-helpers')
 
-const {version} = require('~/fb-components/package')
+const { version } = require('~/fb-components/package')
 
-function addBlockInfoFilter (block, {_id, _type}) {
+function addBlockInfoFilter (block, { _id, _type }) {
   return block
     .replace(/\s*(<\w+[^>]+)/, (match, value) => _id ? `${value} data-block-id="${_id}" data-block-type="${_type}"` : match)
     .replace(/(class=")/, `$1fb-block fb-block-${_type} `)
@@ -48,4 +48,4 @@ function initialiseDataHelpers (env, options) {
 
 const init = (env, options) => initialiseDataHelpers(initialiseMacroHelpers(env), options)
 
-module.exports = Object.assign({}, nunjucksMacroHelpers, nunjucksDataHelpers, {init})
+module.exports = Object.assign({}, nunjucksMacroHelpers, nunjucksDataHelpers, { init })

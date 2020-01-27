@@ -39,7 +39,7 @@ const getTransformForPostCss = () =>
     normalize(),
     autoprefixer(),
     nano()
-  ], {syntax: scss})
+  ], { syntax: scss })
 
 const getTransformForCleanCss = () =>
   cleanCss({
@@ -59,7 +59,7 @@ const getTransformForCssPurge = () =>
 
 const cssFromSass = () =>
   gulp.src([`${buildSourcePath}/sass/**/*.*`, `!${buildSourcePath}/sass/**/_*.*`])
-    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(rename((filePath) => { filePath.basename += `-${version}` }))
     .pipe(getTransformForSass())
     .pipe(getTransformForPostCss())
@@ -67,6 +67,6 @@ const cssFromSass = () =>
     .pipe(getTransformForCssPurge())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(`${buildTargetPath}/stylesheets`))
-    .pipe(debug({title: 'CSS'}))
+    .pipe(debug({ title: 'CSS' }))
 
 module.exports = cssFromSass

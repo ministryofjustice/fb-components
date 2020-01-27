@@ -13,7 +13,7 @@ const dataObjectForEnumInput = require('~/fb-components/test/specifications/defi
 const dataObjectForEnumFeature = require('~/fb-components/test/specifications/definition/condition/valuetype/definition.condition.valuetype.feature.json')
 const jsonSchema = require('~/fb-components/specifications/definition/condition/valuetype/definition.condition.valuetype.schema.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 

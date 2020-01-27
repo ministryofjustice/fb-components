@@ -17,7 +17,7 @@ const dataObjectForText = require('~/fb-components/test/specifications/condition
 
 const jsonSchema = require('~/fb-components/specifications/condition/condition.schema.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 

@@ -13,7 +13,7 @@ const dataObjectForOff = require('~/fb-components/test/specifications/config/mod
 
 const jsonSchema = require('~/fb-components/specifications/config/module/config.module.schema.json')
 
-const ajv = new Ajv({schemas})
+const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 
