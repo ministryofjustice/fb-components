@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
