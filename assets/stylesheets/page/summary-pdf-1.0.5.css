@@ -1,0 +1,35 @@
+.app-check-your-answers__change,
+.govuk-button,
+.govuk-footer,
+.govuk-header,
+.govuk-phase-banner,
+:empty {
+  display: none
+}
+
+html.govuk-template {
+  background-color: transparent;
+  padding: 0!important;
+  margin: 0!important
+}
+
+body {
+  padding: 0 1cm!important;
+  margin: 0!important
+}
+
+h2.govuk-heading-m {
+  border-bottom: 1px solid #000
+}
+
+.govuk-main-wrapper,
+.govuk-width-container {
+  margin: 0!important;
+  width: auto!important;
+  max-width: none!important
+}
+
+.fb-sectionHeading {
+  margin: 0
+}
+/*# sourceMappingURL=summary-pdf-1.0.5.css.map */
