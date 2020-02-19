@@ -8,5 +8,5 @@
   "phaseText": "Service phase text goes here",
   "serviceEmailAddress": "form-builder@digital.justice.gov.uk",
   "serviceUrl": "page.start",
-  "sessionDuration": 60
+  "sessionDuration": 1
 }
