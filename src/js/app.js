@@ -1,8 +1,10 @@
-//const GOVUKFrontend = require('govuk-frontend/govuk/all')
-//const TimeoutWarning = require('./component/timeout_warning')
+const GOVUKFrontend = require('govuk-frontend/govuk/all')
+import TimeoutWarning from './component/timeout-warning/timeout-warning'
 
-//GOVUKFrontend.initAll()
-//var $timeoutWarnings = scope.querySelectorAll('[data-module="govuk-timeout-warning"]')
-//nodeListForEach($timeoutWarnings, function ($timeoutWarning) {
-//    new TimeoutWarning($timeoutWarning).init()
-//})
+GOVUKFrontend.initAll()
+
+var $timeoutWarning = document.querySelector(
+  '[data-module="govuk-timeout-warning"]'
+)
+
+new TimeoutWarning($timeoutWarning).init()

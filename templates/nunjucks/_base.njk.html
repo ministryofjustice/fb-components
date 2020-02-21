@@ -37,7 +37,8 @@
 {% endblock %}
 
 {% block main %}
-  <div class="govuk-width-container govuk-body-m">
+  <div class="govuk-width-container govuk-body-m"
+    data-module="govuk-timeout-warning" data-minutes-timeout="60">
     {% block beforeContent %}{% endblock %}
     <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main">
       {% block content %}{% endblock %}
