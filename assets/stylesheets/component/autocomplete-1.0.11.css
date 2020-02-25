@@ -218,7 +218,7 @@ template {
 }
 
 .autocomplete__input--show-all-values {
-  padding: 4px 34px 4px 4px;
+  padding: 5px 34px 5px 5px;
   cursor: pointer
 }
 
@@ -325,4 +325,4 @@ template {
     line-height: 1.31579
   }
 }
-/*# sourceMappingURL=autocomplete-1.0.5.css.map */
+/*# sourceMappingURL=autocomplete-1.0.11.css.map */
