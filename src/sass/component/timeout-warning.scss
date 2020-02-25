@@ -2,7 +2,7 @@
 
 @import "govuk-frontend/govuk/all";
 
-@import "vendor/dialog-polyfill.0.5.0";
+@import "dialog-polyfill/dialog-polyfill";
 
 .govuk-timeout-warning {
   display: none;

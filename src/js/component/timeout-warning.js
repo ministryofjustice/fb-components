@@ -1,3 +1,5 @@
+require('dialog-polyfill')
+
 function TimeoutWarning ($module) {
   if ($module) {
     this.$module = $module

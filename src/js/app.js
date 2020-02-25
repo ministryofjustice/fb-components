@@ -1,5 +1,4 @@
 const GOVUKFrontend = require('govuk-frontend/govuk/all')
-
 const TimeoutWarning = require('./component/timeout-warning')
 
 GOVUKFrontend.initAll()
