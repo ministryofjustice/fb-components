@@ -4,9 +4,10 @@ function TimeoutWarning ($module) {
   if ($module) {
     this.$module = $module
     this.$fallBackElement = document.querySelector('.govuk-timeout-warning-fallback')
-    this.MinutesBeforeTimeOut = $module.getAttribute('data-minutes-timeout') || 60
+    this.minutesTimeout = $module.getAttribute('data-minutes-timeout') || 60
     this.timeOutRedirectUrl = $module.getAttribute('data-url-redirect')
-    this.minutesTimeOutModalVisible = $module.getAttribute('data-minutes-modal-visible') || 5
+    // 10% of the total time the modal is show
+    this.minutesTimeOutModalVisible = this.minutesTimeout * 0.10
   }
 }
 
@@ -21,13 +22,33 @@ TimeoutWarning.prototype.init = function () {
     return
   }
 
-  this.startUiCountdown()
+  milliSecondsBeforeTimeOut = (this.minutesTimeout * 0.91) * 60000
+  setTimeout(this.openDialog.bind(this), milliSecondsBeforeTimeOut)
 }
 
 // Starts a UI countdown timer. If timer is not cancelled before 0
 // reached + 4 seconds grace period, user is redirected.
 TimeoutWarning.prototype.startUiCountdown = function () {
-  this.$module.showModal()
+  var $module = this
+  var minutes = this.minutesTimeOutModalVisible
+  var seconds = 60 * minutes;
+
+  (function runTimer () {
+    var minutesLeft = parseInt(seconds / 60, 10)
+    var secondsLeft = parseInt(seconds % 60, 10)
+    var timerExpired = minutesLeft < 1 && secondsLeft < 1
+
+    if (timerExpired) {
+      setTimeout($module.redirect.bind($module), 4000)
+    } else {
+      seconds--
+      setTimeout(runTimer, 1000)
+    }
+  })()
+}
+
+TimeoutWarning.prototype.redirect = function () {
+  window.location.replace(this.timeOutRedirectUrl)
 }
 
 TimeoutWarning.prototype.dialogSupported = function () {
@@ -47,7 +68,9 @@ TimeoutWarning.prototype.dialogSupported = function () {
   }
 }
 
-TimeoutWarning.prototype.checkIfShouldHaveTimedOut = function () {
+TimeoutWarning.prototype.openDialog = function () {
+  this.$module.showModal()
+  this.startUiCountdown()
 }
 
 module.exports = TimeoutWarning
