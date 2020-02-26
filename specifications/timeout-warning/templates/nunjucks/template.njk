@@ -1,4 +1,4 @@
-{%- macro timeoutWarning(data) %}
+{%- macro timeoutWarning(sessionDuration) %}
 
 <div class="govuk-timeout-warning-fallback">
   <p>We will reset your application if you do not complete the form and press Next
@@ -6,7 +6,7 @@
   <p>We do this to keep your information secure.</p>
 </div>
 
-<dialog class="govuk-timeout-warning dialog" data-module="govuk-timeout-warning" data-minutes-timeout="60"
+<dialog class="govuk-timeout-warning dialog" data-module="govuk-timeout-warning" data-minutes-timeout="{{ sessionDuration }}"
 id="js-timeout-warning"
 data-minutes-idle-timeout="{{ data['modalIdleTime'] or '0.1'}}"
 data-minutes-modal-visible="{{ data['modalVisibleTime'] or '0.2'}}"

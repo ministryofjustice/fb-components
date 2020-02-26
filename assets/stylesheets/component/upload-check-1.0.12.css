@@ -1,0 +1,19 @@
+.fb-upload-descriptions {
+  background-color: #1d70b8;
+  margin: 50px auto
+}
+
+.fb-upload-descriptions ul {
+  list-style-type: none;
+  padding: 1rem
+}
+
+.fb-upload-descriptions ul li {
+  margin-bottom: unset;
+  padding: 1rem
+}
+
+.fb-upload-descriptions .govuk-body-l {
+  color: #fff
+}
+/*# sourceMappingURL=upload-check-1.0.12.css.map */

@@ -61,7 +61,7 @@
 
 {% block pageContent %}
 
-{{ callMacro('timeoutWarning')}}
+{{ callMacro('timeoutWarning', page.sessionDuration)}}
 
 {% block pageContentHeading %}
 {% if page._type !== 'page.start' -%}
