@@ -8,8 +8,9 @@
 
 <dialog class="govuk-timeout-warning dialog" data-module="govuk-timeout-warning" data-minutes-timeout="{{ sessionDuration }}"
 id="js-timeout-warning"
-data-minutes-modal-visible="{{ data['modalVisibleTime'] or '0.2'}}"
-data-url-redirect="/reserved/timeout"
+data-minutes-modal-visible="5"
+data-url-redirect="/restricted/session-timeout"
+data-url-keep-alive="/keep-alive.json"
 role="dialog"
 aria-live="polite"
 aria-labelledby="dialog-title"
