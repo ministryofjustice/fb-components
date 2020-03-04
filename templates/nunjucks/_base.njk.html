@@ -7,6 +7,10 @@
   <!--[if lt IE 9]>
   <link rel="stylesheet" href="/assets/stylesheets/app-ie8-{{version}}.css" />
   <![endif]-->
+  <noscript>
+    <meta http-equiv="refresh" content="{{ page.sessionDuration * 60
+    }};url=/restricted/session-timeout">
+  </noscript>
   {% block styles %}{% endblock %}
 {% endblock %}
 
