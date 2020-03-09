@@ -34,7 +34,9 @@ TimeoutWarning.prototype.init = function () {
   this.$closeButton.addEventListener('click', this.closeDialog.bind(this))
   this.$module.addEventListener('keydown', this.escClose.bind(this))
 
-  this.addTimer()
+  if (this.minutesTimeout != 0 && this.minutesTimeout != undefined) {
+    this.addTimer()
+  }
 }
 
 TimeoutWarning.prototype.addTimer = function () {
@@ -201,7 +203,7 @@ TimeoutWarning.prototype.escClose = function () {
 }
 
 // Copied from gov.uk accessible timeout
-TimeoutWarning.prototype.numberToWords = function () {
+TimeoutWarning.prototype.numberToWords = function (n) {
   var string = n.toString()
   var units
   var tens
