@@ -6,7 +6,7 @@
   "name": "Config service name",
   "phase": "beta",
   "phaseText": "Config service phase text",
-  "serviceEmailAddress": "form-builder@digital.justice.gov.uk",
+  "serviceEmailAddress": "form-builder-team@digital.justice.gov.uk",
   "serviceUrl": "page.start",
   "sessionDuration": 30
 }
