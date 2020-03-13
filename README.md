@@ -21,13 +21,13 @@ Nunjucks templates and helpers are contained in the directory `templates` (but n
 - Assets are built on `pre-commit` using Husky in development environments
 - In addition they are built on `pre-publish` using NPM
 
-The first should ensure that GitHub _always_ contains the latest built assets. (You can clone the repository and check-out a branch without needing to build.)
+The first ensures that GitHub _always_ contains the latest built assets. (You can clone the repository and check-out a branch without needing to build.)
 
 The second ensures that NPM _always_ does. (You can install the dependency and it will contain up-to-date assets. The build process will be initiated both when CircleCI publishes and when a developer manually publishes from the command line.)
 
 While _you should not have to build manually_ because these automatic process will do so for you, you can build whenever you want, provided that you have developement dependencies installed, by executing the script target `npm run build`.
 
-In case Husky does not build on `pre-commit` check your pre-commit Git scripts:
+In case Husky does not build on `pre-commit` check your pre-commit Git hook scripts:
 
 ```sh
 vim .git/hooks/pre-commit
@@ -39,7 +39,7 @@ It should at least contain the statement:
 . "$(dirname "$0")/husky.sh"
 ```
 
-I have a script to ensure that references to my NPM proxy are not accidentally pushed to GitHub:
+This pre-commit Git hook script ensures that references to an NPM proxy are not accidentally pushed to GitHub:
 
 ```sh
 #!/bin/sh
