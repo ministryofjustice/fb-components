@@ -1,14 +1,12 @@
 {%- macro uploadSummary(data) %}
-  {% if data.uploadList.length %}
-    <input type="hidden" name="uploadPage" value="{{ data.uploadPage }}">
-
+  {% if data.uploadedList.length %}
     <div class="govuk-form-group" data-block-id="{{ data._id }}">
       <h2 class="govuk-heading-m">
         {{ data.summaryListHeading }}
       </h2>
 
       {{ govukSummaryList({
-        rows: data.uploadList
+        rows: data.uploadedList
       }) | indent(2) | trim }}
     </div>
   {% endif %}

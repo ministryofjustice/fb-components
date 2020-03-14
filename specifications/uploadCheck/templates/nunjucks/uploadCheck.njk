@@ -11,11 +11,9 @@
     </div>
   {% endif %}
 
-  {% if data.upload %}
-     <input type="hidden" name="uploadPage" value="{{ data.uploadPage }}">
-
-    {% for upload in data.upload %}
-      <input type="hidden" name="upload" value="{{ upload.uuid }}">
+  {% if data.acceptedList.length %}
+    {% for accepted in data.acceptedList %}
+      <input type="hidden" name="upload-component-accept-id" value="{{ accepted.uuid }}">
     {% endfor %}
   {% endif %}
 {% endmacro -%}
