@@ -147,30 +147,27 @@ textarea {
   box-shadow: none
 }
 
-details,
-dialog {
+details {
   display: block
 }
 
 dialog {
   background-color: #fff;
-  border: solid;
-  color: #000;
-  height: -moz-fit-content;
-  height: -webkit-fit-content;
-  height: fit-content;
-  left: 0;
-  margin: auto;
-  padding: 1em;
   position: absolute;
+  left: 0;
   right: 0;
   width: -moz-fit-content;
   width: -webkit-fit-content;
-  width: fit-content
-}
-
-dialog:not([open]) {
-  display: none
+  width: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  margin: auto;
+  border: solid;
+  padding: 1em;
+  background: #fff;
+  color: #000;
+  display: block
 }
 
 summary {
@@ -6185,236 +6182,77 @@ only screen and (min-resolution:192dpi) {
   }
 }
 
-a:link {
-  color: #005ea5
-}
-
-a:visited {
-  color: #4c2c92
-}
-
-a:focus {
-  outline: 3px solid transparent;
-  color: #0b0c0c;
-  background-color: #fd0;
-  box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
-  text-decoration: none
-}
-
-table td,
-table th {
-  vertical-align: top
-}
-
-#global-cookie-message {
-  background-color: #d5e8f3;
-  padding: 10px 0
-}
-
-.fb-sectionHeading {
-  margin-top: 0
-}
-
-.govuk-button p {
-  display: inline-block;
-  margin: 0
-}
-
-.govuk-button.fb-action-secondary {
-  text-align: left;
-  text-decoration: underline;
-  background: 0 0;
-  border-bottom-color: transparent;
-  color: #005ea5;
-  box-shadow: none;
-  padding-left: 0;
-  border-left: none;
-  margin-bottom: 0
-}
-
-.fb-action-secondary:hover {
-  background: 0 0;
-  color: #2b8cc4
-}
-
-.fb-group-blocks,
-.fb-repeatable-item--block {
-  position: relative
-}
-
-.fb-repeatable-item > .govuk-fieldset > legend.govuk-fieldset__legend {
-  font-weight: 700
-}
-
-.fb-repeatable-item .fb-action--delete {
-  position: absolute;
-  top: .25rem;
-  right: 0;
-  font-size: 75%;
-  width: auto
-}
-
-.fb-info-summary {
-  border-color: #005ea5
-}
-
-.fb-flash-summary {
-  border-color: #006435
-}
-
-.fb-flash-summary .govuk-list li:last-child,
-.fb-info-summary .govuk-list li:last-child {
-  margin-bottom: 0
-}
-
-.govuk-hint p {
-  margin: 0 0 5px
-}
-
-.fb-block-fileupload fieldset .govuk-form-group .govuk-error-message {
+dialog:not([open]) {
   display: none
 }
 
-input[type=file].govuk-file-upload::-webkit-file-upload-button {
-  font-size: 1.25rem!important
+dialog + .backdrop {
+  background: rgba(0,0,0,.1)
 }
 
-.fb-form-group--fileupload-multiple {
-  position: relative
-}
-
-.fb-form-group--fileupload-multiple fieldset .govuk-form-group {
-  border-top: 1px solid #bfc1c3;
-  padding: 10px 0;
-  margin-bottom: 0
-}
-
-@media (min-width:40.0625em) {
-  .fb-form-group--fileupload-multiple fieldset .govuk-form-group {
-    border-bottom: 1px solid #bfc1c3
-  }
-}
-
-.fb-form--fileupload-single .govuk-form-group {
-  margin-bottom: 10px
-}
-
-.fb-form--fileupload-single .govuk-form-group--error .govuk-hint {
-  border-bottom: none;
-  padding-bottom: 0
-}
-
-.fb-form--fileupload-single .govuk-error-message {
-  border-bottom: 1px solid #bfc1c3;
-  padding-bottom: 10px
-}
-
-.fb-form--fileupload-single {
-  border-bottom: 1px solid #bfc1c3;
-  margin-bottom: 30px
-}
-
-.fb-form-group--fileupload-multiple fieldset .fb-control--fileupload--remove + .govuk-form-group,
-.fb-form-group--fileupload-multiple fieldset .govuk-form-group + .govuk-form-group {
-  border-top: none
-}
-
-.fb-block-fileupload .govuk-summary-list {
-  border-top: 1px solid #bfc1c3
-}
-
-.govuk-summary-list__actions .govuk-button {
-  margin-bottom: 0
-}
-
-.govuk-summary-list__actions a.govuk-button {
-  padding: 0
-}
-
-fieldset .govuk-summary-list {
-  margin-bottom: 0
-}
-
-.fb-block-fileupload .fb-summary-list-extended--heading {
-  font-size: 19px;
-  font-weight: 700
-}
-
-@media (min-width:40.0625em) {
-  .govuk-file-upload {
-    width: 65%
-  }
-}
-
-@media (min-width:55em) {
-  .govuk-file-upload {
-    width: auto
-  }
-}
-
-.fb-control--fileupload--remove {
-  border-bottom: 1px solid #bfc1c3;
-  margin: 0
-}
-
-@media (min-width:40.0625em) {
-  .fb-control--fileupload--remove {
-    position: absolute;
-    right: 0;
-    margin: -3rem 0 0;
-    border-bottom: none
-  }
-}
-
-.fb-control--fileupload--remove em {
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  margin: 0!important;
-  overflow: hidden!important;
-  clip: rect(0 0 0 0)!important;
-  -webkit-clip-path: inset(50%)!important;
-  clip-path: inset(50%)!important;
-  white-space: nowrap!important
-}
-
-.fb-summary-list--file-key {
-  font-weight: 400;
-  padding-top: 5px
-}
-
-.fb-summary-list--file-key em {
-  font-style: normal;
-  display: block;
-  white-space: nowrap
-}
-
-@media (min-width:40.0625em) {
-  .fb-summary-list--file-key {
-    padding-top: 0
-  }
-
-  .fb-summary-list--file-key em {
-    display: inline-block
-  }
-}
-
-.environment-display {
+._dialog_overlay,
+dialog + .backdrop {
   position: fixed;
-  background-color: #f47738;
-  color: #fff;
   top: 0;
-  left: 0;
-  padding: 5px 10px;
-  font-family: nta,Arial,sans-serif;
-  text-transform: uppercase;
-  transform-origin: top left;
-  transform: rotate(90deg);
-  margin-left: 30px;
-  margin-top: 0;
-  height: 30px;
-  overflow: hidden;
-  font-size: 16px;
-  box-sizing: border-box
+  right: 0;
+  bottom: 0;
+  left: 0
 }
-/*# sourceMappingURL=app-1.0.14.css.map */
+
+dialog.fixed {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.govuk-timeout-warning {
+  display: none;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px
+}
+
+@media (min-width:40.0625em) {
+  .govuk-timeout-warning {
+    padding: 30px
+  }
+}
+
+.govuk-timeout-warning .govuk-button {
+  margin: 0 10px 15px 0
+}
+
+@media (min-width:40.0625em) {
+  .govuk-timeout-warning .govuk-button {
+    margin-bottom: 0
+  }
+}
+
+.govuk-timeout-warning[open] {
+  display: block
+}
+
+.govuk-timeout-warning[open] + .backdrop {
+  background: rgba(0,0,0,.8)
+}
+
+.govuk-timeout-warning[open]::-webkit-backdrop {
+  background: rgba(0,0,0,.8)
+}
+
+.govuk-timeout-warning[open]::backdrop {
+  background: rgba(0,0,0,.8)
+}
+
+.govuk-timeout-warning-overlay {
+  overflow: hidden
+}
+
+.js-enabled .govuk-timeout-warning-fallback {
+  display: none
+}
+
+.tabular-numbers {
+  font-family: false
+}
+/*# sourceMappingURL=timeout-warning-1.0.16.css.map */
