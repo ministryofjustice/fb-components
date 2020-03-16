@@ -34,7 +34,7 @@ TimeoutWarning.prototype.init = function () {
   this.$closeButton.addEventListener('click', this.closeDialog.bind(this))
   this.$module.addEventListener('keydown', this.escClose.bind(this))
 
-  if (this.minutesTimeout != 0 && this.minutesTimeout != undefined) {
+  if (this.minutesTimeout != 0 && this.minutesTimeout != undefined && this.minutes != null) {
     this.addTimer()
   }
 }
@@ -82,8 +82,8 @@ TimeoutWarning.prototype.startUiCountdown = function () {
 
     // Below string will get read out by screen readers every time the timeout refreshes (every 15 secs. See below).
     // Please add additional information in the modal body content or in below extraText which will get announced to AT the first time the time out opens
-    var text = 'We will reset your application if you do not respond in ' + minutesText + secondsText + '.'
-    var atText = 'We will reset your application if you do not respond in ' + atMinutesText
+    var text = 'We will reset your application if you do not do anything in ' + minutesText + secondsText + '.'
+    var atText = 'We will reset your application if you do not do anything in ' + atMinutesText
     if (atSecondsText) {
       if (minutesLeft > 0) {
         atText += ' and'
