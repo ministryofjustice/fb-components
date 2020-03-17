@@ -31,10 +31,10 @@ TimeoutWarning.prototype.init = function () {
     return
   }
 
-  this.$closeButton.addEventListener('click', this.closeDialog.bind(this))
-  this.$module.addEventListener('keydown', this.escClose.bind(this))
+  if (this.minutesTimeout !== '0') {
+    this.$closeButton.addEventListener('click', this.closeDialog.bind(this))
+    this.$module.addEventListener('keydown', this.escClose.bind(this))
 
-  if (this.minutesTimeout != 0 && this.minutesTimeout != undefined && this.minutes != null) {
     this.addTimer()
   }
 }
@@ -187,7 +187,7 @@ TimeoutWarning.prototype.setLastActiveTimeOnServer = function () {
 }
 
 TimeoutWarning.prototype.isDialogOpen = function () {
-  return this.$module['open']
+  return this.$module.open
 }
 
 TimeoutWarning.prototype.clearTimers = function () {
@@ -197,9 +197,9 @@ TimeoutWarning.prototype.clearTimers = function () {
 }
 
 TimeoutWarning.prototype.escClose = function () {
- if (this.isDialogOpen() && event.keyCode === 27) {
-   this.closeDialog()
- }
+  if (this.isDialogOpen() && event.keyCode === 27) {
+    this.closeDialog()
+  }
 }
 
 // Copied from gov.uk accessible timeout
@@ -223,13 +223,13 @@ TimeoutWarning.prototype.numberToWords = function (n) {
   }
 
   /* Array of units as words */
-  units = [ '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen' ]
+  units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
 
   /* Array of tens as words */
-  tens = [ '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety' ]
+  tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
 
   /* Array of scales as words */
-  scales = [ '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion', 'undecillion', 'duodecillion', 'tredecillion', 'quatttuor-decillion', 'quindecillion', 'sexdecillion', 'septen-decillion', 'octodecillion', 'novemdecillion', 'vigintillion', 'centillion' ]
+  scales = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion', 'undecillion', 'duodecillion', 'tredecillion', 'quatttuor-decillion', 'quindecillion', 'sexdecillion', 'septen-decillion', 'octodecillion', 'novemdecillion', 'vigintillion', 'centillion']
 
   /* Split user arguemnt into 3 digit chunks from right to left */
   start = string.length
@@ -270,7 +270,7 @@ TimeoutWarning.prototype.numberToWords = function (n) {
       }
 
       /* Add tens word if array item exists */
-      if ((word = tens[ ints[1] ])) {
+      if ((word = tens[ints[1]])) {
         words.push(word)
       }
 
