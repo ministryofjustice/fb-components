@@ -2,7 +2,7 @@
 // on https://github.com/alphagov/govuk-design-system-backlog/issues/104
 // and https://github.com/alphagov/govuk-design-system-backlog/issues/103
 // This also were based on the recommended accessible timeout warning.
-const dialogPolyfill = require('dialog-polyfill')
+const { default: dialogPolyfill } = require('dialog-polyfill')
 
 function TimeoutWarning ($module) {
   if ($module) {
@@ -135,7 +135,7 @@ TimeoutWarning.prototype.dialogSupported = function () {
   } else {
     // Native dialog is not supported by browser so use polyfill
     try {
-      dialogPolyfill.default.registerDialog(this.$module)
+      dialogPolyfill.registerDialog(this.$module)
       return true
     } catch (error) {
       // Doesn't support polyfill (IE8) - display fallback element
