@@ -62,8 +62,6 @@
 
 {% block pageContent %}
 
-{{ callMacro('timeoutWarning', page.sessionDuration)}}
-
 {% block pageContentHeading %}
 {% if page._type !== 'page.start' -%}
 {% if page.sectionHeading -%}
