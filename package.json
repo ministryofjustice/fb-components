@@ -1,10 +1,10 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.0.16",
+  "version": "1.1.0",
   "description": "Components as JSON Schemas, Nunjucks templates, Nunjucks helpers, and utilities for Form Builder",
   "scripts": {
     "build": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build\" \"webpack\"",
-    "build:watch": "npm run gulp -- build:watch",
+    "build:watch": "cross-env NODE_ENV=production concurrently -r \"npm run gulp -- build:watch\" \"webpack --watch\"",
     "build:fonts": "npm run gulp -- build:fonts",
     "build:fonts:watch": "npm run gulp -- build:fonts:watch",
     "build:images": "npm run gulp -- build:images",
@@ -36,6 +36,7 @@
     "ajv": "^6.12.0",
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.2",
+    "dialog-polyfill": "^0.5.0",
     "glob": "^7.1.6",
     "glob-all": "^3.1.0",
     "glob-promise": "^3.4.0",
