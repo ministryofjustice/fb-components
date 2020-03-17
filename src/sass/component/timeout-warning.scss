@@ -45,7 +45,7 @@
 }
 
 .js-enabled .govuk-timeout-warning-fallback {
-  display: none;
+  display: none !important;
 }
 
 .tabular-numbers {
