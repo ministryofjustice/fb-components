@@ -1,5 +1,5 @@
 {
-  "_id": "error.required.fileupload",
+  "_id": "error.required.upload",
   "_type": "string.error",
   "description": "File upload is required",
   "value": "Add a file for {control}",

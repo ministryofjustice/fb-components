@@ -1,6 +1,0 @@
-{
-  "_id": "fileupload.file.type.application.x-iwork-pages-sffpages",
-  "_type": "string",
-  "description": "Text explaining that file uploaded is iworks",
-  "value": "iworks"
-}

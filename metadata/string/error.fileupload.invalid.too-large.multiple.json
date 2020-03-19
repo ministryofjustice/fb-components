@@ -1,6 +1,0 @@
-{
-  "_id": "error.fileupload.invalid.too-large.multiple",
-  "_type": "string.error",
-  "description": "File uploaded is too large",
-  "value": "{filename} must be smaller than {maxSize, bytes}"
-}

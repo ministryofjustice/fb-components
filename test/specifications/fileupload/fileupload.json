@@ -1,6 +1,0 @@
-{
-  "_id": "fileuploadId",
-  "_type": "fileupload",
-  "name": "fileupload-component",
-  "label": "File upload label"
-}

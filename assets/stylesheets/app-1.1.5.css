@@ -6271,56 +6271,8 @@ table th {
   margin: 0 0 5px
 }
 
-.fb-block-fileupload fieldset .govuk-form-group .govuk-error-message {
-  display: none
-}
-
 input[type=file].govuk-file-upload::-webkit-file-upload-button {
   font-size: 1.25rem!important
-}
-
-.fb-form-group--fileupload-multiple {
-  position: relative
-}
-
-.fb-form-group--fileupload-multiple fieldset .govuk-form-group {
-  border-top: 1px solid #bfc1c3;
-  padding: 10px 0;
-  margin-bottom: 0
-}
-
-@media (min-width:40.0625em) {
-  .fb-form-group--fileupload-multiple fieldset .govuk-form-group {
-    border-bottom: 1px solid #bfc1c3
-  }
-}
-
-.fb-form--fileupload-single .govuk-form-group {
-  margin-bottom: 10px
-}
-
-.fb-form--fileupload-single .govuk-form-group--error .govuk-hint {
-  border-bottom: none;
-  padding-bottom: 0
-}
-
-.fb-form--fileupload-single .govuk-error-message {
-  border-bottom: 1px solid #bfc1c3;
-  padding-bottom: 10px
-}
-
-.fb-form--fileupload-single {
-  border-bottom: 1px solid #bfc1c3;
-  margin-bottom: 30px
-}
-
-.fb-form-group--fileupload-multiple fieldset .fb-control--fileupload--remove + .govuk-form-group,
-.fb-form-group--fileupload-multiple fieldset .govuk-form-group + .govuk-form-group {
-  border-top: none
-}
-
-.fb-block-fileupload .govuk-summary-list {
-  border-top: 1px solid #bfc1c3
 }
 
 .govuk-summary-list__actions .govuk-button {
@@ -6335,11 +6287,6 @@ fieldset .govuk-summary-list {
   margin-bottom: 0
 }
 
-.fb-block-fileupload .fb-summary-list-extended--heading {
-  font-size: 19px;
-  font-weight: 700
-}
-
 @media (min-width:40.0625em) {
   .govuk-file-upload {
     width: 65%
@@ -6350,32 +6297,6 @@ fieldset .govuk-summary-list {
   .govuk-file-upload {
     width: auto
   }
-}
-
-.fb-control--fileupload--remove {
-  border-bottom: 1px solid #bfc1c3;
-  margin: 0
-}
-
-@media (min-width:40.0625em) {
-  .fb-control--fileupload--remove {
-    position: absolute;
-    right: 0;
-    margin: -3rem 0 0;
-    border-bottom: none
-  }
-}
-
-.fb-control--fileupload--remove em {
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  margin: 0!important;
-  overflow: hidden!important;
-  clip: rect(0 0 0 0)!important;
-  -webkit-clip-path: inset(50%)!important;
-  clip-path: inset(50%)!important;
-  white-space: nowrap!important
 }
 
 .fb-summary-list--file-key {

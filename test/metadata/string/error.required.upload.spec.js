@@ -9,10 +9,10 @@ const {
 const schemas = require('~/fb-components/test/schemas')
 
 const jsonSchema = require('~/fb-components/specifications/string/error/string.error.schema.json')
-const dataObject = require('~/fb-components/metadata/string/error.fileupload.invalid.too-large.json')
+const dataObject = require('~/fb-components/metadata/string/error.required.upload.json')
 
 const ajv = new Ajv({ schemas })
 
 const validator = ajv.compile(jsonSchema)
 
-describe('~/fb-components/metadata/string/error.fileupload.invalid.too-large.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))
+describe('~/fb-components/metadata/string/error.required.upload.json', () => it('validates', () => expect(validator(dataObject)).to.be.true))
