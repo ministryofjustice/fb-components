@@ -4,7 +4,7 @@
   {% set params = setInputWidthClass(params) %}
   {% set attributes = params.attributes %}
 
-  <input type="hidden" name="fieldName" value="{{ params.fieldName }}">
+  <input type="hidden" name="upload-component-field-name" value="{{ params.fieldName }}">
 
   {% set uploadParams = setObject(params.fileUpload, {
       label: params.label,
