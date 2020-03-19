@@ -7,6 +7,10 @@
   <!--[if lt IE 9]>
   <link rel="stylesheet" href="/assets/stylesheets/app-ie8-{{version}}.css" />
   <![endif]-->
+  <noscript>
+    <meta http-equiv="refresh" content="{{ page.sessionDuration * 60
+    }};url=/restricted/session-timeout">
+  </noscript>
   {% block styles %}{% endblock %}
 {% endblock %}
 
@@ -36,6 +40,10 @@
   {% endblock %}
 {% endblock %}
 
+{% block bodyStart %}
+  {{ callMacro('timeoutWarning', page.sessionDuration)}}
+{% endblock %}
+
 {% block main %}
   <div class="govuk-width-container govuk-body-m">
     {% block beforeContent %}{% endblock %}
@@ -44,7 +52,6 @@
     </main>
   </div>
 {% endblock %}
-
 
 {% block bodyEnd %}
 {% block tracking %}
