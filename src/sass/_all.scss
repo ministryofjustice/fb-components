@@ -135,3 +135,9 @@ fieldset .govuk-summary-list { // stylelint-disable-line no-descending-specifici
     display: inline-block;
   }
 }
+
+.govuk-error-summary.fb-info-summary,
+.govuk-error-summary.fb-flash-summary {
+  border-color: #006435;
+}
+

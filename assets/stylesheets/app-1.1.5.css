@@ -6320,6 +6320,11 @@ fieldset .govuk-summary-list {
   }
 }
 
+.govuk-error-summary.fb-flash-summary,
+.govuk-error-summary.fb-info-summary {
+  border-color: #006435
+}
+
 .environment-display {
   position: fixed;
   background-color: #f47738;
