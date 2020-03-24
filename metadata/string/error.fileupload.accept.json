@@ -1,6 +1,0 @@
-{
-  "_id": "error.fileupload.accept",
-  "_type": "string.error",
-  "description": "File uploaded is wrong type",
-  "value": "{filename} was not uploaded successfully as it is the wrong type"
-}

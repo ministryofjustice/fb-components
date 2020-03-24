@@ -2,5 +2,5 @@
   "_id": "error.upload.500",
   "_type": "string.error",
   "description": "File uploaded - unknown error",
-  "value": "[% error.fileupload %]"
+  "value": "[% error.upload %]"
 }

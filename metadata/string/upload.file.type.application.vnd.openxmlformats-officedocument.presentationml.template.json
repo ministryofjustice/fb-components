@@ -2,5 +2,5 @@
   "_id": "upload.file.type.application.vnd.openxmlformats-officedocument.presentationml.template",
   "_type": "string",
   "description": "Text explaining that file uploaded is vnd.openxmlformats-officedocument.presentationml.template",
-  "value": "PowerPoint"
+  "value": "powerpoint"
 }

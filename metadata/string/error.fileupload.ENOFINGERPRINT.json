@@ -1,6 +1,0 @@
-{
-  "_id": "error.fileupload.ENOFINGERPRINT",
-  "_type": "string.error",
-  "description": "File uploaded - no fingerprint returned",
-  "value": "[% error.fileupload %]"
-}

@@ -9,7 +9,7 @@
       "const": "page.uploadCheck"
     },
     "heading": {
-      "default": "Check your uploads"
+      "default": "Check your upload"
     },
     "lede": {
       "multiline": true

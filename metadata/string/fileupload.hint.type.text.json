@@ -1,6 +1,0 @@
-{
-  "_id": "fileupload.hint.type.text",
-  "_type": "string",
-  "description": "Text explaining that users can upload text documents",
-  "value": "word, pdf, rtf or plain text"
-}

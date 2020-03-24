@@ -1,6 +1,0 @@
-{
-  "_id": "fileupload.file.type.application.vnd.openxmlformats-officedocument.wordprocessingml.template",
-  "_type": "string",
-  "description": "Text explaining that file uploaded is vnd.openxmlformats-officedocument.wordprocessingml.template",
-  "value": "word"
-}

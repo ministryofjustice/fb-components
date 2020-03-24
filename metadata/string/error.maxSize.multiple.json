@@ -2,5 +2,5 @@
   "_id": "error.maxSize.multiple",
   "_type": "string.error",
   "description": "Uploaded file is too large",
-  "value": "[% error.fileupload.invalid.too-large.multiple %]"
+  "value": "[% error.upload.invalid.too-large.multiple %]"
 }

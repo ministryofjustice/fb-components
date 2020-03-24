@@ -1,7 +1,0 @@
-{
-  "_id": "fileupload.slot.button.remove",
-  "_type": "string",
-  "description": "Text displayed to label file upload slot",
-  "value": "Remove *{label}*",
-  "value:cy": "Dileu *{label}*"
-}
