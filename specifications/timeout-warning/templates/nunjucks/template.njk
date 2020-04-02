@@ -1,29 +1,33 @@
-{%- macro timeoutWarning(sessionDuration) %}
+{%- macro timeoutWarning(params) %}
 
-<div class="govuk-timeout-warning-fallback">
-  <p>We will reset your application if you do not complete the form and press Next
-  by {{ sessionDuration }} minutes.</p>
-  <p>We do this to keep your information secure.</p>
-</div>
-
-<dialog class="govuk-timeout-warning dialog" data-module="govuk-timeout-warning"
-data-minutes-timeout="{{ sessionDuration }}"
-id="js-timeout-warning"
-data-minutes-modal-visible="5"
-data-url-redirect="/restricted/session-timeout"
-data-url-keep-alive="/keep-alive.json"
-role="dialog"
-aria-live="polite"
-aria-labelledby="dialog-title"
-aria-describedby="at-timer">
-  <h1 id="dialog-title" class="govuk-heading-l">
-    Your application will be reset soon
-  </h1>
-  <div class="govuk-body">
-    <div class="timer" aria-hidden="true" aria-relevant="additions"></div>
-    <div class="at-timer govuk-visually-hidden" role="status" id="at-timer"></div>
+{% if params.showTimeoutWarning %}
+  <div class="govuk-timeout-warning-fallback">
+    <p>We will reset your application if you do not complete the form and press Next
+    by {{ params.sessionDuration }} minutes.</p>
+    <p>We do this to keep your information secure.</p>
   </div>
-  <button class="govuk-button dialog-button js-dialog-close" data-module="govuk-button">Continue application</button>
-</dialog>
+
+  <dialog class="govuk-timeout-warning dialog" data-module="govuk-timeout-warning"
+  data-minutes-timeout="{{ params.sessionDuration }}"
+  id="js-timeout-warning"
+  data-minutes-modal-visible="5"
+  data-url-redirect="/restricted/session-timeout"
+  data-url-keep-alive="/keep-alive.json"
+  role="dialog"
+  aria-live="polite"
+  aria-labelledby="dialog-title"
+  aria-describedby="at-timer">
+    <h1 id="dialog-title" class="govuk-heading-l">
+      Your application will be reset soon
+    </h1>
+    <div class="govuk-body">
+      <div class="timer" aria-hidden="true" aria-relevant="additions"></div>
+      <div class="at-timer govuk-visually-hidden" role="status" id="at-timer"></div>
+    </div>
+    <button data-prevent-double-click="true" class="fb-block fb-block-actions govuk-button dialog-button js-dialog-close" data-module="govuk-button" data-block-id="actions" data-block-type="actions">
+      Continue application
+    </button>
+  </dialog>
+{% endif %}
 
 {% endmacro -%}
