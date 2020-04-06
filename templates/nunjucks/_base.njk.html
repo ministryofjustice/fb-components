@@ -58,19 +58,9 @@
 {% endblock %}
 
 {% block bodyEnd %}
-{% block tracking %}
-{% if not page.EDITMODE %}
-{% if GA_TRACKING_ID %}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_TRACKING_ID }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || []
-  function gtag(){dataLayer.push(arguments)}
-  gtag('js', new Date())
-  gtag('config', '{{ GA_TRACKING_ID }}', { 'anonymize_ip': true });
-</script>
-{% endif %}
-{% endif %}
-{% endblock %}
+
+{% include "_analytics.njk.html" %}
+
 <script src="/assets/javascripts/app-{{version}}.js"></script>
 {% block scripts %}{% endblock %}
 {% endblock %}
