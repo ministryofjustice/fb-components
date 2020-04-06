@@ -14,6 +14,9 @@
   max-width: 500px;
 
   .govuk-button {
+    background-color: #00703c !important;
+    color: #fff !important;
+
     margin: 0 govuk-spacing(2) govuk-spacing(3) 0;
     @include govuk-media-query($from: tablet) {
       margin-bottom: govuk-spacing(0);
@@ -46,8 +49,4 @@
 
 .js-enabled .govuk-timeout-warning-fallback {
   display: none !important;
-}
-
-.tabular-numbers {
-  font-family: $govuk-font-family-tabular;
 }

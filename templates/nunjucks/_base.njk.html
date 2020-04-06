@@ -41,7 +41,11 @@
 {% endblock %}
 
 {% block bodyStart %}
-  {{ callMacro('timeoutWarning', page.sessionDuration)}}
+  {{ callMacro('timeoutWarning', {
+      showTimeoutWarning: page.showTimeoutWarning,
+      sessionDuration: page.sessionDuration
+    })
+  }}
 {% endblock %}
 
 {% block main %}
