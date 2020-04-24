@@ -12,6 +12,10 @@
     }};url=/restricted/session-timeout">
   </noscript>
   {% block styles %}{% endblock %}
+
+  {% if EXCLUDE_FROM_SEARCH_RESULTS %}
+  <meta name="robots" content="noindex,nofollow">
+  {% endif %}
 {% endblock %}
 
 {% block header %}
