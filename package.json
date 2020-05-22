@@ -45,7 +45,7 @@
     "json-schema-ref-parser": "^8.0.0",
     "jsonlint": "^1.6.3",
     "jsonpath": "^1.0.2",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^11.0.0",
     "mkdirp": "^1.0.3",
     "nunjucks": "^3.2.1",
     "shelljs": "^0.8.3",
