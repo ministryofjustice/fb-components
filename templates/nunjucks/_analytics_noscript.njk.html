@@ -1,0 +1,8 @@
+{% block trackingNoScript %}
+{% if not page.EDITMODE %}
+{% if GTM_TRACKING_ID %}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ GTM_TRACKING_ID }}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{% endif %}
+{% endif %}
+{% endblock %}
