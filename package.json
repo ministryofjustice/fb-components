@@ -42,7 +42,7 @@
     "glob-promise": "^3.4.0",
     "govuk-frontend": "^3.6.0",
     "json-schema-merge-allof": "^0.7.0",
-    "json-schema-ref-parser": "^8.0.0",
+    "json-schema-ref-parser": "^9.0.1",
     "jsonlint": "^1.6.3",
     "jsonpath": "^1.0.2",
     "markdown-it": "^11.0.0",
