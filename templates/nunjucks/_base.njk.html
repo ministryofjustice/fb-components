@@ -16,6 +16,8 @@
   {% if EXCLUDE_FROM_SEARCH_RESULTS %}
   <meta name="robots" content="noindex,nofollow">
   {% endif %}
+
+  {% include "_analytics.njk.html" %}
 {% endblock %}
 
 {% block header %}
@@ -45,6 +47,8 @@
 {% endblock %}
 
 {% block bodyStart %}
+  {% include "_analytics_noscript.njk.html" %}
+
   {{ callMacro('timeoutWarning', {
       showTimeoutWarning: page.showTimeoutWarning,
       sessionDuration: page.sessionDuration
@@ -62,8 +66,6 @@
 {% endblock %}
 
 {% block bodyEnd %}
-
-{% include "_analytics.njk.html" %}
 
 <script src="/assets/javascripts/app-{{version}}.js"></script>
 {% block scripts %}{% endblock %}
