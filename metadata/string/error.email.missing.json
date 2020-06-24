@@ -1,0 +1,6 @@
+{
+  "_id": "error.email.missing",
+  "_type": "string.error",
+  "description": "Email not found",
+  "value": "The email was not found"
+}
