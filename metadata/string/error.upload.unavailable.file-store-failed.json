@@ -1,0 +1,6 @@
+{
+  "_id": "error.upload.unavailable.file-store-failed",
+  "_type": "string.error",
+  "description": "Failed to upload file",
+  "value": "The selected file could not be uploaded – try again"
+}
