@@ -1,0 +1,6 @@
+{
+  "_id": "error.ENOTFOUND",
+  "_type": "string.error",
+  "description": "Generic error",
+  "value": "We are experiencing technical difficulties. Please try again later."
+}
