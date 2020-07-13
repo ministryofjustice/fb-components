@@ -4,12 +4,14 @@
 // This also were based on the recommended accessible timeout warning.
 const { default: dialogPolyfill } = require('dialog-polyfill')
 
+const defaultSessionDuration = 20 // minutes
+
 function TimeoutWarning ($module) {
   if ($module) {
     this.$module = $module
     this.$closeButton = $module.querySelector('.js-dialog-close')
     this.$fallBackElement = document.querySelector('.govuk-timeout-warning-fallback')
-    this.minutesTimeout = $module.getAttribute('data-minutes-timeout') || 60
+    this.minutesTimeout = $module.getAttribute('data-minutes-timeout') || defaultSessionDuration
     this.timeOutRedirectUrl = $module.getAttribute('data-url-redirect')
     this.keepAliveUrl = $module.getAttribute('data-url-keep-alive')
     this.minutesTimeOutModalVisible = $module.getAttribute('data-minutes-modal-visible')
