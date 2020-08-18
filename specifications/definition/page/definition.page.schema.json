@@ -64,7 +64,12 @@
         "save",
         "confirm",
         "send.email",
-        "send.sms"
+        "send.sms",
+        "custom-1",
+        "custom-2",
+        "custom-3",
+        "custom-4",
+        "custom-5"
       ],
       "default": "continue",
       "category": [
