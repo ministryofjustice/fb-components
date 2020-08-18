@@ -27,7 +27,7 @@
     "pre-commit": "npm run build && git add assets",
     "prepublishOnly": "npm run build"
   },
-  "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
+  "author": "MoJ Online Team <moj-online@digital.justice.gov.uk>",
   "repository": {
     "type": "git",
     "url": "https://github.com/ministryofjustice/fb-components.git"
