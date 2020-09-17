@@ -214,7 +214,7 @@ template {
 .govuk-link--muted:hover,
 .govuk-link--muted:link,
 .govuk-link--muted:visited {
-  color: #505a5f
+  color: #626a6e
 }
 
 .govuk-link--muted:focus,
@@ -357,7 +357,7 @@ template {
   font-size: 1.6875rem;
   line-height: 1.11111;
   margin-bottom: 5px;
-  color: #505a5f
+  color: #626a6e
 }
 
 .govuk-caption-l {
@@ -374,7 +374,7 @@ template {
   font-weight: 400;
   line-height: 1.25;
   display: block;
-  color: #505a5f
+  color: #626a6e
 }
 
 .govuk-caption-m {
@@ -901,7 +901,7 @@ template {
   width: auto;
   height: auto;
   border: 0;
-  color: #505a5f;
+  color: #626a6e;
   font-family: Arial,sans-serif
 }
 
@@ -963,7 +963,7 @@ template {
   width: auto;
   height: auto;
   border: 0;
-  color: #505a5f;
+  color: #626a6e;
   font-family: Arial,sans-serif
 }
 
@@ -1269,7 +1269,7 @@ template {
   line-height: 1.31579;
   display: block;
   margin-bottom: 15px;
-  color: #505a5f
+  color: #626a6e
 }
 
 .govuk-fieldset__legend:not(.govuk-fieldset__legend--m):not(.govuk-fieldset__legend--l):not(.govuk-fieldset__legend--xl) + .govuk-hint,
@@ -1380,31 +1380,30 @@ template {
 }
 
 .govuk-checkboxes__label:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
   top: 0;
   left: 0;
   width: 40px;
   height: 40px;
-  border: 2px solid
-}
-
-.govuk-checkboxes__label:after,
-.govuk-checkboxes__label:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
+  border: 2px solid;
   background: 0 0
 }
 
 .govuk-checkboxes__label:after {
+  content: "";
+  position: absolute;
   top: 11px;
   left: 9px;
-  width: 23px;
-  height: 12px;
+  width: 18px;
+  height: 7px;
   transform: rotate(-45deg);
   border: solid;
   border-width: 0 0 5px 5px;
   border-top-color: transparent;
-  opacity: 0
+  opacity: 0;
+  background: 0 0
 }
 
 .govuk-checkboxes__hint {
@@ -1478,8 +1477,8 @@ template {
 .govuk-checkboxes--small .govuk-checkboxes__label:after {
   top: 15px;
   left: 6px;
-  width: 12px;
-  height: 6.5px;
+  width: 9px;
+  height: 3.5px;
   border-width: 0 0 3px 3px
 }
 
@@ -1540,11 +1539,12 @@ template {
 }
 
 .govuk-textarea--error {
-  border: 2px solid #d4351c
+  border: 4px solid #d4351c
 }
 
 .govuk-textarea--error:focus {
-  border-color: #0b0c0c
+  border-color: #0b0c0c;
+  box-shadow: none
 }
 
 .govuk-character-count {
@@ -1554,6 +1554,10 @@ template {
 .govuk-character-count .govuk-form-group,
 .govuk-character-count .govuk-textarea {
   margin-bottom: 5px
+}
+
+.govuk-character-count .govuk-textarea--error {
+  padding: 3px
 }
 
 .govuk-character-count__message {
@@ -1701,11 +1705,12 @@ template {
 }
 
 .govuk-input--error {
-  border: 2px solid #d4351c
+  border: 4px solid #d4351c
 }
 
 .govuk-input--error:focus {
-  border-color: #0b0c0c
+  border-color: #0b0c0c;
+  box-shadow: none
 }
 
 .govuk-input--width-30 {
@@ -1940,6 +1945,24 @@ template {
   padding-left: 5px;
   outline: 3px solid #fd0;
   box-shadow: inset 0 0 0 4px #0b0c0c
+}
+
+.govuk-file-upload--error {
+  margin-right: -5px;
+  margin-left: -5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border: 4px solid #d4351c
+}
+
+.govuk-file-upload--error:focus {
+  border-color: #0b0c0c;
+  box-shadow: none
+}
+
+.govuk-file-upload--error:focus-within {
+  border-color: #0b0c0c;
+  box-shadow: none
 }
 
 .govuk-footer {
@@ -2447,12 +2470,12 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-tag--inactive {
-  background-color: #505a5f
+  background-color: #626a6e
 }
 
 .govuk-tag--grey {
-  color: #383f43;
-  background: #eeefef
+  color: #454a4d;
+  background: #eff0f1
 }
 
 .govuk-tag--purple {
@@ -2914,11 +2937,12 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-select--error {
-  border: 2px solid #d4351c
+  border: 4px solid #d4351c
 }
 
 .govuk-select--error:focus {
-  border-color: #0b0c0c
+  border-color: #0b0c0c;
+  box-shadow: none
 }
 
 .govuk-skip-link {
@@ -2971,7 +2995,6 @@ only screen and (min-resolution:192dpi) {
 
 .govuk-skip-link:focus {
   outline: 3px solid #fd0;
-  outline-offset: 0;
   background-color: #fd0
 }
 
@@ -3054,12 +3077,11 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-warning-text__icon {
-  box-sizing: border-box;
   display: inline-block;
   position: absolute;
   left: 0;
-  min-width: 35px;
-  min-height: 35px;
+  min-width: 29px;
+  min-height: 29px;
   margin-top: -5px;
   border: 3px solid #0b0c0c;
   border-radius: 50%;

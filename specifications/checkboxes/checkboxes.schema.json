@@ -26,5 +26,8 @@
     "namespace": {
       "propagation": "items[?(@._type === 'checkbox')]"
     }
-  }
+  },
+  "required": [
+    "items"
+  ]
 }
