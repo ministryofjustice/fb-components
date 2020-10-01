@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@ministryofjustice/module-alias": "^1.0.17",
+    "@ministryofjustice/module-alias": "^1.0.18",
     "accessible-autocomplete": "^2.0.2",
     "ajv": "^6.12.0",
     "concurrently": "^5.1.0",
