@@ -6,7 +6,7 @@
   "name": "Service name goes here",
   "phase": "alpha",
   "phaseText": "Service phase text goes here",
-  "serviceEmailAddress": "moj-online@digital.justice.gov.uk",
+  "serviceEmailAddress": "moj-forms@digital.justice.gov.uk",
   "serviceUrl": "page.start",
   "sessionDuration": 20
 }
