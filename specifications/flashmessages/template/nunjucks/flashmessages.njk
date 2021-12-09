@@ -1,8 +1,14 @@
 {% macro flashmessages(data) %}
 {% if data.messages.length %}
-<div class="govuk-error-summary fb-info-summary fb-flash-summary
-  {%- if data.classes %} {{ data.classes }}{% endif %}" aria-labelledby="info-summary-title" role="alert" tabindex="-1"
-  {%- for attribute, value in data.attributes %} {{ attribute }}="{{ value }}"{% endfor %} data-module="info-summary">
+  {% if (data._type) and (data._type == "page.uploadCheck") %}
+    <div class="govuk-error-summary
+      {%- if data.classes %} {{ data.classes }}{% endif %}" aria-labelledby="info-summary-title" role="alert" tabindex="-1"
+      {%- for attribute, value in data.attributes %} {{ attribute }}="{{ value }}"{% endfor %} data-module="info-summary">
+  {% else %}
+     <div class="govuk-error-summary fb-info-summary fb-flash-summary
+       {%- if data.classes %} {{ data.classes }}{% endif %}" aria-labelledby="info-summary-title" role="alert" tabindex="-1"
+       {%- for attribute, value in data.attributes %} {{ attribute }}="{{ value }}"{% endfor %} data-module="info-summary">
+  {% endif %}
   {% if data.title %}
   <h2 class="govuk-error-summary__title fb-info-summary__title" id="info-summary-title">
     {{ data.title | safe }}
