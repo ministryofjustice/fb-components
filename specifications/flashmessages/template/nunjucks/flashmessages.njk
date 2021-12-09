@@ -1,6 +1,6 @@
 {% macro flashmessages(data) %}
 {% if data.messages.length %}
-  {% if (data._type) and (data._type == "page.uploadCheck") %}
+  {% if (data.messages[0].type) and (data.messages[0].type == "error.required.radios") %}
     <div class="govuk-error-summary
       {%- if data.classes %} {{ data.classes }}{% endif %}" aria-labelledby="info-summary-title" role="alert" tabindex="-1"
       {%- for attribute, value in data.attributes %} {{ attribute }}="{{ value }}"{% endfor %} data-module="info-summary">
