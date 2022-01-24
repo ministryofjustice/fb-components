@@ -60,7 +60,7 @@
     "@babel/plugin-transform-react-jsx": "^7.9.1",
     "@babel/preset-env": "^7.9.0",
     "ajv-cli": "^4.0.0",
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-preact": "^2.0.0",
