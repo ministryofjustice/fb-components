@@ -1,116 +1,83 @@
-html {
-  line-height: 1.15;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%
+:where(html) {
+  line-height: 1.15
 }
 
-h1 {
+:where(h1) {
   font-size: 2em;
-  margin: .67em 0
+  -webkit-margin-after: .67em;
+  margin-block-end: .67em;
+  -webkit-margin-before: .67em;
+  margin-block-start: .67em
 }
 
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-  margin: 0
+:where(dl,ol,ul) :where(dl,ol,ul) {
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0
 }
 
-hr {
+:where(hr) {
   box-sizing: content-box;
-  height: 0;
-  overflow: visible
+  color: inherit;
+  height: 0
 }
 
-main {
-  display: block
-}
-
-pre {
+:where(pre) {
   font-family: monospace,monospace;
   font-size: 1em
 }
 
-abbr[title] {
+:where(abbr[title]) {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted
 }
 
-b,
-strong {
+:where(b,strong) {
   font-weight: bolder
 }
 
-code,
-kbd,
-samp {
+:where(code,kbd,samp) {
   font-family: monospace,monospace;
   font-size: 1em
 }
 
-small {
+:where(small) {
   font-size: 80%
 }
 
-svg:not(:root) {
-  overflow: hidden
+:where(table) {
+  border-color: currentColor;
+  text-indent: 0
 }
 
-button,
-input,
-select {
+:where(button,input,select) {
   margin: 0
 }
 
-button {
-  overflow: visible;
+:where(button) {
   text-transform: none
 }
 
-[type=button],
-[type=reset],
-[type=submit],
-button {
+:where(button,
+input:is([type=button i],[type=reset i],[type=submit i])) {
   -webkit-appearance: button
 }
 
-fieldset {
-  padding: .35em .75em .625em
-}
-
-input {
-  overflow: visible
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  white-space: normal
-}
-
-progress {
-  display: inline-block;
+:where(progress) {
   vertical-align: baseline
 }
 
-select {
+:where(select) {
   text-transform: none
 }
 
-textarea {
-  margin: 0;
-  overflow: auto
+:where(textarea) {
+  margin: 0
 }
 
-[type=search] {
+:where(input[type=search i]) {
   -webkit-appearance: textfield;
   outline-offset: -2px
 }
@@ -134,25 +101,22 @@ textarea {
   font: inherit
 }
 
-::-moz-focus-inner {
+:where(button,
+input:is([type=button i],[type=color i],[type=reset i],[type=submit i]))::-moz-focus-inner {
   border-style: none;
   padding: 0
 }
 
-:-moz-focusring {
+:where(button,
+input:is([type=button i],[type=color i],[type=reset i],[type=submit i]))::-moz-focusring {
   outline: 1px dotted ButtonText
 }
 
-:-moz-ui-invalid {
+:where(:-moz-ui-invalid) {
   box-shadow: none
 }
 
-details,
-dialog {
-  display: block
-}
-
-dialog {
+:where(dialog) {
   background-color: #fff;
   border: solid;
   color: #000;
@@ -169,16 +133,12 @@ dialog {
   width: fit-content
 }
 
-dialog:not([open]) {
+:where(dialog:not([open])) {
   display: none
 }
 
-summary {
+:where(summary) {
   display: list-item
-}
-
-template {
-  display: none
 }
 
 .autocomplete__wrapper {
@@ -297,6 +257,27 @@ template {
   border-color: #1d70b8;
   color: #fff;
   outline: 0
+}
+
+@media (-ms-high-contrast:active),
+(forced-colors:active) {
+  .autocomplete__menu {
+    border-color: FieldText
+  }
+
+  .autocomplete__option {
+    background-color: Field;
+    color: FieldText
+  }
+
+  .autocomplete__option--focused,
+  .autocomplete__option:hover {
+    forced-color-adjust: none;
+    background-color: SelectedItem;
+    border-color: SelectedItem;
+    color: SelectedItemText;
+    outline-color: SelectedItemText
+  }
 }
 
 .autocomplete__option--no-results {
