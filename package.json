@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "engines": {
     "node": ">=14.5.0"
   },
@@ -46,7 +46,7 @@
     "govuk-frontend": "^3.6.0",
     "json-schema-merge-allof": "^0.8.1",
     "json-schema-ref-parser": "^9.0.1",
-    "jsonlint": "^1.6.3",
+    "jsonlint-mod": "^1.7.6",
     "jsonpath": "^1.0.2",
     "markdown-it": "^12.0.0",
     "mkdirp": "^1.0.3",
