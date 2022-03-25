@@ -12,15 +12,9 @@
 
 {% block skipLink %}
 {{ super() }}
-{% block cookiesMessage %}
-{% if page.cookieMessage %}
-<div id="global-cookie-message">
-<p class="CookieMessage govuk-body-s govuk-width-container">
-<span data-block-name="CookieMessage">{{ page.cookieMessage | safe }}</a></span>
-</p>
-</div>
+{% if page.showCookieBanner %}
+{% include "_cookies_banner.njk.html" %}
 {% endif %}
-{% endblock %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -144,5 +138,9 @@
 {% block footer %}
 {% if page.footer %}
 {{ govukFooter(page.footer) }}
+{% endif %}
+
+{% if not page.useAnalytics %}
+  <script>analytics.removeAnalyticsCookies()</script>
 {% endif %}
 {% endblock %}
