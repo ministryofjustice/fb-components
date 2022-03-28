@@ -30,7 +30,7 @@ function hideCookieBanner () {
 }
 
 function removeAnalyticsCookies () {
-  const cookiePrefixes = ['_ga', '_gid', '_gat_gtag_', '_utma', '_utmb', '_utmc', '_utmz']
+  const cookiePrefixes = ['_ga', '_gid', '_gat_gtag_', '_hj', '_utma', '_utmb', '_utmc', '_utmz']
   for (const cookie of document.cookie.split(';')) {
     for (const cookiePrefix of cookiePrefixes) {
       const cookieName = cookie.split('=')[0].trim()
