@@ -133,6 +133,10 @@
   {% if page.$useAutocomplete %}
   <script src="/assets/javascripts/component/autocomplete-{{version}}.js"></script>
   {% endif %}
+
+{% if not page.useAnalytics %}
+  <script>analytics.removeAnalyticsCookies()</script>
+{% endif %}
 {% endblock %}
 
 {% block footer %}
@@ -140,7 +144,4 @@
 {{ govukFooter(page.footer) }}
 {% endif %}
 
-{% if not page.useAnalytics %}
-  <script>analytics.removeAnalyticsCookies()</script>
-{% endif %}
 {% endblock %}
