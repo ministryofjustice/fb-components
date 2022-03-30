@@ -42,7 +42,8 @@ function removeAnalyticsCookies () {
 }
 
 function deleteCookie (cookieName) {
-  document.cookie = `${cookieName}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 UTC;`
+  document.cookie = `${cookieName}=; Path=/; Domain=${location.hostname}; Expires=Thu, 01 Jan 1970 00:00:01 UTC;`
+  document.cookie = `${cookieName}=; Path=/; Domain=.justice.gov.uk; Expires=Thu, 01 Jan 1970 00:00:01 UTC;`
 }
 
 module.exports = {

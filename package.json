@@ -1,6 +1,6 @@
 {
   "name": "@ministryofjustice/fb-components",
-  "version": "1.4.13",
+  "version": "1.4.14",
   "engines": {
     "node": ">=14.5.0"
   },
