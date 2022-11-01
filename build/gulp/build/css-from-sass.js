@@ -1,6 +1,6 @@
 const path = require('path')
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const debug = require('gulp-debug')
 
 const rename = require('gulp-rename')
@@ -28,7 +28,7 @@ const buildTargetPath = path.relative(currentDir, targetPath)
 
 const getTransformForSass = () =>
   sass({
-    outputStyle: 'nested',
+    outputStyle: 'compressed',
     includePaths: [
       'node_modules'
     ]
