@@ -9,13 +9,13 @@
 
 html.govuk-template {
   background-color: transparent;
-  padding: 0!important;
-  margin: 0!important
+  margin: 0!important;
+  padding: 0!important
 }
 
 body {
-  padding: 0 1cm!important;
-  margin: 0!important
+  margin: 0!important;
+  padding: 0 1cm!important
 }
 
 h2.govuk-heading-m {
@@ -25,8 +25,8 @@ h2.govuk-heading-m {
 .govuk-main-wrapper,
 .govuk-width-container {
   margin: 0!important;
-  width: auto!important;
-  max-width: none!important
+  max-width: none!important;
+  width: auto!important
 }
 
 .fb-sectionHeading {
