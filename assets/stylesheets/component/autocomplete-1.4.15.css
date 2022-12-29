@@ -121,7 +121,6 @@ input:is([type=button i],[type=color i],[type=reset i],[type=submit i]))::-moz-f
   border: solid;
   color: #000;
   height: -moz-fit-content;
-  height: -webkit-fit-content;
   height: fit-content;
   left: 0;
   margin: auto;
@@ -129,7 +128,6 @@ input:is([type=button i],[type=color i],[type=reset i],[type=submit i]))::-moz-f
   position: absolute;
   right: 0;
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content
 }
 
