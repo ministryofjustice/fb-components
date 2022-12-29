@@ -1,6 +1,6 @@
 const path = require('path')
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('node-sass'))
 const debug = require('gulp-debug')
 
 const rename = require('gulp-rename')
