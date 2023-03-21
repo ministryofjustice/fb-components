@@ -41,7 +41,7 @@
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
     "dialog-polyfill": "^0.5.6",
-    "glob": "^7.2.3",
+    "glob": "^9.3.1",
     "glob-all": "^3.3.1",
     "glob-promise": "^3.4.0",
     "govuk-frontend": "^3.14.0",
