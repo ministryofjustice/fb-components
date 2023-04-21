@@ -44,7 +44,7 @@
     "glob": "^7.2.3",
     "glob-all": "^3.3.1",
     "glob-promise": "^3.4.0",
-    "govuk-frontend": "^3.14.0",
+    "govuk-frontend": "^4.6.0",
     "json-schema-merge-allof": "^0.8.1",
     "json-schema-ref-parser": "^9.0.1",
     "jsonlint-mod": "^1.7.6",
